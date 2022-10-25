@@ -30,8 +30,9 @@
 	</header><!-- .entry-header -->
 
 	<?php expert_post_thumbnail(); ?>
-
+	
 	<div class="entry-content">
+
 		<?php
 		the_content(
 			sprintf(

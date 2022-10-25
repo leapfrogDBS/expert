@@ -176,3 +176,243 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/* Custom Scripts and Styles */
+function add_custom_scripts() {
+	wp_enqueue_script('jquery', 'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js');
+	wp_enqueue_script('youtube', 'https://www.youtube.com/iframe_api');
+	wp_enqueue_script('app-js', get_template_directory_uri() . '/js/app.js');
+	wp_enqueue_style('tailwind-css', get_template_directory_uri() . '/css/tailwind.css');
+	wp_enqueue_script('splide-js', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@3.6.12/dist/js/splide.min.js');
+	wp_enqueue_script('splide-grid-js', 'https://cdn.jsdelivr.net/npm/@splidejs/splide-extension-grid@0.4.1/dist/js/splide-extension-grid.min.js');
+	wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css');	
+	wp_enqueue_style('font-awesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');	
+}
+
+add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );
+
+// add the ajax fetch js
+add_action( 'wp_footer', 'ajax_fetch' );
+function ajax_fetch() {
+?>
+<script type="text/javascript">
+function fetch(){
+
+    jQuery.ajax({
+        url: '<?php echo admin_url('admin-ajax.php'); ?>',
+        type: 'post',
+        data: { action: 'data_fetch', keyword: jQuery('#keyword').val() },
+        success: function(data) {
+            jQuery('#datafetch').html( data );
+        }
+    });
+
+}
+</script>
+
+<?php
+}
+
+
+// the ajax function
+add_action('wp_ajax_data_fetch' , 'data_fetch');
+add_action('wp_ajax_nopriv_data_fetch','data_fetch');
+function data_fetch(){
+
+    $the_query = new WP_Query( 
+      array( 
+        'posts_per_page' => -1, 
+        's' => esc_attr( $_POST['keyword'] ), 
+        'post_type' => 'post' 
+      ) 
+    );
+  
+    if( $the_query->have_posts() ) : ?>
+		<div class="w-full px-20 py-5 flex justify-end">
+			<i id="close-search" class="fa-solid fa-x text-white text-lg"></i>
+		</div>
+		<div class="row sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-20">
+		<?php
+        while( $the_query->have_posts() ): $the_query->the_post(); ?>
+			<div class="col mb-[40px] sm:mb-0">
+				<?php
+				if (has_post_thumbnail()) {
+				?>
+					<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" class="w-full object-cover h-[50%] xl:h-[135px]">
+				<?php
+				} else {
+				?>
+					<img src="<?php echo get_template_directory_uri();?>/img/backup-thumb.jpg" class="w-full object-cover h-[50%] xl:h-[135px]">
+				<?php
+				}
+
+				if (get_post_type() === 'page') {
+				?>
+					<div class="article-date mt-[20px]"><h4 class="uppercase text-blue child:text-blue font-bold">Page -  <?php echo get_the_date(); ?></h4></div>
+				<?php
+				} else {
+				?>
+					<div class="article-date mt-[20px]"><h4 class="uppercase text-blue child:text-blue font-bold"><?php the_category(' '); ?> -  <?php echo get_the_date(); ?></h4></div>
+				<?php
+				}
+				?>
+				
+				
+				<h3 class="text-white font-bold mt-[6px] lg:mt-[10px] lg:text-[1.75vw] lg:leading-[1.1]"><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></h3>
+			</div>
+        <?php endwhile;
+		?>
+		</div>
+		<script>
+			searchResults = document.querySelector('#datafetch');
+			closeButton = searchResults.querySelector('#close-search');
+			searchField = document.querySelector('#search-bar #keyword');
+			closeButton.addEventListener('click', closeSearch);
+
+			function closeSearch () {
+				searchResults.innerHTML = "";
+				searchField.value = "";
+			}
+			</script>
+		<?php
+        wp_reset_postdata();  
+    endif;
+
+    die();
+}
+
+function wpshock_search_filter( $query ) {
+    if ( $query->is_search ) {
+        $query->set( 'post_type', array('post','page') );
+    }
+    return $query;
+}
+add_filter('pre_get_posts','wpshock_search_filter');
+
+
+/* Hide Admin Bar */
+add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
+
+/* Display Breadcrumbs */
+function display_breadcrumb() {
+	echo 'Home';
+	if (is_category() || is_single()){
+	echo " > ";
+	the_category (' • ');
+	if (is_single()) {
+	echo " > ";
+	the_title();
+	}
+	} elseif (is_page()) {
+	echo " > ";
+	echo the_title();
+	} elseif (is_search()) {
+	echo " > Results for...";
+	echo '"';
+	echo the_search_query();
+	echo '"';
+	}
+	}
+
+
+
+
+/*Adds author box to page */
+function wpb_author_info_box( $content ) {
+
+	global $post;
+		
+	// Detect if it is a single post with a post author
+	if ( is_single() && isset( $post->post_author ) ) {
+		
+	// Get author's display name
+	$display_name = get_the_author_meta( 'display_name', $post->post_author );
+		
+	// If display name is not available then use nickname as display name
+	if ( empty( $display_name ) )
+	$display_name = get_the_author_meta( 'nickname', $post->post_author );
+		
+	// Get author's biographical information or description
+	$user_description = get_the_author_meta( 'user_description', $post->post_author );
+		
+	// Get author's website URL
+	$user_website = get_the_author_meta('url', $post->post_author);
+		
+	// Get link to the author archive page
+	$user_posts = get_author_posts_url( get_the_author_meta( 'ID' , $post->post_author));
+		
+	if ( ! empty( $display_name ) )
+		
+	$author_details = '<p class="author_name">About ' . $display_name . '</p>';
+		
+	if ( ! empty( $user_description ) )
+	// Author avatar and bio
+		
+	$author_details .= '<p class="author_details flex">' . get_avatar( get_the_author_meta('user_email') , 90 ) . nl2br( $user_description ). '</p>';
+		
+	$author_details .= '<p class="author_links"><a href="'. $user_posts .'">View all posts by ' . $display_name . '</a>';  
+		
+	// Check if author has a website in their profile
+	if ( ! empty( $user_website ) ) {
+		
+	// Display author website link
+	$author_details .= ' | <a href="' . $user_website .'" target="_blank" rel="nofollow">Website</a></p>';
+		
+	} else {
+	// if there is no author website then just close the paragraph
+	$author_details .= '</p>';
+	}
+		
+	// Pass all this info to post content
+	$content = $content . '<footer class="author_bio_section" >' . $author_details . '</footer>';
+	}
+	return $content;
+	}
+		
+	// Add our function to the post content filter
+	add_action( 'the_content', 'wpb_author_info_box' );
+		
+	// Allow HTML in author bio section
+	remove_filter('pre_user_description', 'wp_filter_kses');
+
+
+
+// REMOVE EMOJI ICONS
+remove_action('wp_head', 'print_emoji_detection_script', 7);
+remove_action('wp_print_styles', 'print_emoji_styles');
+
+// REMOVE RSS FEED SUPPORT
+add_action( 'after_theme_support', 'remove_feed' );
+
+function remove_feed() {
+   remove_theme_support( 'automatic-feed-links' );
+}
+
+// Use what works best for your website
+add_action('init', 'my_head_cleanup');
+
+function my_head_cleanup() {
+  // Category Feeds
+  remove_action( 'wp_head', 'feed_links_extra', 3 ); 
+
+  // Post and Comment Feeds
+  remove_action( 'wp_head', 'feed_links', 2 );
+
+   // Windows Live Writer
+  remove_action( 'wp_head','wlwmanifest_link' );                         
+
+  // WP version
+   remove_action( 'wp_head', 'wp_generator' );   
+}
+
+// Removes from admin menu
+add_action( 'admin_menu', 'my_remove_admin_menus' );
+function my_remove_admin_menus() {
+    remove_menu_page( 'edit-comments.php' );
+}
+// Removes from post and pages
+add_action('init', 'remove_comment_support', 100);
+
+function remove_comment_support() {
+    remove_post_type_support( 'post', 'comments' );
+    remove_post_type_support( 'page', 'comments' );
+}

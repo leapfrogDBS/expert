@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:wght@400;500;700;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+    .headingOne, .headingTwo, .headingThree, .headingFour, .headingFive, .headingSix, .subtitleOne, .subtitleTwo, .ctaButton, .bodyOne, .bodyTwo {
+        @apply text-charcoal;
+        
+    }
+    .headingOne, .headingTwo, .headingThree, .headingFour, .headingFive, .headingSix, .subtitleOne, .subtitleTwo, .ctaButton {
+        @apply text-charcoal;
+    }
+    .bodyOne, .bodyTwo {
+        @apply font-nunito;
+    }
+    .headingOne {
+        @apply font-bold text-6xl mb-10 md:text-8xl;
+    }
+    .headingTwo {
+        @apply font-bold text-5xl mb-9 md:text-6xl;
+    }
+    .headingThree {
+        @apply font-medium text-4xl mb-8 md:text-5xl;
+    }
+    .headingFour {
+        @apply font-bold text-2xl mb-7 md:text-4xl;
+    }
+    .headingFive {
+        @apply font-normal text-xl mb-6 md:text-2xl;
+    }
+    .headingSix {
+        @apply font-medium text-lg mb-5 md:text-xl;
+    }
+    .subtitleOne {
+        @apply font-normal text-base mb-4 md:text-lg;
+    }
+    .subtitleTwo {
+        @apply font-normal mb-4 text-base;
+    }
+    .bodyOne {
+        @apply font-normal text-lg mb-4 md:text-xl;
+    }
+    .bodyTwo {
+        @apply text-base font-normal mb-4;
+    }
+    .ctaButton {
+        @apply font-normal text-lg md:text-xl text-white bg-blue rounded-full px-4 py-2;
+    }
+    section {
+        @apply py-24;
+    }
+    .container {
+        @apply mx-auto w-11/12;
+    }
+    .row {
+        @apply grid grid-cols-12 gap-x-5;
+    }
+
+
+}
+
+html {
+    scroll-behavior: smooth;
+}
