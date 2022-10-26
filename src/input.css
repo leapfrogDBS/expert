@@ -5,6 +5,9 @@
 @tailwind utilities;
 
 @layer components {
+    .container {
+        @apply max-w-[1320px];
+    }
     .headingOne, .headingTwo, .headingThree, .headingFour, .headingFive, .headingSix, .subtitleOne, .subtitleTwo, .ctaButton, .bodyOne, .bodyTwo {
         @apply text-charcoal;
         
@@ -16,10 +19,10 @@
         @apply font-nunito;
     }
     .headingOne {
-        @apply font-bold text-6xl mb-10 md:text-8xl;
+        @apply font-medium text-4xl mb-4 md:mb-10 md:text-6xl md:font-bold lg:mb-16 lg:text-7xl xl:text-8xl ;
     }
     .headingTwo {
-        @apply font-bold text-5xl mb-9 md:text-6xl;
+        @apply font-bold mb-6 text-4xl md:mb-9 md:text-6xl;
     }
     .headingThree {
         @apply font-medium text-4xl mb-8 md:text-5xl;
@@ -28,7 +31,7 @@
         @apply font-bold text-2xl mb-7 md:text-4xl;
     }
     .headingFive {
-        @apply font-normal text-xl mb-6 md:text-2xl;
+        @apply font-medium text-xl mb-6 md:text-2xl;
     }
     .headingSix {
         @apply font-medium text-lg mb-5 md:text-xl;
@@ -46,10 +49,10 @@
         @apply text-base font-normal mb-4;
     }
     .ctaButton {
-        @apply font-normal text-lg md:text-xl text-white bg-blue rounded-full px-4 py-2;
+        @apply font-normal text-lg md:text-xl text-white bg-blue rounded-full px-4 py-2 inline-block hover:text-white hover:bg-turquoise visited:text-white;
     }
     section {
-        @apply py-24;
+        @apply py-12 md:py-24;
     }
     .container {
         @apply mx-auto w-11/12;
@@ -57,8 +60,13 @@
     .row {
         @apply grid grid-cols-12 gap-x-5;
     }
-
-
+    a {
+        @apply visited:text-inherit;
+    }
+    .col {
+        @apply col-span-12;
+    }
+  
 }
 
 html {

@@ -2,6 +2,7 @@
 module.exports = {
   content: ["../**.php",
 "../**/**.php",],
+important: true,
   theme: {
     extend: {
       fontFamily: {
@@ -20,4 +21,7 @@ module.exports = {
     },
   },
   plugins: [],
+  corePlugins: {
+   container: false,
+  }
 }
