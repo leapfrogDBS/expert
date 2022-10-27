@@ -1020,6 +1020,10 @@ a:visited{
   height: 3.5rem !important;
 }
 
+.h-auto{
+  height: auto !important;
+}
+
 .w-full{
   width: 100% !important;
 }

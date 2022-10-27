@@ -11,16 +11,16 @@
                     <div class="splide__track">
                         <ul class="splide__list"> 
                             <li class="splide__slide">
-                                <img class="m-auto w-44" src="<?php echo get_template_directory_uri(); ?>/img/logo-1.svg" alt="">
+                                <img class="m-auto w-44 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-1.svg" alt="">
                             </li>
                             <li class="splide__slide">
-                                <img class="m-auto w-44" src="<?php echo get_template_directory_uri(); ?>/img/logo-2.svg" alt="">
+                                <img class="m-auto w-44 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-2.svg" alt="">
                             </li>
                             <li class="splide__slide">
-                                <img class="m-auto w-44" src="<?php echo get_template_directory_uri(); ?>/img/logo-3.svg" alt="">
+                                <img class="m-auto w-44 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-3.svg" alt="">
                             </li>
                             <li class="splide__slide">
-                                <img class="m-auto w-44" src="<?php echo get_template_directory_uri(); ?>/img/logo-4.svg" alt="">
+                                <img class="m-auto w-44 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-4.svg" alt="">
                             </li>
                         </ul>
                     </div>
