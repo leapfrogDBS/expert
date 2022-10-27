@@ -7,10 +7,10 @@
             </div>
         </div>
 
-        <div class="splide learning-tracks-slider" id="learning-tracks-slider" >
+        <div class="splide learning-tracks-slider max-w-md m-auto md:max-w-none" id="learning-tracks-slider" >
             <div class="splide__track">
-                <ul class="splide__list sm:grid sm:grid-cols-12 sm:gap-x-5"> 
-                    <li class="splide__slide sm:col-span-4">
+                <ul class="splide__list md:grid md:grid-cols-12 md:gap-x-5"> 
+                    <li class="splide__slide md:col-span-4">
                         <div class="shadow-md mb-8 mx-2 mb-8 mx-2">
                             <div class="square bg-yellow pb-[100%] relative">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -18,11 +18,11 @@
                             <div class="info p-8">
                                 <h3 class="headingSix">Track One</h3>
                                 <p class="bodyTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati omnis repellat, impedit sint, asperiores consequuntur, atque eaque eius velit neque dolores quod nam vel sequi autem laudantium voluptatum qui ipsum?</p>
-                                <a href="#" class="ctaButton">Learn more</a>
+                                <a href="#" class="ctaButton small">Learn more</a>
                             </div>
                         </div>
                     </li>
-                    <li class="splide__slide sm:col-span-4">
+                    <li class="splide__slide md:col-span-4">
                         <div class="shadow-md mb-8 mx-2">
                             <div class="square bg-yellow pb-[100%] relative">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/man.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -30,11 +30,11 @@
                             <div class="info p-8">
                                 <h3 class="headingSix">Track Two</h3>
                                 <p class="bodyTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati omnis repellat, impedit sint, asperiores consequuntur, atque eaque eius velit neque dolores quod nam vel sequi autem laudantium voluptatum qui ipsum?</p>
-                                <a href="#" class="ctaButton">Learn more</a>
+                                <a href="#" class="ctaButton small">Learn more</a>
                             </div>
                         </div>
                     </li>
-                    <li class="splide__slide sm:col-span-4">
+                    <li class="splide__slide md:col-span-4">
                         <div class="shadow-md mb-8 mx-2">
                             <div class="square bg-yellow pb-[100%] relative">
                                 <img src="<?php echo get_template_directory_uri(); ?>/img/lady2.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
@@ -42,11 +42,19 @@
                             <div class="info p-8">
                                 <h3 class="headingSix">Track Three</h3>
                                 <p class="bodyTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati omnis repellat, impedit sint, asperiores consequuntur, atque eaque eius velit neque dolores quod nam vel sequi autem laudantium voluptatum qui ipsum?</p>
-                                <a href="#" class="ctaButton">Learn more</a>
+                                <a href="#" class="ctaButton small">Learn more</a>
                             </div>
                         </div>
                     </li>
                 </ul>
+            </div>
+            <div class="splide__arrows block md:hidden">
+                <button class="splide__arrow splide__arrow--prev left-[35%] -bottom-12 transfrom-none top-auto bg-white opacity-100">
+                    <i class="fa-solid fa-square-caret-left text-turquoise text-5xl"></i>
+                </button>
+                <button class="splide__arrow splide__arrow--next right-[35%] -bottom-12 transfrom-none top-auto bg-white opacity-100">
+                    <i class="fa-solid fa-square-caret-right text-turquoise text-5xl"></i>
+                </button>
             </div>
         </div>      
         <script>
@@ -64,7 +72,7 @@
                 arrows: true,
                 mediaQuery: 'min',
                 breakpoints: {
-                    640: {
+                    768: {
                         destroy: true,
                     },
                 }                       
@@ -73,7 +81,7 @@
         </script>
 
         
-        <div class="row">
+        <div class="row mt-24 md:mt-12">
             <div class="col col-span-12 text-center">
                 <a href="#" class="ctaButton">Explore all learning tracks</a>
             </div>
