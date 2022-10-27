@@ -2,7 +2,7 @@
     <div class="container">
         <div class="row">
             <div class="col text-center md:col-span-8 md:col-start-3 mb-6">
-                <h2 class="headingTwo">Learning Pathways</h2>
+                <h2 class="headingTwo">Learning Tracks</h2>
                 <p class="bodyOne">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi placeat nisi laboriosam ut quasi blanditiis quos? Fuga tempore debitis quaerat.</p>
             </div>
         </div>

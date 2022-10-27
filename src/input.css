@@ -22,10 +22,10 @@
         @apply font-medium text-4xl mb-4 md:mb-10 md:text-6xl md:font-bold lg:mb-16 lg:text-7xl xl:text-8xl ;
     }
     .headingTwo {
-        @apply font-bold mb-6 text-3xl md:mb-9 md:text-6xl;
+        @apply font-bold mb-6 text-3xl md:mb-9 md:text-4xl lg:text-5xl;
     }
     .headingThree {
-        @apply font-medium text-3xl mb-8 md:text-5xl;
+        @apply font-medium text-3xl mb-8 md:text-4xl;
     }
     .headingFour {
         @apply font-bold text-2xl mb-7 md:text-4xl;
