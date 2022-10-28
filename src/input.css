@@ -81,3 +81,14 @@ html {
     border-color: #06D6A0 !important;
     font-weight: 700;
 }
+
+/* Progress Bar */
+#progress-bar {
+    --scrollAmount: 0%;
+     width: var(--scrollAmount);
+    height: 16px;
+    /*
+    Height of the header
+    top: 110px;
+    */  
+}

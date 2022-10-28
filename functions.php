@@ -296,14 +296,14 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 function display_breadcrumb() {
 	echo 'Home';
 	if (is_category() || is_single()){
-	echo " > ";
+	echo " <span style='color:#2176FF;font-size:larger;'>  >  </span> ";
 	the_category (' • ');
 	if (is_single()) {
-	echo " > ";
+	echo " <span style='color:#2176FF;font-size:larger;'>  >  </span> ";
 	the_title();
 	}
 	} elseif (is_page()) {
-	echo " > ";
+	echo " <span style='color:#2176FF;font-size:larger;'>  >  </span> ";
 	echo the_title();
 	} elseif (is_search()) {
 	echo " > Results for...";

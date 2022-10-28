@@ -30,7 +30,7 @@
                                 <li class="splide__slide p-2">                                                  
                                     <div class="rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
                                         <div class="realtive">
-                                            <img class="w-full h-52 object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
+                                            <img class="w-full h-64 object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
                                             <div class="absolute top-0 left-0 ml-6 mt-4">
                                                 <?php
                                                 $categories = get_the_category();
@@ -43,17 +43,18 @@
                                         <div class="py-8 px-6 flex flex-col flex-1 justify-between">        
                                             <h3 class="headingSix"><?php the_title(); ?></h3>                               
                                             <p class="bodyTwo"><?php echo strip_tags(get_the_excerpt()); ?></p>
-                                            <?php 
-                                            /*if (rmp_get_avg_rating( $postID ) != 0) { ?>
-                                                <p>Average rating: <?php echo rmp_get_avg_rating( $postID ); ?></p>
-                                                <p>Vote Count: <?php echo  rmp_get_vote_count( $postID ); ?></p>
-                                                <p>Visual Rating: <?php echo rmp_get_visual_rating( $postID ); ?></p>
-                                                
-                                            <?php
-                                            } */
-                                            ?>
+                                            
                                             <div>
-                                                <a class="ctaButton small" href="<?php the_permalink() ?>">Read more</a>
+                                                <a class="headingTwo text-turquoise" href="<?php the_permalink() ?>"><i class="fa-brands fa-readme"></i><i class="fa-solid fa-circle-play"></i></a>
+                                                <div class="flex justify-between items-center mt-5">
+                                                    <div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
+                                                    <?php 
+                                                    if (rmp_get_avg_rating( $postID ) != 0) { ?>
+                                                        <div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full ml-2 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
+                                                    <?php
+                                                    } 
+                                                    ?>
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
@@ -96,10 +97,10 @@
 		640: {
 			perPage: 1,
 		},
-        768: {
+        840: {
             perPage: 2,
         },
-        1024: {
+        1200: {
             perPage: 3,
         },
   }
