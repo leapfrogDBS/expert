@@ -454,14 +454,6 @@ remove_action( 'wp_head', 'wp_generator' ) ;
 /* Remove WLManifest Link */
 remove_action( 'wp_head', 'wlwmanifest_link' ) ;
 
-/* Remove JQuery Migrate */
-function deregister_qjuery() { 
-	if ( !is_admin() ) {
-		wp_deregister_script('jquery');
-	}
-} 
-add_action('wp_enqueue_scripts', 'deregister_qjuery');
-
 /* Disable Self Pingback */
 function disable_pingback( &$links ) {
 	foreach ( $links as $l => $link )
@@ -490,4 +482,6 @@ add_filter( 'wpcf7_load_js', '__return_false' );
 add_filter( 'wpcf7_load_css', '__return_false' );
 
 
-  
+add_filter( 'excerpt_length', function($length) {
+    return 20;
+}, PHP_INT_MAX );

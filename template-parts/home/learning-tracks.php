@@ -1,4 +1,4 @@
-<section class="bg-white">
+<section id="learning-tracks" class="bg-white ds-section">
     <div class="container">
         <div class="row">
             <div class="col text-center md:col-span-8 md:col-start-3 mb-6">
@@ -48,14 +48,14 @@
                     </li>
                 </ul>
             </div>
-            <div class="splide__arrows block md:hidden">
-                <button class="splide__arrow splide__arrow--prev left-[35%] -bottom-12 transfrom-none top-auto bg-white opacity-100">
-                    <i class="fa-solid fa-square-caret-left text-turquoise text-5xl"></i>
-                </button>
-                <button class="splide__arrow splide__arrow--next right-[35%] -bottom-12 transfrom-none top-auto bg-white opacity-100">
-                    <i class="fa-solid fa-square-caret-right text-turquoise text-5xl"></i>
-                </button>
-            </div>
+            <div class="splide__arrows flex justify-center gap-x-6 mt-6 md:hidden">
+                    <button class="splide__arrow splide__arrow--prev opacity-100 static bg-white">
+                        <i class="fa-solid fa-square-caret-left text-turquoise text-5xl"></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next opacity-100 static bg-white">
+                        <i class="fa-solid fa-square-caret-right text-turquoise text-5xl"></i>
+                    </button>
+                </div>
         </div>      
         <script>
             var splide = new Splide( '#learning-tracks-slider', {
@@ -81,7 +81,7 @@
         </script>
 
         
-        <div class="row mt-24 md:mt-12">
+        <div class="row mt-12">
             <div class="col col-span-12 text-center">
                 <a href="#" class="ctaButton">Explore all learning tracks</a>
             </div>

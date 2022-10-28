@@ -36,14 +36,14 @@
                         </li>
                     </ul>
                 </div>
-                <div class="splide__arrows">
-                <button class="splide__arrow splide__arrow--prev left-[35%] -bottom-12 transfrom-none top-auto bg-white opacity-100">
-                    <i class="fa-solid fa-square-caret-left text-turquoise text-5xl"></i>
-                </button>
-                <button class="splide__arrow splide__arrow--next right-[35%] -bottom-12 transfrom-none top-auto bg-white opacity-100">
-                    <i class="fa-solid fa-square-caret-right text-turquoise text-5xl"></i>
-                </button>
-            </div>
+                <div class="splide__arrows flex justify-center gap-x-6 mt-6">
+                    <button class="splide__arrow splide__arrow--prev opacity-100 static bg-white">
+                        <i class="fa-solid fa-square-caret-left text-turquoise text-5xl"></i>
+                    </button>
+                    <button class="splide__arrow splide__arrow--next opacity-100 static bg-white">
+                        <i class="fa-solid fa-square-caret-right text-turquoise text-5xl"></i>
+                    </button>
+                </div>
             </div>
         </div>
     </div>

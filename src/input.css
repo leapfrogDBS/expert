@@ -40,7 +40,7 @@
         @apply font-normal text-base mb-4 md:text-lg;
     }
     .subtitleTwo {
-        @apply font-normal mb-4 text-base;
+        @apply font-normal mb-4 text-sm;
     }
     .bodyOne {
         @apply font-normal text-lg mb-4 md:text-xl;
@@ -74,4 +74,10 @@
 
 html {
     scroll-behavior: smooth;
+}
+
+
+#anchor-links > a.ds-menu-active {
+    border-color: #06D6A0 !important;
+    font-weight: 700;
 }
