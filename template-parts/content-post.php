@@ -71,7 +71,7 @@
     </section>
     
     <section class="bg-white relative pt-0">
-        <div class="bg-none top-0 left-0 right-0 sticky mb-12" id="progress-bar-container">
+        <div class="bg-none top-28 left-0 right-0 sticky mb-12" id="progress-bar-container">
             <div id="progress-bar" class="rounded-r-full bg-orange block z-100 "></div> 
         </div>
         <div class="container">
@@ -128,7 +128,18 @@
 document.addEventListener('scroll', processScroll);
 </script>
 	
+<div id="sticky-social-media" class="col flex flex-col fixed w-auto left-[4%] top-[50%] gap-y-2 container">
+    <a href="#" target="_blank"><i class="fa-brands fa-facebook-f text-3xl text-blue hover:text-turquoise cursor-pointer"></i></a>
+    <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in text-3xl text-blue hover:text-turquoise cursor-pointer"></i></a>
+    <a href="#" target="_blank"><i class="fa-brands fa-youtube text-3xl text-blue hover:text-turquoise cursor-pointer"></i></a>
+    <a href="#" target="_blank"><i class="fa-brands fa-pinterest-p text-3xl text-blue hover:text-turquoise cursor-pointer"></i></a>
+    <a href="#" target="_blank"><i class="fa-brands fa-twitter text-3xl text-blue hover:text-turquoise cursor-pointer"></i></a>
+</div>
+
+
 	<footer class="entry-footer">
 		<?php expert_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
+
+

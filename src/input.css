@@ -92,3 +92,7 @@ html {
     top: 110px;
     */  
 }
+
+.logo-container .custom-logo {
+    height: 40px;
+}

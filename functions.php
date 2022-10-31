@@ -227,38 +227,41 @@ function data_fetch(){
     );
   
     if( $the_query->have_posts() ) : ?>
-		<div class="w-full px-20 py-5 flex justify-end">
-			<i id="close-search" class="fa-solid fa-x text-white text-lg"></i>
+		<div class="w-full flex justify-end">
+			<i id="close-search" class="fa-solid fa-xmark text-blue text-3xl cursor-pointer mb-4 mt-4"></i>
 		</div>
-		<div class="row sm:grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-10 p-20">
+		<div class="flex flex-col">
 		<?php
         while( $the_query->have_posts() ): $the_query->the_post(); ?>
-			<div class="col mb-[40px] sm:mb-0">
-				<?php
-				if (has_post_thumbnail()) {
-				?>
-					<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" class="w-full object-cover h-[50%] xl:h-[135px]">
-				<?php
-				} else {
-				?>
-					<img src="<?php echo get_template_directory_uri();?>/img/backup-thumb.jpg" class="w-full object-cover h-[50%] xl:h-[135px]">
-				<?php
-				}
-
-				if (get_post_type() === 'page') {
-				?>
-					<div class="article-date mt-[20px]"><h4 class="uppercase text-blue child:text-blue font-bold">Page -  <?php echo get_the_date(); ?></h4></div>
-				<?php
-				} else {
-				?>
-					<div class="article-date mt-[20px]"><h4 class="uppercase text-blue child:text-blue font-bold"><?php the_category(' '); ?> -  <?php echo get_the_date(); ?></h4></div>
-				<?php
-				}
-				?>
-				
-				
-				<h3 class="text-white font-bold mt-[6px] lg:mt-[10px] lg:text-[1.75vw] lg:leading-[1.1]"><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></h3>
-			</div>
+			<div class="grid grid-cols-3 gap-x-4 mb-7">
+				<div class="thumbnail-container">
+					<?php
+					if (has_post_thumbnail()) {
+					?>
+						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" class="w-full object-cover rounded-lg">
+					<?php
+					} else {
+					?>
+						<img src="<?php echo get_template_directory_uri();?>/img/backup-thumb.jpg" class="w-full object-cover rounded-lg">
+					<?php
+					}
+					?>
+				</div>
+				<div class="post-info col-span-2">
+					<h4 class="subtitleTwo mb-0"><?php the_category(' '); ?></h4>								
+					<h3 class="subtitleOne font-bold leading-5 mb-0"><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></h3>
+					<a class="text-3xl text-turquoise" href="<?php the_permalink() ?>"><i class="fa-solid fa-circle-play"></i></a>
+					<div class="flex items-center">
+						<div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
+						<?php 
+						if (rmp_get_avg_rating( $postID ) != 0) { ?>
+							<div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full ml-2 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
+						<?php
+						} 
+						?>
+						</div>
+					</div>
+				</div>
         <?php endwhile;
 		?>
 		</div>
@@ -485,3 +488,6 @@ add_filter( 'wpcf7_load_css', '__return_false' );
 add_filter( 'excerpt_length', function($length) {
     return 20;
 }, PHP_INT_MAX );
+
+
+
