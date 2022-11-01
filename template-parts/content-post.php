@@ -71,7 +71,7 @@
     </section>
     
     <section class="bg-white relative pt-0">
-        <div class="bg-none top-28 left-0 right-0 sticky mb-12" id="progress-bar-container">
+        <div class="bg-none left-0 right-0 sticky mb-12" id="progress-bar-container">
             <div id="progress-bar" class="rounded-r-full bg-orange block z-100 "></div> 
         </div>
         <div class="container">

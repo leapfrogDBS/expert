@@ -1,4 +1,4 @@
-<div class="seconadry-nav bg-white sticky top-28 shadow-md z-50 hidden sm:block">
+<div class="seconadry-nav bg-white sticky shadow-md z-40 hidden sm:block">
     <div class="container">
         <div id="anchor-links" class="flex justify-center items-center gap-x-12">
             <a href="#learning-tracks" class="inline-block subtitleOne pb-1 mt-6 mb-4 border-b-2 border-white hover:border-turquoise">Learning Tracks</a>

@@ -94,5 +94,86 @@ html {
 }
 
 .logo-container .custom-logo {
-    height: 40px;
+    height: 35px;
+    width: auto;
+}
+@media only screen and (max-width: 1024px) {
+    .logo-container .custom-logo {
+        height: 30px;
+    }   
+}
+
+.seconadry-nav, #progress-bar-container, #mobile-menu, #search-bar.show-mobile, #datafetch {
+    top: 76px;
+}
+.announcement .seconadry-nav, .announcement #progress-bar-container, .announcement #mobile-menu, .announcement #search-bar.show-mobile, .announcement #datafetch {
+    top: 112px;
+}
+.mobile-menu {
+    height: calc(100vh - 76px);
+}
+.announcement .mobile-menu {
+    height: calc(100vh - 112px);
+}
+
+/* Search results height and scroll */
+#datafetch {
+    max-height: calc(95vh - 76px);
+}
+.announcement #datafetch {
+    max-height: calc(95vh - 112px);
+}
+
+/*Hamburger transitions with open class added via javascript */
+.open {
+    transform: rotate(90deg) !important;
+    transform: translateY(0px) !important;
+}
+.open .hamburger-top {
+    transform: rotate(45deg) translateY(6px) translate(6px) !important;
+}
+.open .hamburger-middle {
+    display: none;
+}
+.open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translate(-6px) !important;
+}
+body.no-scroll {
+    overflow: hidden;
+    height: 100%;
+}
+#search-icon.open i, #close-search-container {
+    display: none;
+}
+#search-icon.open #close-search-container {
+    display: block !important;
+}
+
+/*Show search bar as fixed on mobile */
+
+@media only screen and (max-width: 1024px) {
+    #search-bar.show-mobile {
+        display: block !important;
+        position: fixed;
+        left: 0;
+        right: 0;
+    }
+    #search-bar.show-mobile #datafetch {
+        position: relative !important;
+        top: 0 !important;
+        box-shadow: none !important;
+        margin-top: 50px !important;
+        padding-left: 1rem !important;
+        padding-right: 1rem !important;
+        max-width: 42rem !important;
+    }
+    #search-bar.show-mobile #close-search-container {
+        display: none !important;
+    }
+    #search-bar.show-mobile {
+        height: calc(100vh - 76px);
+    }
+    .announcement #search-bar.show-mobile {
+        height: calc(100vh - 112px);
+    }
 }

@@ -227,10 +227,10 @@ function data_fetch(){
     );
   
     if( $the_query->have_posts() ) : ?>
-		<div class="w-full flex justify-end">
+		<div id="close-search-container" class="w-full flex justify-end">
 			<i id="close-search" class="fa-solid fa-xmark text-blue text-3xl cursor-pointer mb-4 mt-4"></i>
 		</div>
-		<div class="flex flex-col">
+		<div class="flex flex-col mb-4">
 		<?php
         while( $the_query->have_posts() ): $the_query->the_post(); ?>
 			<div class="grid grid-cols-3 gap-x-4 mb-7">
@@ -242,7 +242,7 @@ function data_fetch(){
 					<?php
 					} else {
 					?>
-						<img src="<?php echo get_template_directory_uri();?>/img/backup-thumb.jpg" class="w-full object-cover rounded-lg">
+						<img src="<?php echo get_template_directory_uri();?>/img/fallback-post.jpg" class="w-full object-cover rounded-lg">
 					<?php
 					}
 					?>
@@ -270,10 +270,21 @@ function data_fetch(){
 			closeButton = searchResults.querySelector('#close-search');
 			searchField = document.querySelector('#search-bar #keyword');
 			closeButton.addEventListener('click', closeSearch);
+			searchBar = document.querySelector('#search-bar');
+			searchIcon = document.querySelector('#search-icon');
 
 			function closeSearch () {
 				searchResults.innerHTML = "";
 				searchField.value = "";
+				if (searchBar.classList.contains('show-mobile')) {
+					searchBar.classList.toggle('show-mobile');
+				}
+				if (searchIcon.classList.contains('open')) {
+					searchIcon.classList.toggle('open');
+					const menuBtn = document.getElementById('menu-btn');
+					menuBtn.classList.toggle('hidden');
+				}
+				
 			}
 			</script>
 		<?php

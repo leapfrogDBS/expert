@@ -25,7 +25,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('announcement'); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'test' ); ?></a>
@@ -34,161 +34,182 @@
 
 <header id="masthead" class="site-header sticky inset-x-0 top-0 z-[998] bg-white shadow-md">
 	
-    <div id="announcement-bar" class="sticky top-0 left-0 right-0 bg-blue w-full h-9 z-[999] flex items-center justify-center gap-x-6 text-white">
-		<p class="subtitleTwo mb-0 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit. Laudantium nisi asperiores sint cum veniam minima quae aperiam aliquam, eveniet nostrum!</p>
-		<i id="close-announcement" class="fa-solid fa-x"></i>
+    <div id="announcement-bar" class="sticky top-0 left-0 right-0 bg-blue w-full h-9 z-[999]">
+		<div class="flex items-center justify-center gap-x-6 text-white h-full mx-auto w-11/12 max-w-[1320px]">
+			<p class="subtitleTwo text-xs sm:text-sm mb-0 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
+			<i id="close-announcement" class="fa-solid fa-x"></i>
+		</div>
 	</div>
 		
     <div class="header-container desktop-header-container block py-4">
 			
-		<div class="container grid grid-cols-3 justify-between items-center w-full">
+		<div class="container flex md:grid md:grid-cols-2 lg:grid-cols-3 justify-between items-center mb-1">
 					
-        	<div id="logo-container" class="logo-container h-10 w-auto text-left">
+        	<div id="logo-container" class="logo-container h-10 w-auto flex items-center">
            		<?php the_custom_logo(); ?>
 		  	</div>
 
-			<div id="search-bar" class="text-center">
+			<div id="search-bar" class="text-center hidden lg:block bg-white">
 				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
-					<div id="datafetch" class="fixed left-0 right-0 top-28 text-left px-12 bg-white max-w-lg m-auto bg-white rounded-b-3xl shadow-lg"></div>
+					<div id="datafetch" class="fixed overflow-scroll left-0 right-0 text-left px-12 bg-white max-w-lg m-auto bg-white rounded-b-3xl shadow-lg"></div>
 			</div>
-
 			
 				<nav>
-					<ul class="flex items-center justify-center font-semibold justify-end gap-x-6">
-						<li class="relative group px-3 py-2">
-							<button class="hover:text-blue cursor-default border-none tracking-wider subtitleOne mb-0 font-normal text-charcoal" aria-haspopup="true">Tools</button>
-							<div class="fixed left-0 right-0 top-[92px] transition translate-y-0 opacity-0 invisible bg-transparent pt-[20px] group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-								<div class="container rounded-b-3xl relative py-12 px-24 bg-white shadow-xl w-full">
-									<div class="relative z-10">
-										<div class="grid grid-cols-3 gap-6">
-											
+					<ul class="flex items-center font-semibold justify-end gap-x-2 md:gap-x-0">
+						<div id="search-icon" class="lg:hidden w-8">
+							<i class="fa-solid fa-magnifying-glass text-turquoise text-2xl"></i>
+								<div id="close-search-container">
+								<div class="hamburger relative w-8 h-[22px] cursor-pointer transition-all duration-[0.25s] z-[999] md:w-[40px]" id="search-close-btn">
+									<span class="hamburger-top w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-0 bg-turquoise"></span>
+									<span class="hamburger-middle w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-[9px] bg-turquoise"></span>
+									<span class="hamburger-bottom w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-[19px] bg-turquoise"></span>
+								</div>
+							</div>
+						</div>
+						
+							<div class="hamburger md:hidden relative w-8 h-[22px] cursor-pointer transition-all duration-[0.25s] z-[999] md:w-[40px]" id="menu-btn">
+								<span class="hamburger-top w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-0 md:w-[40px] bg-turquoise"></span>
+								<span class="hamburger-middle w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-[10px] md:w-[40px] bg-turquoise"></span>
+								<span class="hamburger-bottom w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-[20px] md:w-[40px] bg-turquoise"></span>
+							</div>
+						
+						
+						<div class="hidden md:flex">
+							<li class="relative group px-3 py-2">
+								<button class="hover:text-blue cursor-default border-none  text-base mb-0 font-normal text-charcoal" aria-haspopup="true">Tools</button>
+								<div class="fixed left-0 right-0 top-[92px] transition translate-y-0 opacity-0 invisible bg-transparent pt-[20px] group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+									<div class="container rounded-b-3xl relative py-12 px-24 bg-white shadow-xl w-full">
+										<div class="relative z-10">
+											<div class="grid grid-cols-3 gap-6">
 												
-												<ul>
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg transition ease-in-out duration-300 font-semibold hover:text-turquiose">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Career Skills</p>
-															</div>
-														</a>
-													</li>
-
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Change Management</p>
-															</div>
-														</a>
-													</li>
-
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Decision Management</p>
-															</div>
-														</a>
-													</li>
-
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Finance</p>
-															</div>
-														</a>
-													</li>
-
 													
-												</ul>
-											
-											
-												<ul>
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Human Resources</p>
-															</div>
-														</a>
-													</li>
+													<ul>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg transition ease-in-out duration-300 font-semibold hover:text-turquiose">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Career Skills</p>
+																</div>
+															</a>
+														</li>
 
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Interpersonal Skills</p>
-															</div>
-														</a>
-													</li>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Change Management</p>
+																</div>
+															</a>
+														</li>
 
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Leadership</p>
-															</div>
-														</a>
-													</li>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Decision Management</p>
+																</div>
+															</a>
+														</li>
 
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Marketing</p>
-															</div>
-														</a>
-													</li>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Finance</p>
+																</div>
+															</a>
+														</li>
 
-												</ul>
+														
+													</ul>
+												
+												
+													<ul>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Human Resources</p>
+																</div>
+															</a>
+														</li>
 
-												<ul>
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Personal Development</p>
-															</div>
-														</a>
-													</li>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Interpersonal Skills</p>
+																</div>
+															</a>
+														</li>
 
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Program Mangement</p>
-															</div>
-														</a>
-													</li>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Leadership</p>
+																</div>
+															</a>
+														</li>
 
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Strategy</p>
-															</div>
-														</a>
-													</li>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Marketing</p>
+																</div>
+															</a>
+														</li>
 
-													<li>
-														<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
-															<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-regular fa-lightbulb"></i>
-																<p>Team Management</p>
-															</div>
-														</a>
-													</li>
-												</ul>
-											
+													</ul>
+
+													<ul>
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Personal Development</p>
+																</div>
+															</a>
+														</li>
+
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Program Mangement</p>
+																</div>
+															</a>
+														</li>
+
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Strategy</p>
+																</div>
+															</a>
+														</li>
+
+														<li>
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+																<div class="mega-link flex items-center gap-x-4 ">
+																	<i class="fa-regular fa-lightbulb"></i>
+																	<p>Team Management</p>
+																</div>
+															</a>
+														</li>
+													</ul>
+												
+											</div>
 										</div>
 									</div>
 								</div>
-							</div>
-						</li>
-						<a href="#" class="subtitleOne mb-0 text-charcoal tracking-wider">About</a>
-						<a href="#" class="subtitleOne mb-0 text-charcoal tracking-wider">Books</a>
-						<a href="#" class="ctaButton small text-lg shadow-md tracking-wider">Free Course</a>	
+							</li>
+							<a href="#" class="text-base font-normal mb-0 text-charcoal  px-2 py-2">About</a>
+							<a href="#" class="text-base mb-0 font-normal text-charcoal  px-2 py-2">Books</a>
+							<a href="#" class="ctaButton small text-base shadow-md  px-3 py-1 ml-2 flex items-center">Free Course</a>	
+						</div>
 					</ul>
 				</nav>
 				
@@ -196,7 +217,10 @@
 	</div>
 </header>
 
-	
+<div id="mobile-menu" class="fixed left-0 right-0 bg-blue w-full z-50 hidden mobile-menu">
+	<h1>menu</h1>
+</div>
+
 
 <script>
 	announcement = document.querySelector('#announcement-bar')
@@ -205,8 +229,42 @@
 	closeAnnouncement.addEventListener('click', hideAnnouncement);
 
 	function hideAnnouncement() {
-		announcement.style.visibility = 'hidden';
+		announcement.style.display = 'none';
+		document.querySelector('body').classList.toggle('announcement');
 	}
 </script>
 
+<script>
+	// handle hamburger //
+	document.addEventListener("DOMContentLoaded", function(){
+		const menuBtn = document.getElementById('menu-btn');
+		const menu = document.getElementById('mobile-menu');
+		const searchBtn = document.getElementById('search-icon');
+		const searchMenu = document.getElementById('mobile-search');
+		const searchBar = document.querySelector('#search-bar');
+		const body = document.querySelector('body');
+		
 
+		menuBtn.addEventListener('click', () => {
+      		menuBtn.classList.toggle('open')
+			menu.classList.toggle('hidden')
+			searchBtn.classList.toggle('hidden')
+			body.classList.toggle('no-scroll');  
+		});
+
+		searchBtn.addEventListener('click', () => {
+			if (searchBtn.classList.contains('open')) {
+				searchResults = document.querySelector('#datafetch');
+				searchField = document.querySelector('#search-bar #keyword');
+				searchResults.innerHTML = "";
+				searchField.value = "";
+			}
+      		searchBtn.classList.toggle('open')
+			menuBtn.classList.toggle('hidden')
+			searchBar.classList.toggle('show-mobile')
+			body.classList.toggle('no-scroll');  
+		});
+
+
+	}); //end DOM Load
+</script>
