@@ -1274,6 +1274,10 @@ a:visited{
   overflow: scroll !important;
 }
 
+.overflow-y-scroll{
+  overflow-y: scroll !important;
+}
+
 .rounded-lg{
   border-radius: 0.5rem !important;
 }
