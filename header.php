@@ -231,7 +231,7 @@
 	</section>
 </div>
 
-<div id="to-top-button" class="fixed bottom-0 left-0 z-[997] cursor-pointer lg:hidden">
+<div id="to-top-button" class="fixed bottom-6 left-6 z-[997] cursor-pointer">
 	<div class="bg-blue flex items-center justify-center w-12 h-12 rounded-full">
 		<i class="fa-solid fa-arrow-up text-white headingSix mb-0"></i>
 	</div>

@@ -444,3 +444,5 @@ add_filter( 'excerpt_length', function($length) {
 
 
 
+// Remove p tags from category description
+remove_filter('term_description','wpautop');

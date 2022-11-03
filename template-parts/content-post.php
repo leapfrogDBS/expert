@@ -14,27 +14,11 @@
 		
 	</header><!-- .entry-header -->
     
-    <section class="bg-turquoise py-0">
+    <section class="bg-turquoise pt-0">
         <div class="container">
             <div class="row ">
-                <div class="col">
-                    <div class="breadcrumbs subtitleTwo text-white font-medium mt-6 mb-24"><?php display_breadcrumb(); ?></div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col lg:col-span-8 lg:col-start-3 mb-24">
-                <?php
-                if ( is_singular() ) :
-                    the_title( '<h1 class="entry-title headingTwo text-white text-center">', '</h1>' );
-                else :
-                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
-                endif;
-                ?>
-                    <p class="headingSix text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dicta adipisci nemo neque voluptas incidunt unde commodi. Id laboriosam vel soluta earum omnis pariatur officia nesciunt in tempora sequi itaque atque a totam cupiditate commodi illo quasi blanditiis autem, non mollitia facere officiis esse! Alias qui amet doloremque quam aliquid!</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col mb-6"> 
+                <div class="col flex flex-col md:flex-row items-center md:items-start justify-between mb-6 sm:mb-12 mt-6 md:mb-24 gap-y-6">
+                    <div class="breadcrumbs subtitleTwo mb-0 text-white font-medium"><?php display_breadcrumb(); ?></div>
                     <div class="flex items-center gap-x-2 justify-end">             
                     <?php
                     // Get the author ID    
@@ -67,6 +51,18 @@
                     </div>
                 </div>
             </div>
+            <div class="row">
+                <div class="col lg:col-span-8 lg:col-start-3">
+                <?php
+                if ( is_singular() ) :
+                    the_title( '<h1 class="entry-title headingTwo text-white text-center">', '</h1>' );
+                else :
+                    the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
+                endif;
+                ?>
+                    <p class="headingSix text-white text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet dicta adipisci nemo neque voluptas incidunt unde commodi. Id laboriosam vel soluta earum omnis pariatur officia nesciunt in tempora sequi itaque atque a totam cupiditate commodi illo quasi blanditiis autem, non mollitia facere officiis esse! Alias qui amet doloremque quam aliquid!</p>
+                </div>
+            </div>
         </div>
     </section>
     
@@ -77,13 +73,13 @@
         <div class="container">
             <div class="row">
                 
-                <div class="col lg:col-span-8 lg:col-start-3">
+                <div class="col md:col-span-8 md:col-start-3">
                     <div id="featured-image-container">
                         <?php expert_post_thumbnail(); ?>
                     </div>
                 </div>
                 
-                <div class="col lg:col-span-10 lg:col-start-2">
+                <div class="col md:col-span-10 md:col-start-2">
                     <div class="entry-content">
                     <?php
                     the_content(
@@ -121,7 +117,7 @@
             <div class="col">
                 <div onClick="copyFunction()" class="citation relative flex flex-col items-center justify-center cursor-pointer">
                     <h3 class="headingFour">Reference</h3>
-                    <div id="citation-text" class="flex gap-x-1 bodyOne">
+                    <div id="citation-text" class="block subtitleOne">
                         <span class="author"><?php the_author(); ?></span>
                         <span class="published-date">(<?php echo get_the_date( 'Y' ); ?>)</span>
                         <span class="title"><?php the_title(); ?></span>
@@ -129,7 +125,7 @@
                         <span class="accessed-date">acessed <?php echo date('d F Y');; ?></span>
                         <p id="copy-text" class="hidden"><?php the_author(); ?> (<?php echo get_the_date( Y ); ?>) <?php the_permalink(); ?> <?php the_title(); ?> <?php echo get_bloginfo( 'name' ); ?> acessed <?php echo date('d F Y');; ?></p>			
                     </div>
-                    <p id="click-to-copy" class="ctaButton">Click to copy</p>
+                    <div id="click-to-copy" class="ctaButton">Click to copy</div>
                 </div>
             </div>
         </div>
@@ -184,7 +180,7 @@
 document.addEventListener('scroll', processScroll);
 </script>
 	
-<div id="sticky-social-media" class="col flex flex-col fixed w-auto left-[4%] top-[50%] gap-y-2 container">
+<div id="sticky-social-media" class="col flex fixed w-auto bottom-6 right-6 md:left-6 md:right-auto md:bottom-auto md:top-2/3 md:flex-col gap-2 container ">
     <a href="#" target="_blank"><i class="fa-brands fa-facebook-f text-3xl text-blue hover:text-turquoise cursor-pointer"></i></a>
     <a href="#" target="_blank"><i class="fa-brands fa-linkedin-in text-3xl text-blue hover:text-turquoise cursor-pointer"></i></a>
     <a href="#" target="_blank"><i class="fa-brands fa-youtube text-3xl text-blue hover:text-turquoise cursor-pointer"></i></a>
