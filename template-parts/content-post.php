@@ -115,6 +115,62 @@
         </div>
     </section>
 
+    <section class="pt-0">
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <div onClick="copyFunction()" class="citation relative flex flex-col items-center justify-center cursor-pointer">
+                    <h3 class="headingFour">Reference</h3>
+                    <div id="citation-text" class="flex gap-x-1 bodyOne">
+                        <span class="author"><?php the_author(); ?></span>
+                        <span class="published-date">(<?php echo get_the_date( Y ); ?>)</span>
+                        <span class="title"><?php the_title(); ?></span>
+                        <span class="website-name"><?php echo get_bloginfo( 'name' ); ?></span>
+                        <span class="accessed-date">acessed <?php echo date('d F Y');; ?></span>
+                        <p id="copy-text" class="hidden"><?php the_author(); ?> (<?php echo get_the_date( Y ); ?>) <?php the_permalink(); ?> <?php the_title(); ?> <?php echo get_bloginfo( 'name' ); ?> acessed <?php echo date('d F Y');; ?></p>			
+                    </div>
+                    <p id="click-to-copy" class="ctaButton">Click to copy</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <section class="pt-4">
+        <div class="container">
+            <div class="row">
+                <div class="col sm:flex justify-center">
+                    <div class="author-container max-w-[240px] sm:grid grid-cols-6 rounded-2xl shadow-xl sm:max-w-2xl m-auto">
+                        <?php
+                        // Get the author ID    
+                        $author_id = get_the_author_meta('ID');
+                        // Get the author image URL    
+                        $output = get_avatar_url($author_id, array('size' => 250));
+                        // Display the author image    
+                        echo '<img class="col-span-2 w-full h-56 sm:h-full object-cover rounded-t-2xl sm:rounded-l-2xl" src="'.$output.'"/>';
+                        ?>
+                        <div class="author-details col-span-4 p-4">
+                            <p class="headingFive mb-0"><?php echo get_the_author_meta( 'display_name', $post->post_author ); ?></p>
+                            <p class="subtitleOne mb-0"><?php echo get_the_author_meta( 'nickname', $post->post_author ); ?></p>
+                            <p class="subtitleTwo"><?php echo get_the_author_meta( 'user_description', $post->post_author ); ?></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="bg-turquoise py-4">
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <?php echo do_shortcode('[ratemypost]'); ?>
+                </div>
+            </div>
+        </div>
+    </section>
+
+ 
 <script>	
 	let processScroll = () => {
     let docElem = document.documentElement,
@@ -137,9 +193,21 @@ document.addEventListener('scroll', processScroll);
 </div>
 
 
-	<footer class="entry-footer">
-		<?php expert_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
 </article><!-- #post-<?php the_ID(); ?> -->
 
 
+<script>
+    function copyFunction() {
+
+        var copyData = document.getElementById("copy-text").innerHTML;
+        console.log(copyData);
+    var showText = document.getElementById("click-to-copy");
+
+
+
+    navigator.clipboard.writeText(copyData);
+
+    showText.innerHTML = "Copied!";
+
+    }
+</script>

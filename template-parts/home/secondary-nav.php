@@ -16,7 +16,7 @@ jQuery(function ($) {
         var scrollPos = $(window).scrollTop();
         $('.ds-section').each(function (i) {
             var topPos = $(this).offset().top;
-            if ((topPos - scrollPos) <= 80) {
+            if ((topPos - scrollPos) <= 200) {
                 $('.ds-menu-active').removeClass('ds-menu-active')
                 $('#anchor-links a').eq(i).addClass('ds-menu-active')
             }

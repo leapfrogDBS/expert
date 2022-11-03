@@ -18,6 +18,14 @@ include(locate_template('template-parts/home/books.php'));
 include(locate_template('template-parts/home/testimonials.php'));
 include(locate_template('template-parts/home/start-business.php'));
 ?>
+<style>
+    html {
+        scroll-padding-top: 150px   ;
+    }
+    html.announcement {
+        scroll-padding-top: 186px   ;
+    }
+</style>
 
 <?php 
 /**

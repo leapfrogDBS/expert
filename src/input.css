@@ -109,6 +109,14 @@ html {
 .announcement .seconadry-nav, .announcement #progress-bar-container, .announcement #mobile-menu, .announcement #search-bar.show-mobile, .announcement #datafetch {
     top: 112px;
 }
+
+#mega-menu {
+    top: 56px;
+}
+
+.announcement #mega-menu {
+    top: 92px;
+}
 .mobile-menu {
     height: calc(100vh - 76px);
 }
@@ -176,4 +184,27 @@ body.no-scroll {
     .announcement #search-bar.show-mobile {
         height: calc(100vh - 112px);
     }
+}
+
+#datafetch::-webkit-scrollbar {
+   width: 12px;
+   border-radius: 1.5rem !important;
+}
+   
+#datafetch::-webkit-scrollbar-track {
+    
+    border-radius: 1.5rem !important;
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+   
+#datafetch::-webkit-scrollbar-thumb {
+    background-color: #F3722C;
+    border-radius: 1.5rem !important;
+}
+
+/* Rate my post Styles */
+.rmp-widgets-container {
+    background: #06D6A0;
+    color: #fff !important;
 }

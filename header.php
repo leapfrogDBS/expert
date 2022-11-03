@@ -11,7 +11,7 @@
 
 ?>
 <!doctype html>
-<html <?php language_attributes(); ?>>
+<html class="announcement" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -25,7 +25,7 @@
 	<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>
 
-<body <?php body_class('announcement'); ?>>
+<body <?php body_class(); ?>>
 <?php wp_body_open(); ?>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'test' ); ?></a>
@@ -77,7 +77,7 @@
 						<div class="hidden md:flex">
 							<li class="relative group px-3 py-2">
 								<button class="hover:text-blue cursor-default border-none  text-base mb-0 font-normal text-charcoal" aria-haspopup="true">Tools</button>
-								<div class="fixed left-0 right-0 top-[92px] transition translate-y-0 opacity-0 invisible bg-transparent pt-[20px] group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
+								<div id="mega-menu" class="fixed left-0 right-0 transition translate-y-0 opacity-0 invisible bg-transparent pt-[20px] group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
 									<div class="container rounded-b-3xl relative py-12 px-24 bg-white shadow-xl w-full">
 										<div class="relative z-10">
 											<div class="grid grid-cols-3 gap-6">
@@ -218,7 +218,23 @@
 </header>
 
 <div id="mobile-menu" class="fixed left-0 right-0 bg-blue w-full z-50 hidden mobile-menu">
-	<h1>menu</h1>
+	<section>	
+		<div class="container">
+			<div class="row">
+				<div class="col">
+					<a href="#" class="text-base font-normal mb-0 text-charcoal  px-2 py-2">About</a>
+					<a href="#" class="text-base mb-0 font-normal text-charcoal  px-2 py-2">Books</a>
+					<a href="#" class="ctaButton small text-base shadow-md  px-3 py-1 ml-2 flex items-center">Free Course</a>
+				</div>
+			</div>
+		</div>
+	</section>
+</div>
+
+<div id="to-top-button" class="fixed bottom-0 left-0 z-[997] cursor-pointer lg:hidden">
+	<div class="bg-blue flex items-center justify-center w-12 h-12 rounded-full">
+		<i class="fa-solid fa-arrow-up text-white headingSix mb-0"></i>
+	</div>
 </div>
 
 
@@ -230,7 +246,7 @@
 
 	function hideAnnouncement() {
 		announcement.style.display = 'none';
-		document.querySelector('body').classList.toggle('announcement');
+		document.querySelector('html').classList.toggle('announcement');
 	}
 </script>
 
