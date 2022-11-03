@@ -123,7 +123,7 @@
                     <h3 class="headingFour">Reference</h3>
                     <div id="citation-text" class="flex gap-x-1 bodyOne">
                         <span class="author"><?php the_author(); ?></span>
-                        <span class="published-date">(<?php echo get_the_date( Y ); ?>)</span>
+                        <span class="published-date">(<?php echo get_the_date( 'Y' ); ?>)</span>
                         <span class="title"><?php the_title(); ?></span>
                         <span class="website-name"><?php echo get_bloginfo( 'name' ); ?></span>
                         <span class="accessed-date">acessed <?php echo date('d F Y');; ?></span>
