@@ -446,3 +446,33 @@ add_filter( 'excerpt_length', function($length) {
 
 // Remove p tags from category description
 remove_filter('term_description','wpautop');
+
+
+/* Learning Pathways Custom Post */
+function my_custom_post_track() {
+	$labels = array(
+	  'name'               => _x( 'Learning Tracks', 'post type general name' ),
+	  'singular_name'      => _x( 'Learning Track', 'post type singular name' ),
+	  'add_new'            => _x( 'Add New', 'book' ),
+	  'add_new_item'       => __( 'Add New Learning Track' ),
+	  'edit_item'          => __( 'Edit Learning Track' ),
+	  'new_item'           => __( 'New Learning Track' ),
+	  'all_items'          => __( 'All Learning Tracks' ),
+	  'view_item'          => __( 'View Learning Track' ),
+	  'search_items'       => __( 'Search Learning Tracks' ),
+	  'not_found'          => __( 'No Learning Tracks found' ),
+	  'not_found_in_trash' => __( 'No Learning Tracks found in the Trash' ), 
+	  'parent_item_colon'  => ’,
+	  'menu_name'          => 'Learning Tracks'
+	);
+	$args = array(
+	  'labels'        => $labels,
+	  'description'   => 'Holds Learning Tracks and Lessons',
+	  'public'        => true,
+	  'menu_position' => 5,
+	  'supports'      => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
+	  'has_archive'   => true,
+	);
+	register_post_type( 'track', $args ); 
+  }
+  add_action( 'init', 'my_custom_post_track' );

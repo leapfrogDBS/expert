@@ -1,8 +1,8 @@
-<section class="bg-blue">
+<section class="bg-blue py-12">
     <div class="container">
         <div class="row">
-            <div class="col md:col-span-8 md:col-start-3 text-center md:mb-6">
-                <h2 class="headingTwo text-white">Featured in</h2>
+            <div class="col md:col-span-8 md:col-start-3 text-center">
+                <h2 class="headingFour text-white">Featured in</h2>
             </div>
         </div>
         <div class="row">
@@ -11,16 +11,16 @@
                     <div class="splide__track">
                         <ul class="splide__list"> 
                             <li class="splide__slide">
-                                <img class="m-auto w-44 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-1.svg" alt="">
+                                <img class="m-auto w-32 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-1.svg" alt="">
                             </li>
                             <li class="splide__slide">
-                                <img class="m-auto w-44 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-2.svg" alt="">
+                                <img class="m-auto w-32 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-2.svg" alt="">
                             </li>
                             <li class="splide__slide">
-                                <img class="m-auto w-44 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-3.svg" alt="">
+                                <img class="m-auto w-32 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-3.svg" alt="">
                             </li>
                             <li class="splide__slide">
-                                <img class="m-auto w-44 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-4.svg" alt="">
+                                <img class="m-auto w-32 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-4.svg" alt="">
                             </li>
                         </ul>
                     </div>
@@ -54,13 +54,13 @@
         mediaQuery: 'min',
         breakpoints: {
             640: {
-                perPage: 2,
+                perPage: 3,
             },
             920: {
-                perPage: 3,
+                perPage: 4,
                 },
             1024: {
-                perPage: 4,
+                perPage: 5,
             },
         }                 
     });

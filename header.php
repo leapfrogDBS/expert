@@ -19,7 +19,8 @@
 	
 	<?php wp_head(); ?>
 
-  <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"border":"thin","corners":"small","colors":{"popup":{"background":"#f6f6f6","text":"#000000","border":"#555555"},"button":{"background":"#555555","text":"#ffffff"}},"position":"bottom"})});</script>
+  
+<script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"colors":{"popup":{"background":"#2176FF","text":"#FFFFFF","border":"#FFFFFF"},"button":{"background":"#06D6A0","text":"#ffffff"}},"position":"bottom","transparency":"25","fontsize":"large","content":{"href":"https://expertprogrammanagement.com/cookie-policy/"}})});</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
@@ -51,13 +52,13 @@
 
 			<div id="search-bar" class="text-center hidden lg:block bg-white">
 				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
-					<div id="datafetch" class="fixed overflow-y-scroll left-0 right-0 text-left px-12 bg-white max-w-lg m-auto bg-white rounded-b-3xl shadow-lg"></div>
+					<div id="datafetch" class="fixed overflow-y-scroll left-0 right-0 text-left px-12 max-w-lg m-auto bg-white rounded-b-3xl shadow-lg"></div>
 			</div>
 			
 				<nav>
 					<ul class="flex items-center font-semibold justify-end gap-x-2 md:gap-x-0">
 						<div id="search-icon" class="lg:hidden w-8">
-							<i class="fa-solid fa-magnifying-glass text-turquoise text-2xl"></i>
+							<i class="fa-solid headingFour mb-0 fa-magnifying-glass text-turquoise text-2xl"></i>
 								<div id="close-search-container">
 								<div class="hamburger relative w-8 h-[22px] cursor-pointer transition-all duration-[0.25s] z-[999] md:w-[40px]" id="search-close-btn">
 									<span class="hamburger-top w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-0 bg-turquoise"></span>
@@ -80,82 +81,78 @@
 								<div id="mega-menu" class="fixed left-0 right-0 transition translate-y-0 opacity-0 invisible bg-transparent pt-[20px] group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
 									<div class="container rounded-b-3xl relative py-12 px-24 bg-white shadow-xl w-full">
 										<div class="relative z-10">
-											<div class="grid grid-cols-3 gap-6">
-												
-													
+											<div class="grid grid-cols-3 gap-6">											
 													<ul>
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg transition ease-in-out duration-300 font-semibold hover:text-turquiose">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																	<i class="fa-solid text-turquoise headingFive mb-0 fa-lightbulb group-hover/item:text-white"></i>
 																	<p>Career Skills</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																<i class="fa-solid text-turquoise  group-hover/item:text-white headingFive mb-0 fa-book-open-reader"></i>
 																	<p>Change Management</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																	<i class="fa-solid text-turquoise headingFive mb-0 fa-school group-hover/item:text-white"></i>
 																	<p>Decision Management</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																	<i class="fa-solid text-turquoise headingFive mb-0 fa-chalkboard group-hover/item:text-white"></i>
 																	<p>Finance</p>
 																</div>
 															</a>
 														</li>
-
-														
 													</ul>
 												
 												
 													<ul>
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																<i class="fa-solid text-turquoise headingFive mb-0 fa-atom group-hover/item:text-white"></i>
 																	<p>Human Resources</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																	<i class="fa-solid text-turquoise headingFive mb-0 fa-user-graduate group-hover/item:text-white"></i>
 																	<p>Interpersonal Skills</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																	<i class="fa-solid text-turquoise headingFive mb-0 fa-shapes group-hover/item:text-white"></i>
 																	<p>Leadership</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																<i class="fa-solid text-turquoise headingFive mb-0 fa-apple-whole group-hover/item:text-white"></i>
 																	<p>Marketing</p>
 																</div>
 															</a>
@@ -165,36 +162,36 @@
 
 													<ul>
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																<i class="fa-solid text-turquoise headingFive mb-0 fa-award group-hover/item:text-white"></i>
 																	<p>Personal Development</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																<i class="fa-solid text-turquoise headingFive mb-0 fa-bell group-hover/item:text-white"></i>
 																	<p>Program Mangement</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																	<i class="fa-solid text-turquoise headingFive mb-0 fa-graduation-cap group-hover/item:text-white"></i>
 																	<p>Strategy</p>
 																</div>
 															</a>
 														</li>
 
 														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-gradient-to-br hover:from-indigo-50 hover:to-pink-50 hover:via-blue-50 transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-indigo-600">
+															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
 																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-regular fa-lightbulb"></i>
+																	<i class="fa-solid text-turquoise headingFive mb-0 fa-laptop-file group-hover/item:text-white"></i>
 																	<p>Team Management</p>
 																</div>
 															</a>
