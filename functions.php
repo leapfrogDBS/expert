@@ -462,7 +462,6 @@ function my_custom_post_track() {
 	  'search_items'       => __( 'Search Learning Tracks' ),
 	  'not_found'          => __( 'No Learning Tracks found' ),
 	  'not_found_in_trash' => __( 'No Learning Tracks found in the Trash' ), 
-	  'parent_item_colon'  => ’,
 	  'menu_name'          => 'Learning Tracks'
 	);
 	$args = array(
