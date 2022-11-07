@@ -12,46 +12,19 @@ get_header();
 
 	<main id="primary" class="site-main">
 
-		<section class="error-404 not-found">
-			<header class="page-header">
-				<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'expert' ); ?></h1>
-			</header><!-- .page-header -->
-
-			<div class="page-content">
-				<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'expert' ); ?></p>
-
-					<?php
-					get_search_form();
-
-					the_widget( 'WP_Widget_Recent_Posts' );
-					?>
-
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'expert' ); ?></h2>
-						<ul>
-							<?php
-							wp_list_categories(
-								array(
-									'orderby'    => 'count',
-									'order'      => 'DESC',
-									'show_count' => 1,
-									'title_li'   => '',
-									'number'     => 10,
-								)
-							);
-							?>
-						</ul>
-					</div><!-- .widget -->
-
-					<?php
-					/* translators: %1$s: smiley */
-					$expert_archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'expert' ), convert_smilies( ':)' ) ) . '</p>';
-					the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$expert_archive_content" );
-
-					the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
-			</div><!-- .page-content -->
+		<section class="error-404 not-found relative">
+			
+			<div class="container z-50">
+				<div class="row">
+					<div class="col text-center py-20 sm:py-32 md:py-38 lg:py-56">
+						<h1 class="headingOne text-blue">404</h1>
+						<h2 class="headingThree">Page not found</h2>
+						<p class="bodyOne">Opps! The page you are looking for does not exist. It might have been moved or deleted</p>
+						<a href="<?php echo home_url(); ?>" class="ctaButton">Back to home</a>
+					</div>
+				</div>
+			</div>
+			<img class="absolute w-full h-full inset-0 object-cover z-[-1]" src="<?php echo get_template_directory_uri(); ?>/img/404.png">
 		</section><!-- .error-404 -->
 
 	</main><!-- #main -->

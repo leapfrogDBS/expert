@@ -10,7 +10,7 @@ get_header();
 include(locate_template('template-parts/about/hero.php'));
 include(locate_template('template-parts/home/featured-in.php'));
 include(locate_template('template-parts/about/about.php'));
-include(locate_template('template-parts/home/start-business.php'));
+include(locate_template('template-parts/cta/start-business.php'));
 include(locate_template('template-parts/home/follow-us.php'));
 ?>
 

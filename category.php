@@ -109,7 +109,7 @@ else: ?>
 
  include(locate_template('template-parts/home/follow-us.php'));
 
-include(locate_template('template-parts/home/start-business.php'));
+include(locate_template('template-parts/cta/start-business.php'));
 ?>
 </main>
 

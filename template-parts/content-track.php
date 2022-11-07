@@ -82,6 +82,14 @@
                 <h2 class="headingTwo text-white text-center">Lessons</h2>
             </div>
         </div>
+        <div class="row">
+            <div class="col md:col-span-6">
+
+            </div>
+            <div class="col md:col-span-6">
+
+            </div>
+        </div>
     </div>
 </section>
 	

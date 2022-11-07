@@ -475,3 +475,45 @@ function my_custom_post_track() {
 	register_post_type( 'track', $args ); 
   }
   add_action( 'init', 'my_custom_post_track' );
+
+
+// Add Woocommerce Support
+function mytheme_add_woocommerce_support() {	
+	add_theme_support( 'woocommerce' );
+}
+add_action( 'after_setup_theme', 'mytheme_add_woocommerce_support' );
+
+/**
+ * Remove "Description" Heading Title @ WooCommerce Single Product Tabs
+ */
+add_filter( 'woocommerce_product_description_heading', '__return_null' );
+
+/* Remove Woocommerce Breadcrumbs */
+remove_action('woocommerce_before_main_content', 'woocommerce_breadcrumb', 20, 0);
+
+/* Remove Woocommerce Quantity */
+function custom_remove_all_quantity_fields( $return, $product ) {return true;}
+add_filter( 'woocommerce_is_sold_individually','custom_remove_all_quantity_fields', 10, 2 );
+
+// To change add to cart text on single product page to Buy now	
+add_filter( 'woocommerce_product_single_add_to_cart_text', 'woocommerce_custom_single_add_to_cart_text' ); 
+function woocommerce_custom_single_add_to_cart_text() {
+    return __( 'Buy Now', 'woocommerce' ); 
+}
+
+/* Remove Categories from Single Products */ 
+remove_action( 'woocommerce_single_product_summary', 'woocommerce_template_single_meta', 40 );
+
+/* Direct to Checkout after adding product to cart */
+add_filter('add_to_cart_redirect', 'cw_redirect_add_to_cart');
+function cw_redirect_add_to_cart() {
+    global $woocommerce;
+    $cw_redirect_url_checkout = $woocommerce->cart->get_checkout_url();
+    return $cw_redirect_url_checkout;
+}
+
+function mb_remove_sidebar() {
+    return false;
+}
+
+add_filter( 'is_active_sidebar', 'mb_remove_sidebar', 10, 2 );
