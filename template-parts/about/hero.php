@@ -9,7 +9,7 @@
             <div class="col md:col-span-8 md:col-start-3">
                 <!-- The YouTube video -->
                 <figure class="content-media content-media--video" id="featured-media">
-                    <iframe class="content-media__object z-50" id="featured-video" src="https://www.youtube.com/embed/VJztnIFPO4o?enablejsapi=1&rel=0&showinfo=0&controls=0" frameborder="0"></iframe>
+                    <iframe loading="lazy" class="content-media__object z-50" id="featured-video" src="https://www.youtube.com/embed/VJztnIFPO4o?enablejsapi=1&rel=0&showinfo=0&controls=0" frameborder="0"></iframe>
                 </figure>
             </div>
         </div>
