@@ -53,7 +53,7 @@
 
 		  	</div>
 
-			<div id="search-bar" class="text-center hidden pt-5 lg:pt-0 lg:block bg-white/95 lg:bg-white ">
+			<div id="search-bar" class="text-center invisible absolute -left-full lg:left-auto opacity-0 pt-5 lg:relative lg:visible lg:opacity-100 lg:pt-0 lg:block bg-white/95 lg:bg-white ">
 				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
 					<div id="datafetch" class="fixed overflow-y-scroll left-0 right-0 text-left px-12 max-w-lg m-auto lg:bg-white rounded-b-3xl shadow-lg"></div>
 			</div>
@@ -217,7 +217,7 @@
 	</div>
 </header>
 
-<div id="mobile-menu" class="fixed left-0 right-0 bg-blue w-full z-50 hidden mobile-menu">
+<div id="mobile-menu" class="fixed left-0 right-0 bg-blue w-full z-50 mobile-menu invisible opacity-0">
 	<section>	
 		<div class="container">
 			<div class="row">
@@ -231,7 +231,7 @@
 	</section>
 </div>
 
-<div id="to-top-button" class="fixed bottom-6 left-6 z-[997] cursor-pointer">
+<div id="to-top-button" class="fixed bottom-2 md:bottom-6 left-6 z-[997] cursor-pointer">
 	<div class="bg-blue flex items-center justify-center w-12 h-12 rounded-full">
 		<i class="fa-solid fa-arrow-up text-white headingSix mb-0"></i>
 	</div>
@@ -252,7 +252,9 @@
 
 		menuBtn.addEventListener('click', () => {
       		menuBtn.classList.toggle('open')
-			menu.classList.toggle('hidden')
+			menu.classList.toggle('invisible')
+			menu.classList.toggle('opacity-0')
+			menu.classList.toggle('opacity-100')
 			searchBtn.classList.toggle('hidden')
 			body.classList.toggle('no-scroll');  
 		});
@@ -267,6 +269,8 @@
       		searchBtn.classList.toggle('open')
 			menuBtn.classList.toggle('hidden')
 			searchBar.classList.toggle('show-mobile')
+			searchBar.classList.toggle('opcaity-0')
+			searchBar.classList.toggle('opacity-100')
 			body.classList.toggle('no-scroll');  
 		});
 

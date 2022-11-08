@@ -296,7 +296,7 @@ function data_fetch(){
 
 function wpshock_search_filter( $query ) {
     if ( $query->is_search ) {
-        $query->set( 'post_type', array('post','page') );
+        $query->set( 'post_type', array('post','track', 'page') );
     }
     return $query;
 }
@@ -515,5 +515,5 @@ function cw_redirect_add_to_cart() {
 function mb_remove_sidebar() {
     return false;
 }
-
 add_filter( 'is_active_sidebar', 'mb_remove_sidebar', 10, 2 );
+

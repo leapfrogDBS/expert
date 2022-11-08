@@ -227,8 +227,9 @@ body.no-scroll {
 @media only screen and (max-width: 1024px) {
     #search-bar.show-mobile {
         display: block !important;
+        visibility: visible !important;
         position: fixed;
-        left: 0;
+        left: 0 !important;
         right: 0;
     }
     #search-bar.show-mobile #datafetch {
@@ -378,4 +379,7 @@ body.no-scroll {
 }
 #announcement-bar a {
     text-decoration: underline;
+}
+#mobile-menu, #search-bar { 
+    transition: visibility 0.6s ease-in-out,opacity 0.6s ease-in-out;
 }
