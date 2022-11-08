@@ -16,7 +16,7 @@
                 if ( have_posts() ) {
                     ?>
 
-                    <div class="splide max-w-[80%] m-auto md:max-w-none" id="articles-slider" >
+                    <div class="splide" id="articles-slider" >
                         <div class="splide__track">
                             <ul class="splide__list"> 
                             <?php
@@ -34,7 +34,7 @@
                                 <li class="splide__slide p-2">                                                  
                                     <div class="rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
                                         <div class="realtive">
-                                            <img class="w-full h-64 object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
+                                            <img class="w-full h-44 md:h-64 object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
                                             <div class="absolute top-0 left-0 ml-6 mt-4">
                                                 <?php
                                                 $categories = get_the_category();
@@ -49,7 +49,7 @@
                                             <p class="bodyTwo"><?php echo strip_tags(get_the_excerpt()); ?></p>
                                             
                                             <div>
-                                                <a class="headingTwo text-turquoise" href="<?php the_permalink() ?>"><i class="fa-brands fa-readme"></i><i class="fa-solid fa-circle-play"></i></a>
+                                                <a class=" text-5xl md:headingTwo  text-turquoise" href="<?php the_permalink() ?>"><i class="fa-brands fa-readme"></i><i class="fa-solid fa-circle-play"></i></a>
                                                 <div class="flex justify-between items-center mt-5">
                                                     <div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
                                                     <?php 

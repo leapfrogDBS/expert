@@ -3,7 +3,7 @@
     <div class="container">
         <div class="row items-center">
             <div class="col col-span-5 hidden md:block">
-                <img loading="lazy" class="w-full h-full" src="<?php echo get_template_directory_uri(); ?>/img/leadership-book.jpg" alt="">
+                <img loading="lazy" class="w-full h-full max-w-md m-auto" src="<?php echo get_template_directory_uri(); ?>/img/leadership-book.jpg" alt="">
             </div>
             <div class="col md:col-span-5 md:col-start-7">
                 <h2 class="headingThree text-white text-center md:mb-20 md:text-left">Leadership Book</h2>
@@ -29,7 +29,7 @@
                 </div>
             </div>
             <div class="col col-span-5 hidden md:block md:col-start-7">
-                <img loading="lazy" class="w-full h-full" src="<?php echo get_template_directory_uri(); ?>/img/project-management-book.jpg" alt="">
+                <img loading="lazy" class="w-full h-full max-w-md m-auto" src="<?php echo get_template_directory_uri(); ?>/img/project-management-book.jpg" alt="">
             </div>  
         </div>
     </div>
