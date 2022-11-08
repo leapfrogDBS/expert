@@ -1169,6 +1169,14 @@ a:visited{
   left: 0px !important;
 }
 
+.top-4{
+  top: 1rem !important;
+}
+
+.right-4{
+  right: 1rem !important;
+}
+
 .right-0{
   right: 0px !important;
 }
@@ -1195,18 +1203,6 @@ a:visited{
 
 .bottom-\[2\%\]{
   bottom: 2% !important;
-}
-
-.top-6{
-  top: 1.5rem !important;
-}
-
-.top-4{
-  top: 1rem !important;
-}
-
-.right-4{
-  right: 1rem !important;
 }
 
 .z-50{
@@ -1343,10 +1339,6 @@ a:visited{
 
 .mr-6{
   margin-right: 1.5rem !important;
-}
-
-.mr-4{
-  margin-right: 1rem !important;
 }
 
 .mb-7{
@@ -1515,6 +1507,10 @@ a:visited{
 
 .max-w-xl{
   max-width: 36rem !important;
+}
+
+.max-w-\[80\%\]{
+  max-width: 80% !important;
 }
 
 .flex-1{
@@ -1943,11 +1939,6 @@ a:visited{
 .text-5xl{
   font-size: 3rem !important;
   line-height: 1 !important;
-}
-
-.text-lg{
-  font-size: 1.125rem !important;
-  line-height: 1.75rem !important;
 }
 
 .font-medium{

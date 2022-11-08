@@ -9,10 +9,14 @@
         <div class="row mt-4">
             <div class="col">
             <?php 
+            
+            global $query_string;
+            query_posts( $query_string . '&posts_per_page=9' );
+            
                 if ( have_posts() ) {
                     ?>
 
-                    <div class="splide" id="articles-slider" >
+                    <div class="splide max-w-[80%] m-auto md:max-w-none" id="articles-slider" >
                         <div class="splide__track">
                             <ul class="splide__list"> 
                             <?php

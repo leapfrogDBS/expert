@@ -25,10 +25,10 @@
                         </ul>
                     </div>
                     <div class="splide__arrows">
-                        <button class="splide__arrow splide__arrow--prev bg-blue opacity-100">
+                        <button class="splide__arrow splide__arrow--prev bg-transparent opacity-100">
                             <i class="fa-solid fa-chevron-left text-4xl text-turquoise"></i>
                         </button>
-                        <button class="splide__arrow splide__arrow--next bg-blue opacity-100">
+                        <button class="splide__arrow splide__arrow--next bg-transparent opacity-100">
                             <i class="fa-solid fa-chevron-right text-4xl text-turquoise"></i>
                         </button>
                     </div>

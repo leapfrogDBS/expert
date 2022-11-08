@@ -7,63 +7,57 @@
             </div>
         </div>
 
-        <div class="splide learning-tracks-slider max-w-md m-auto md:max-w-none" id="learning-tracks-slider" >
-            <div class="splide__track">
-                <ul class="splide__list md:grid md:grid-cols-12 md:gap-x-5"> 
-                    <li class="splide__slide md:col-span-4">
-                        <div class="shadow-md mb-8 mx-2 mb-8 mx-2">
-                            <div class="square bg-yellow pb-[100%] relative">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            </div>
-                            <div class="info p-8">
-                                <h3 class="headingSix">Track One</h3>
-                                <p class="bodyTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati omnis repellat, impedit sint, asperiores consequuntur, atque eaque eius velit neque dolores quod nam vel sequi autem laudantium voluptatum qui ipsum?</p>
-                                <a href="#" class="ctaButton small">Learn more</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide md:col-span-4">
-                        <div class="shadow-md mb-8 mx-2">
-                            <div class="square bg-yellow pb-[100%] relative">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/man.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            </div>
-                            <div class="info p-8">
-                                <h3 class="headingSix">Track Two</h3>
-                                <p class="bodyTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati omnis repellat, impedit sint, asperiores consequuntur, atque eaque eius velit neque dolores quod nam vel sequi autem laudantium voluptatum qui ipsum?</p>
-                                <a href="#" class="ctaButton small">Learn more</a>
-                            </div>
-                        </div>
-                    </li>
-                    <li class="splide__slide md:col-span-4">
-                        <div class="shadow-md mb-8 mx-2">
-                            <div class="square bg-yellow pb-[100%] relative">
-                                <img src="<?php echo get_template_directory_uri(); ?>/img/lady2.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
-                            </div>
-                            <div class="info p-8">
-                                <h3 class="headingSix">Track Three</h3>
-                                <p class="bodyTwo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Obcaecati omnis repellat, impedit sint, asperiores consequuntur, atque eaque eius velit neque dolores quod nam vel sequi autem laudantium voluptatum qui ipsum?</p>
-                                <a href="#" class="ctaButton small">Learn more</a>
-                            </div>
-                        </div>
-                    </li>
-                </ul>
-            </div>
-            <div class="splide__arrows flex justify-center gap-x-6 mt-6 md:hidden">
-                    <button class="splide__arrow splide__arrow--prev opacity-100 static bg-white">
-                        <i class="fa-solid fa-square-caret-left text-turquoise text-5xl"></i>
-                    </button>
-                    <button class="splide__arrow splide__arrow--next opacity-100 static bg-white">
-                        <i class="fa-solid fa-square-caret-right text-turquoise text-5xl"></i>
-                    </button>
+
+        <div class="custom-posts">
+        <?php
+            $args = array(
+                'post_type' => 'track',
+                'posts_per_page' => 9
+            );
+            $the_query = new WP_Query( $args ); ?>
+
+            <?php if ( $the_query->have_posts() ) : ?>
+                <div class="splide learning-tracks-slider max-w-[80%] m-auto md:max-w-none" id="learning-tracks-slider" >
+                    <div class="splide__track">
+                        <ul class="splide__list"> 
+
+                            <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
+                            <li class="splide__slide md:col-span-4">
+                                <div class="shadow-md mb-8 mx-2 mb-8 mx-2">
+                                    <div class="square bg-yellow pb-[100%] relative">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                    </div>
+                                    <div class="info p-8">
+                                        <h3 class="headingSix"><?php the_title(); ?></h3>                               
+                                        <p class="bodyTwo"><?php echo strip_tags(get_the_excerpt()); ?></p>                                     
+                                        <a href="<?php the_permalink() ?>" class="ctaButton small">Learn more</a>
+                                    </div>
+                                </div>
+                            </li>
+                            <?php endwhile; ?>
+                
+                        </ul>
+                    </div>
+                    <div class="splide__arrows flex justify-center gap-x-6 mt-6">
+                        <button class="splide__arrow splide__arrow--prev opacity-100 static bg-white">
+                            <i class="fa-solid fa-square-caret-left text-turquoise text-5xl"></i>
+                        </button>
+                        <button class="splide__arrow splide__arrow--next opacity-100 static bg-white">
+                            <i class="fa-solid fa-square-caret-right text-turquoise text-5xl"></i>
+                        </button>
+                    </div>
                 </div>
-        </div>      
+                <?php wp_reset_postdata(); ?>
+            <?php endif; ?>
+        </div>
+
         <script>
             var splide = new Splide( '#learning-tracks-slider', {
                 lazyLoad: true,
                 pagination: true,
                 rewind: true,
                 speed: '1000',
-                type: 'slide',
+                type: 'loop',
                 drag: true,
                 snap: true,
                 arrows: false,
@@ -73,9 +67,9 @@
                 mediaQuery: 'min',
                 breakpoints: {
                     768: {
-                        destroy: true,
+                        perPage: 3,
                     },
-                }                       
+                },                       
             });
             splide.mount();
         </script>
@@ -83,7 +77,7 @@
         
         <div class="row mt-12">
             <div class="col col-span-12 text-center">
-                <a href="#" class="ctaButton">Explore all learning tracks</a>
+                <a href="<?php echo home_url(); ?>/track" class="ctaButton">Explore all learning tracks</a>
             </div>
         </div>
     </div>
