@@ -53,7 +53,7 @@
 
 		  	</div>
 
-			<div id="search-bar" class="text-center hidden pt-5 lg:p	t-0 lg:block bg-white/95 lg:bg-white ">
+			<div id="search-bar" class="text-center hidden pt-5 lg:pt-0 lg:block bg-white/95 lg:bg-white ">
 				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
 					<div id="datafetch" class="fixed overflow-y-scroll left-0 right-0 text-left px-12 max-w-lg m-auto lg:bg-white rounded-b-3xl shadow-lg"></div>
 			</div>

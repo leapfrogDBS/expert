@@ -1749,8 +1749,8 @@ a:visited{
   background-color: rgb(243 114 44 / var(--tw-bg-opacity)) !important;
 }
 
-.bg-white\/50{
-  background-color: rgb(255 255 255 / 0.5) !important;
+.bg-white\/95{
+  background-color: rgb(255 255 255 / 0.95) !important;
 }
 
 .bg-transparent{
@@ -1762,18 +1762,6 @@ a:visited{
   background-color: rgb(255 190 0 / var(--tw-bg-opacity)) !important;
 }
 
-.bg-white\/80{
-  background-color: rgb(255 255 255 / 0.8) !important;
-}
-
-.bg-white\/90{
-  background-color: rgb(255 255 255 / 0.9) !important;
-}
-
-.bg-white\/95{
-  background-color: rgb(255 255 255 / 0.95) !important;
-}
-
 .bg-none{
   background-image: none !important;
 }
@@ -1783,12 +1771,12 @@ a:visited{
      object-fit: cover !important;
 }
 
-.p-2{
-  padding: 0.5rem !important;
-}
-
 .p-4{
   padding: 1rem !important;
+}
+
+.p-2{
+  padding: 0.5rem !important;
 }
 
 .p-8{
@@ -1847,6 +1835,11 @@ a:visited{
 .py-4{
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
+}
+
+.py-5{
+  padding-top: 1.25rem !important;
+  padding-bottom: 1.25rem !important;
 }
 
 .px-4{
@@ -2216,10 +2209,12 @@ body.no-scroll {
     position: relative !important;
     top: 0 !important;
     box-shadow: none !important;
-    margin-top: 20px !important;
+    padding-top: 20px !important;
+    padding-bottom: 20px !important;
     padding-left: 1rem !important;
     padding-right: 1rem !important;
     max-width: 42rem !important;
+    height: calc(100vh - 184px);
   }
 
   #search-bar.show-mobile #close-search-container {
@@ -2791,6 +2786,11 @@ body.no-scroll {
   .lg\:py-56{
     padding-top: 14rem !important;
     padding-bottom: 14rem !important;
+  }
+
+  .lg\:py-0{
+    padding-top: 0px !important;
+    padding-bottom: 0px !important;
   }
 
   .lg\:pt-0{

@@ -230,7 +230,7 @@ function data_fetch(){
 		<div id="close-search-container" class="w-full flex justify-end">
 			<i id="close-search" class="fa-solid fa-xmark text-blue text-3xl cursor-pointer mb-4 mt-4"></i>
 		</div>
-		<div class="flex flex-col mb-4">
+		<div class="flex flex-col">
 		<?php
         while( $the_query->have_posts() ): $the_query->the_post(); ?>
 			<div class="grid grid-cols-3 gap-x-4 mb-7 bg-white rounded-lg">

@@ -196,6 +196,7 @@ html {
     max-height: calc(95vh - 112px);
 }
 
+
 /*Hamburger transitions with open class added via javascript */
 .open {
     transform: rotate(90deg) !important;
@@ -234,10 +235,12 @@ body.no-scroll {
         position: relative !important;
         top: 0 !important;
         box-shadow: none !important;
-        margin-top: 20px !important;
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
         padding-left: 1rem !important;
         padding-right: 1rem !important;
         max-width: 42rem !important;
+        height: calc(100vh - 184px);
     }
     #search-bar.show-mobile #close-search-container {
         display: none !important;
