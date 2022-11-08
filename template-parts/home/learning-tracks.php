@@ -23,7 +23,7 @@
 
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                             <li class="splide__slide md:col-span-4">
-                                <div class="shadow-md mb-8 mx-2 mb-8 mx-2">
+                                <div class="shadow-md mb-8 mx-2">
                                     <div class="square bg-yellow pb-[100%] relative">
                                         <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     </div>

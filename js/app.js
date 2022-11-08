@@ -35,15 +35,4 @@ function hideAnnouncement() {
   } 
 }
 
-/*Check if user already hidden announcement bar */
-/*
-if (typeof(Storage) !== "undefined") {
-  if(sessionStorage.hideAnnouncement) {
-    announcement = document.querySelector('#announcement-bar');
-    announcement.style.display = 'none';
-		document.querySelector('html').classList.toggle('announcement');
-  }
-} */
-
-
 }); //end DOM Load

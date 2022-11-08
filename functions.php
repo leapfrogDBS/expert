@@ -233,7 +233,7 @@ function data_fetch(){
 		<div class="flex flex-col mb-4">
 		<?php
         while( $the_query->have_posts() ): $the_query->the_post(); ?>
-			<div class="grid grid-cols-3 gap-x-4 mb-7">
+			<div class="grid grid-cols-3 gap-x-4 mb-7 bg-white rounded-lg">
 				<div class="thumbnail-container">
 					<?php
 					if (has_post_thumbnail()) {
@@ -247,7 +247,7 @@ function data_fetch(){
 					}
 					?>
 				</div>
-				<div class="post-info col-span-2">
+				<div class="post-info col-span-2 p-4">
 					<h4 class="subtitleTwo mb-0"><?php the_category(' '); ?></h4>								
 					<h3 class="subtitleOne font-bold leading-5 mb-0"><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></h3>
 					<a class="text-3xl text-turquoise" href="<?php the_permalink() ?>"><i class="fa-solid fa-circle-play"></i></a>
