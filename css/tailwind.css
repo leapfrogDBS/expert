@@ -1429,16 +1429,16 @@ a:visited{
   height: auto !important;
 }
 
+.h-44{
+  height: 11rem !important;
+}
+
 .h-5\/6{
   height: 83.333333% !important;
 }
 
 .h-14{
   height: 3.5rem !important;
-}
-
-.h-44{
-  height: 11rem !important;
 }
 
 .w-full{
@@ -1497,12 +1497,16 @@ a:visited{
   max-width: 240px !important;
 }
 
+.max-w-md{
+  max-width: 28rem !important;
+}
+
 .max-w-sm{
   max-width: 24rem !important;
 }
 
-.max-w-md{
-  max-width: 28rem !important;
+.max-w-\[80\%\]{
+  max-width: 80% !important;
 }
 
 .max-w-3xl{
@@ -1511,10 +1515,6 @@ a:visited{
 
 .max-w-xl{
   max-width: 36rem !important;
-}
-
-.max-w-\[80\%\]{
-  max-width: 80% !important;
 }
 
 .flex-1{
@@ -1858,14 +1858,14 @@ a:visited{
   padding-right: 6rem !important;
 }
 
-.py-10{
-  padding-top: 2.5rem !important;
-  padding-bottom: 2.5rem !important;
-}
-
 .px-10{
   padding-left: 2.5rem !important;
   padding-right: 2.5rem !important;
+}
+
+.py-10{
+  padding-top: 2.5rem !important;
+  padding-bottom: 2.5rem !important;
 }
 
 .py-6{
@@ -1887,10 +1887,6 @@ a:visited{
 
 .pt-4{
   padding-top: 1rem !important;
-}
-
-.pl-10{
-  padding-left: 2.5rem !important;
 }
 
 .pt-12{
@@ -2357,6 +2353,10 @@ body.no-scroll {
   transform: translateY(0) scale(1);
 }
 
+#announcement-bar a {
+  text-decoration: underline;
+}
+
 .hover\:border-turquoise:hover{
   --tw-border-opacity: 1 !important;
   border-color: rgb(6 214 160 / var(--tw-border-opacity)) !important;
@@ -2633,16 +2633,8 @@ body.no-scroll {
     max-width: none !important;
   }
 
-  .md\:flex-1{
-    flex: 1 1 0% !important;
-  }
-
   .md\:grid-cols-2{
     grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
-  }
-
-  .md\:grid-cols-12{
-    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
   }
 
   .md\:flex-row{
@@ -2662,16 +2654,6 @@ body.no-scroll {
          column-gap: 0px !important;
   }
 
-  .md\:gap-x-5{
-    -moz-column-gap: 1.25rem !important;
-         column-gap: 1.25rem !important;
-  }
-
-  .md\:py-10{
-    padding-top: 2.5rem !important;
-    padding-bottom: 2.5rem !important;
-  }
-
   .md\:py-12{
     padding-top: 3rem !important;
     padding-bottom: 3rem !important;
@@ -2679,10 +2661,6 @@ body.no-scroll {
 
   .md\:pt-10{
     padding-top: 2.5rem !important;
-  }
-
-  .md\:pl-10{
-    padding-left: 2.5rem !important;
   }
 
   .md\:pr-0{
@@ -2794,10 +2772,5 @@ body.no-scroll {
 @media (min-width: 1280px){
   .xl\:col-span-5{
     grid-column: span 5 / span 5 !important;
-  }
-
-  .xl\:text-7xl{
-    font-size: 4.5rem !important;
-    line-height: 1 !important;
   }
 }

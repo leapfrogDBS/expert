@@ -35,9 +35,9 @@
 
 <header id="masthead" class="site-header sticky inset-x-0 top-0 z-[998] bg-white shadow-md">
 	
-    <div id="announcement-bar" class="sticky top-0 left-0 right-0 bg-blue w-full h-9 z-[999]">
+    <div id="announcement-bar" class="sticky top-0 left-0 right-0 bg-blue w-full h-9 z-[999] hidden">
 		<div class="flex items-center justify-center gap-x-6 text-white h-full mx-auto w-11/12 max-w-[1320px]">
-			<p class="subtitleTwo text-xs sm:text-sm mb-0 text-white">Lorem ipsum dolor sit amet consectetur adipisicing elit!</p>
+			<p class="subtitleTwo text-xs sm:text-sm mb-0 text-white">Lorem ipsum <a href="#">test link</a> amet consectetur adipisicing elit!</p>
 			<i id="close-announcement" class="fa-solid fa-x"></i>
 		</div>
 	</div>
@@ -235,17 +235,6 @@
 </div>
 
 
-<script>
-	announcement = document.querySelector('#announcement-bar')
-	closeAnnouncement = document.querySelector('#close-announcement');
-
-	closeAnnouncement.addEventListener('click', hideAnnouncement);
-
-	function hideAnnouncement() {
-		announcement.style.display = 'none';
-		document.querySelector('html').classList.toggle('announcement');
-	}
-</script>
 
 <script>
 	// handle hamburger //

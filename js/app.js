@@ -10,4 +10,40 @@ document.addEventListener("DOMContentLoaded", function(){
  scrollToTopBtn.addEventListener("click", scrollToTop);
  
 
+/* Announcement bar*/ 
+const html = document.querySelector('html');
+const announcement = document.querySelector('#announcement-bar');
+
+if (html.classList.contains('announcement')) {
+  if (typeof(Storage) !== "undefined") {
+    if(!sessionStorage.hideAnnouncement) {
+      console.log("announcement to be shown");
+      announcement.classList.toggle('hidden');
+      closeAnnouncement = document.querySelector('#close-announcement');
+      closeAnnouncement.addEventListener('click', hideAnnouncement);
+    } else {
+      html.classList.toggle('announcement');
+    }
+  }
+}
+
+function hideAnnouncement() {
+  announcement.classList.toggle('hidden');
+  html.classList.toggle('announcement');
+  if (typeof(Storage) !== "undefined") {
+    sessionStorage.hideAnnouncement = "true";
+  } 
+}
+
+/*Check if user already hidden announcement bar */
+/*
+if (typeof(Storage) !== "undefined") {
+  if(sessionStorage.hideAnnouncement) {
+    announcement = document.querySelector('#announcement-bar');
+    announcement.style.display = 'none';
+		document.querySelector('html').classList.toggle('announcement');
+  }
+} */
+
+
 }); //end DOM Load

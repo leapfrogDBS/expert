@@ -373,3 +373,6 @@ body.no-scroll {
 .exit-intent-popup.visible {
     transform: translateY(0) scale(1);
 }
+#announcement-bar a {
+    text-decoration: underline;
+}
