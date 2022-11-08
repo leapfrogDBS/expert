@@ -1,4 +1,4 @@
-<section class="bg-blue py-12">
+<section class="bg-blue py-6 md:py-12">
     <div class="container">
         <div class="row">
             <div class="col md:col-span-8 md:col-start-3 text-center">

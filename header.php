@@ -203,7 +203,7 @@
 									</div>
 								</div>
 							</li>
-							<a href="#" class="text-base font-normal mb-0 text-charcoal  px-2 py-2">About</a>
+							<a href="<?php echo home_url(); ?>/about" class="text-base font-normal mb-0 text-charcoal  px-2 py-2">About</a>
 							<a href="#" class="text-base mb-0 font-normal text-charcoal  px-2 py-2">Books</a>
 							<a href="#" class="ctaButton small text-base shadow-md  px-3 py-1 ml-2 flex items-center">Free Course</a>	
 						</div>

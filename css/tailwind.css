@@ -1868,6 +1868,11 @@ a:visited{
   padding-right: 2.5rem !important;
 }
 
+.py-6{
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
+}
+
 .pt-6{
   padding-top: 1.5rem !important;
 }
@@ -2665,6 +2670,11 @@ body.no-scroll {
   .md\:py-10{
     padding-top: 2.5rem !important;
     padding-bottom: 2.5rem !important;
+  }
+
+  .md\:py-12{
+    padding-top: 3rem !important;
+    padding-bottom: 3rem !important;
   }
 
   .md\:pt-10{

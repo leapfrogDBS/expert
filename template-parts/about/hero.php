@@ -1,4 +1,4 @@
-<section class="bg-yellow">
+<section class="bg-turquoise">
     <div class="container">
         <div class="row">
             <div class="col">
@@ -15,7 +15,7 @@
         </div>
         <div class="row mt-12">
             <div class="col text-center">
-                <a href="#" class="ctaButton">Explore Learning Tracks</a>
+                <a href="<?php echo home_url();?>/track" class="ctaButton">Explore Learning Tracks</a>
             </div>
         </div>
     </div>
@@ -48,7 +48,7 @@
      * @return {Void}
      */
     function onPlayerStateChange( event ) {
-    
+        console.log("state change");
         var isPlay  = 1 === event.data;
         var isPause = 2 === event.data;
         var isEnd   = 0 === event.data;
