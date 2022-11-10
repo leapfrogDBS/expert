@@ -54,8 +54,7 @@
                                             <div>
                                                 <a class=" text-5xl md:headingTwo  text-turquoise" href="<?php the_permalink() ?>">
                                                 <?php
-                                                
-                                                $article_video_link = get_subfield('article_video_link', );
+                                                $article_video_link = get_field('article_video_link');
                                                 if ($article_video_link) {
                                                 ?>
                                                    <i class="fa-solid fa-circle-play"></i></a>     
@@ -106,8 +105,6 @@
         </div>
     </div>
 </section>
-
-
 <script>
     var splide4 = new Splide( '#articles-slider', {
         lazyLoad: true,
