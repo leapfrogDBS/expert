@@ -1,6 +1,4 @@
-?php
-global $wp_query;
-?>
+
 <section id="related" class="bg-white ds-section">
     <div class="container">
         <div class="row">
@@ -11,16 +9,17 @@ global $wp_query;
         </div>
         <div class="row mt-4">
             <div class="col">
-            <?php 
-                if ( have_posts() ) {
-                    ?>
+            <?php
+                $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+                if( $related ) {
+                ?>
 
                     <div class="splide" id="articles-slider" >
                         <div class="splide__track">
                             <ul class="splide__list"> 
                             <?php
-                            while ( have_posts() ) {
-                                the_post(); 
+                            foreach( $related as $post ) {
+                                setup_postdata($post);
                                 $imgSrc;
                                     if (has_post_thumbnail()) {
                                         $imgSrc = get_the_post_thumbnail_url('', "medium");
@@ -49,7 +48,20 @@ global $wp_query;
                                             <p class="bodyTwo"><?php echo strip_tags(get_the_excerpt()); ?></p>
                                             
                                             <div>
-                                                <a class="headingTwo text-turquoise" href="<?php the_permalink() ?>"><i class="fa-brands fa-readme"></i><i class="fa-solid fa-circle-play"></i></a>
+                                            <a class=" text-5xl md:headingTwo  text-turquoise" href="<?php the_permalink() ?>">
+                                                <?php
+                                                $article_video_link = get_field('article_video_link');
+                                                if ($article_video_link) {
+                                                ?>
+                                                   <i class="fa-solid fa-circle-play"></i></a>     
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <i class="fa-brands fa-readme"></i>
+                                                <?php
+                                                }
+                                                ?>
+                                                </a>
                                                 <div class="flex justify-between items-center mt-5">
                                                 <?php
                                                     if ($reading_time) {
@@ -84,11 +96,34 @@ global $wp_query;
                     </div>
                 <?php
                 } // end if
-                ?>
+                wp_reset_postdata(); ?>
+                </div>
+        </div>
+    </div>
+</section>
+
+
+<section>
+    <div class="container">
+        <div class="row">
+            <div class="col">
+                <?php
+                $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+                if( $related ) foreach( $related as $post ) {
+                setup_postdata($post); ?>
+                <ul> 
+                    <li>
+                        <a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title(); ?>"><?php the_title(); ?></a>  
+                    </li>
+                </ul>   
+            <?php }
+            wp_reset_postdata(); ?>
             </div>
         </div>
     </div>
 </section>
+
+
 <script>
     var splide4 = new Splide( '#articles-slider', {
         lazyLoad: true,

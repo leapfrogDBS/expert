@@ -1505,10 +1505,6 @@ a:visited{
   height: 14rem !important;
 }
 
-.h-16{
-  height: 4rem !important;
-}
-
 .h-11{
   height: 2.75rem !important;
 }
@@ -1547,10 +1543,6 @@ a:visited{
 
 .w-52{
   width: 13rem !important;
-}
-
-.w-16{
-  width: 4rem !important;
 }
 
 .w-11{
@@ -1734,10 +1726,6 @@ a:visited{
 
 .gap-y-6{
   row-gap: 1.5rem !important;
-}
-
-.gap-y-1{
-  row-gap: 0.25rem !important;
 }
 
 .overflow-hidden{
@@ -2612,11 +2600,6 @@ body.no-scroll {
     color: rgb(74 74 74 / var(--tw-text-opacity));
   }
 
-  .md\:subtitleTwo{
-    --tw-text-opacity: 1;
-    color: rgb(74 74 74 / var(--tw-text-opacity));
-  }
-
   .md\:bottom-6{
     bottom: 1.5rem !important;
   }
@@ -2674,11 +2657,6 @@ body.no-scroll {
     grid-column-start: 7 !important;
   }
 
-  .md\:subtitleTwo{
-    --tw-text-opacity: 1;
-    color: rgb(74 74 74 / var(--tw-text-opacity));
-  }
-
   .md\:headingTwo{
     margin-bottom: 1.5rem;
     font-size: 1.875rem;
@@ -2699,13 +2677,6 @@ body.no-scroll {
       font-size: 3rem;
       line-height: 1;
     }
-  }
-
-  .md\:subtitleTwo{
-    margin-bottom: 1rem;
-    font-size: 0.875rem;
-    line-height: 1.25rem;
-    font-weight: 400;
   }
 
   .md\:my-0{
