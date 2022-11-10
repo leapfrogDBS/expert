@@ -190,6 +190,21 @@ function add_custom_scripts() {
 
 add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );
 
+
+function theme_setup() {
+     
+    
+
+    /**
+    * Nav Menus
+    */
+    register_nav_menus(array(
+        'header' => __('Header Main'),
+    ));
+}
+
+add_action('after_setup_theme', 'theme_setup');
+
 // add the ajax fetch js
 add_action( 'wp_footer', 'ajax_fetch' );
 function ajax_fetch() {
@@ -516,4 +531,47 @@ function mb_remove_sidebar() {
     return false;
 }
 add_filter( 'is_active_sidebar', 'mb_remove_sidebar', 10, 2 );
+
+
+
+/* Get classes from menu items */ 
+add_filter( 'wp_get_nav_menu_items', 'prefix_nav_menu_classes', 10, 3 );
+
+function prefix_nav_menu_classes($items, $menu, $args) {
+    _wp_menu_item_classes_by_context($items);
+    return $items;
+}
+
+/* Add ACF Options page */
+add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );
+
+if( function_exists('acf_add_options_page') ) {
+	
+	acf_add_options_page();
+	
+}
+
+function mytheme_customize_register( $wp_customize ) {
+    //All our sections, settings, and controls will be added here
+
+    $wp_customize->add_section( 'my_site_logo' , array(
+        'title'      => __( 'My Site Logo', 'mytheme' ),
+        'priority'   => 30,
+    ) );
+
+    $wp_customize->add_control(
+        new WP_Customize_Image_Control(
+            $wp_customize,
+            'logo',
+            array(
+               'label'      => __( 'Upload a logo', 'theme_name' ),
+               'section'    => 'my_site_logo',
+               'settings'   => 'my_site_logo_id' 
+            )
+        )
+    );
+
+}
+add_action( 'customize_register', 'mytheme_customize_register' );
+
 

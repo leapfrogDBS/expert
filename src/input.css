@@ -37,7 +37,7 @@
         @apply font-medium text-xl mb-6 md:text-2xl;
     }
     .headingSix {
-        @apply font-medium text-lg mb-5 md:text-xl;
+        @apply font-light text-lg mb-5 md:text-xl;
     }
     .subtitleOne {
         @apply font-normal text-base mb-4 md:text-lg;
@@ -133,7 +133,18 @@
     .woocommerce-checkout .entry-header {
         @apply bg-turquoise text-white headingTwo text-center py-12 mb-0;
     }
-  
+    #mobile-menu a:not(.ctaButton a) {
+     @apply text-turquoise headingFour mb-2 block;
+    }
+    #mobile-menu .sub-menu {
+        @apply mb-2;
+    }
+    #mobile-menu .sub-menu a:not(.ctaButton a) {
+        @apply headingFive text-turquoise mb-1 block;
+    }
+    #mobile-menu .ctaButton {
+        @apply bg-turquoise text-white;
+    }
 }
 
 html {
@@ -175,11 +186,11 @@ html {
 }
 
 #mega-menu {
-    top: 56px;
+    top: 46px;
 }
 
 .announcement #mega-menu {
-    top: 92px;
+    top: 76px;
 }
 .mobile-menu {
     height: calc(100vh - 76px);
@@ -380,6 +391,26 @@ body.no-scroll {
 #announcement-bar a {
     text-decoration: underline;
 }
-#mobile-menu, #search-bar { 
+#mobile-menu, #search-bar, #mega-menu { 
     transition: visibility 0.6s ease-in-out,opacity 0.6s ease-in-out;
 }
+
+/* Mega menu hover icon - wouldn't work with Tailwind*/ 
+#mega-menu {
+    transition: opacity 0.5s ease-in-out, translate 0s !important;
+}
+
+#mega-menu i {
+   margin-bottom: 0;
+   color: #06D6A0;
+   font-size: 26px;
+}
+
+#mega-menu a:hover i {
+    color: #fff !important;
+}
+
+.main-nav .ctaButton {
+    margin-left: 8px;
+}
+

@@ -10,7 +10,13 @@
             <p class="bodyOne text-white flex items-center gap-x-2"><i class="fa-solid fa-circle-chevron-right text-blue"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
             <p class="bodyOne text-white flex items-center gap-x-2"><i class="fa-solid fa-circle-chevron-right text-blue"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
             <p class="bodyOne text-white flex items-center gap-x-2"><i class="fa-solid fa-circle-chevron-right text-blue"></i><span>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</span></p>
-            <a href="#" class="ctaButton">Sign me up</a>
+            <?php
+            $cta_link_address = get_field('cta_link_address', 'option'); 		
+			if ($cta_link_address) { ?>
+                <a href="<?php echo $cta_link_address; ?>" class="ctaButton">Sign me up</a>
+            <?php
+            }
+            ?>
         </div>
     </div>
 </div>

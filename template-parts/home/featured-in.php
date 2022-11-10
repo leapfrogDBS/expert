@@ -1,3 +1,7 @@
+<?php
+    if( have_rows('featured_in', 'option') ):
+?>
+
 <section class="bg-blue py-6 md:py-12">
     <div class="container">
         <div class="row">
@@ -10,18 +14,14 @@
                 <div class="splide featured-in-slider" id="featured-in-slider">
                     <div class="splide__track">
                         <ul class="splide__list"> 
+
+                        <?php while( have_rows('featured_in', 'option') ) : the_row(); 
+                        $featured_in_logo = get_sub_field('featured_in_logo');
+                        ?>
                             <li class="splide__slide">
-                                <img class="m-auto w-32 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-1.svg" alt="">
-                            </li>
-                            <li class="splide__slide">
-                                <img class="m-auto w-32 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-2.svg" alt="">
-                            </li>
-                            <li class="splide__slide">
-                                <img class="m-auto w-32 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-3.svg" alt="">
-                            </li>
-                            <li class="splide__slide">
-                                <img class="m-auto w-32 h-auto" src="<?php echo get_template_directory_uri(); ?>/img/logo-4.svg" alt="">
-                            </li>
+                                <img class="m-auto w-32 h-auto" data-splide-lazy="<?php echo $featured_in_logo['url']; ?>" alt="<?php echo esc_attr($featured_in_logo['alt']); ?>" >
+                            </li>                           
+                        <?php endwhile; ?>
                         </ul>
                     </div>
                     <div class="splide__arrows">
@@ -66,3 +66,7 @@
     });
     splide2.mount();
 </script>
+
+<?php
+endif;
+?>

@@ -1,3 +1,6 @@
+?php
+global $wp_query;
+?>
 <section id="related" class="bg-white ds-section">
     <div class="container">
         <div class="row">
@@ -25,6 +28,7 @@
                                     } else {
                                         $imgSrc = get_template_directory_uri() . "/img/fallback-post.jpg";
                                     } 
+                                    $reading_time = get_field('reading_time');    
                                     ?>
 
                                 <li class="splide__slide p-2">                                                  
@@ -47,8 +51,12 @@
                                             <div>
                                                 <a class="headingTwo text-turquoise" href="<?php the_permalink() ?>"><i class="fa-brands fa-readme"></i><i class="fa-solid fa-circle-play"></i></a>
                                                 <div class="flex justify-between items-center mt-5">
-                                                    <div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
+                                                <?php
+                                                    if ($reading_time) {
+                                                    ?>
+                                                        <div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
                                                     <?php 
+                                                    }
                                                     if (rmp_get_avg_rating( $postID ) != 0) { ?>
                                                         <div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full ml-2 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
                                                     <?php

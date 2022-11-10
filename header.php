@@ -9,9 +9,14 @@
  * @package test
  */
 
+$show_announcement_bar = get_field('show_announcement_bar', 'option'); 
+$html_classes = "";
+if ($show_announcement_bar) {
+	$html_classes = "announcement";
+}
 ?>
 <!doctype html>
-<html class="announcement" <?php language_attributes(); ?>>
+<html class="<?php echo $html_classes; ?>" <?php language_attributes(); ?>>
 <head>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
@@ -37,7 +42,7 @@
 	
     <div id="announcement-bar" class="sticky top-0 left-0 right-0 bg-blue w-full h-9 z-[999] hidden">
 		<div class="flex items-center justify-center gap-x-6 text-white h-full mx-auto w-11/12 max-w-[1320px]">
-			<p class="subtitleTwo text-xs sm:text-sm mb-0 text-white">Lorem ipsum <a href="#">test link</a> amet consectetur adipisicing elit!</p>
+			<p class="subtitleTwo text-xs sm:text-sm mb-0 text-white"><?php echo get_field('announcement_text', 'option'); ?></p>
 			<i id="close-announcement" class="fa-solid fa-x"></i>
 		</div>
 	</div>
@@ -46,11 +51,27 @@
 			
 		<div class="container flex md:grid md:grid-cols-2 lg:grid-cols-3 justify-between items-center mb-1">
 					
-        	<div id="logo-container" class="logo-container h-10 w-auto flex items-center">
-           		<div class="hidden sm:block"><?php the_custom_logo(); ?></div>
-				<div class="sm:hidden"><img src="<?php echo get_template_directory_uri(); ?>/img/mobile-logo.svg" alt=""></div>
-
-
+			<div id="logo-container" class="logo-container h-10 w-auto flex items-center">
+           		<a href="<?php echo home_url(); ?>">
+					<div class="hidden sm:block">
+					<?php
+					$desktop_logo = get_field('desktop_header_logo', 'option'); 
+						if ($desktop_logo) { ?>
+							<img class="custom-logo" loading="lazy" src="<?php echo $desktop_logo['url']; ?>" alt="desktop header logo">
+						<?php
+						}
+						?>
+					</div>
+					<div class="sm:hidden">
+						<?php
+						$mobile_logo = get_field('mobile_header_logo', 'option'); 
+						if ($mobile_logo) { ?>
+							<img  loading="lazy" src="<?php echo $mobile_logo['url']; ?>" alt="mobile header logo">
+						<?php
+						}
+						?>
+					</div>
+				</a>
 		  	</div>
 
 			<div id="search-bar" class="text-center invisible absolute -left-full lg:left-auto opacity-0 pt-5 lg:relative lg:visible lg:opacity-100 lg:pt-0 lg:block bg-white/95 lg:bg-white ">
@@ -79,136 +100,7 @@
 						
 						
 						<div class="hidden md:flex">
-							<li class="relative group px-3 py-2">
-								<button class="hover:text-blue cursor-default border-none  text-base mb-0 font-normal text-charcoal" aria-haspopup="true">Tools</button>
-								<div id="mega-menu" class="fixed left-0 right-0 transition translate-y-0 opacity-0 invisible bg-transparent pt-[20px] group-hover:opacity-100 group-hover:visible duration-500 ease-in-out group-hover:transform z-50 min-w-[560px] transform">
-									<div class="container rounded-b-3xl relative py-12 px-24 bg-white shadow-xl w-full">
-										<div class="relative z-10">
-											<div class="grid grid-cols-3 gap-6">											
-													<ul>
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-solid text-turquoise headingFive mb-0 fa-lightbulb group-hover/item:text-white"></i>
-																	<p>Career Skills</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-solid text-turquoise  group-hover/item:text-white headingFive mb-0 fa-book-open-reader"></i>
-																	<p>Change Management</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-solid text-turquoise headingFive mb-0 fa-school group-hover/item:text-white"></i>
-																	<p>Decision Management</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-solid text-turquoise headingFive mb-0 fa-chalkboard group-hover/item:text-white"></i>
-																	<p>Finance</p>
-																</div>
-															</a>
-														</li>
-													</ul>
-												
-												
-													<ul>
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-solid text-turquoise headingFive mb-0 fa-atom group-hover/item:text-white"></i>
-																	<p>Human Resources</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-solid text-turquoise headingFive mb-0 fa-user-graduate group-hover/item:text-white"></i>
-																	<p>Interpersonal Skills</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-solid text-turquoise headingFive mb-0 fa-shapes group-hover/item:text-white"></i>
-																	<p>Leadership</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-solid text-turquoise headingFive mb-0 fa-apple-whole group-hover/item:text-white"></i>
-																	<p>Marketing</p>
-																</div>
-															</a>
-														</li>
-
-													</ul>
-
-													<ul>
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-solid text-turquoise headingFive mb-0 fa-award group-hover/item:text-white"></i>
-																	<p>Personal Development</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																<i class="fa-solid text-turquoise headingFive mb-0 fa-bell group-hover/item:text-white"></i>
-																	<p>Program Mangement</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-solid text-turquoise headingFive mb-0 fa-graduation-cap group-hover/item:text-white"></i>
-																	<p>Strategy</p>
-																</div>
-															</a>
-														</li>
-
-														<li>
-															<a href="#" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white group/item">
-																<div class="mega-link flex items-center gap-x-4 ">
-																	<i class="fa-solid text-turquoise headingFive mb-0 fa-laptop-file group-hover/item:text-white"></i>
-																	<p>Team Management</p>
-																</div>
-															</a>
-														</li>
-													</ul>
-												
-											</div>
-										</div>
-									</div>
-								</div>
-							</li>
-							<a href="<?php echo home_url(); ?>/about" class="text-base font-normal mb-0 text-charcoal  px-2 py-2">About</a>
-							<a href="#" class="text-base mb-0 font-normal text-charcoal  px-2 py-2">Books</a>
-							<a href="#" class="ctaButton small text-base shadow-md  px-3 py-1 ml-2 flex items-center">Free Course</a>	
+							<?php include(locate_template('template-parts/menu/desktop-menu.php')); ?>
 						</div>
 					</ul>
 				</nav>
@@ -217,21 +109,19 @@
 	</div>
 </header>
 
-<div id="mobile-menu" class="fixed left-0 right-0 bg-blue w-full z-50 mobile-menu invisible opacity-0">
+<div id="mobile-menu" class="fixed left-0 right-0 bg-blue w-full z-50 mobile-menu invisible opacity-0 overflow-y-scroll">
 	<section>	
 		<div class="container">
 			<div class="row">
 				<div class="col">
-					<a href="#" class="text-base font-normal mb-0 text-charcoal  px-2 py-2">About</a>
-					<a href="#" class="text-base mb-0 font-normal text-charcoal  px-2 py-2">Books</a>
-					<a href="#" class="ctaButton small text-base shadow-md  px-3 py-1 ml-2 flex items-center">Free Course</a>
+					<?php include(locate_template('template-parts/menu/mobile-menu.php')); ?>
 				</div>
 			</div>
 		</div>
 	</section>
 </div>
 
-<div id="to-top-button" class="fixed bottom-2 md:bottom-6 left-6 z-[997] cursor-pointer">
+<div id="to-top-button" class="fixed bottom-2 md:bottom-6 left-6 z-40 cursor-pointer">
 	<div class="bg-blue flex items-center justify-center w-12 h-12 rounded-full">
 		<i class="fa-solid fa-arrow-up text-white headingSix mb-0"></i>
 	</div>

@@ -29,7 +29,10 @@
                                     } else {
                                         $imgSrc = get_template_directory_uri() . "/img/fallback-post.jpg";
                                     } 
-                                    ?>
+                                
+                                $reading_time = get_field('reading_time');
+                                ?>
+                                
 
                                 <li class="splide__slide p-2">                                                  
                                     <div class="rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
@@ -47,12 +50,29 @@
                                         <div class="py-8 px-6 flex flex-col flex-1 justify-between">        
                                             <h3 class="headingSix"><?php the_title(); ?></h3>                               
                                             <p class="bodyTwo"><?php echo strip_tags(get_the_excerpt()); ?></p>
-                                            
+                                           
                                             <div>
-                                                <a class=" text-5xl md:headingTwo  text-turquoise" href="<?php the_permalink() ?>"><i class="fa-brands fa-readme"></i><i class="fa-solid fa-circle-play"></i></a>
+                                                <a class=" text-5xl md:headingTwo  text-turquoise" href="<?php the_permalink() ?>">
+                                                <?php
+                                                $article_video_link = get_field('article_video_link');
+                                                if ($article_video_link) {
+                                                ?>
+                                                   <i class="fa-solid fa-circle-play"></i></a>     
+                                                <?php
+                                                } else {
+                                                ?>
+                                                    <i class="fa-brands fa-readme"></i>
+                                                <?php
+                                                }
+                                                ?>
+                                                </a>
                                                 <div class="flex justify-between items-center mt-5">
-                                                    <div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
+                                                    <?php
+                                                    if ($reading_time) {
+                                                    ?>
+                                                        <div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
                                                     <?php 
+                                                    }
                                                     if (rmp_get_avg_rating( $postID ) != 0) { ?>
                                                         <div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full ml-2 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
                                                     <?php

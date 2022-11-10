@@ -17,7 +17,6 @@ const announcement = document.querySelector('#announcement-bar');
 if (html.classList.contains('announcement')) {
   if (typeof(Storage) !== "undefined") {
     if(!sessionStorage.hideAnnouncement) {
-      console.log("announcement to be shown");
       announcement.classList.toggle('hidden');
       closeAnnouncement = document.querySelector('#close-announcement');
       closeAnnouncement.addEventListener('click', hideAnnouncement);

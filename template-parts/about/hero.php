@@ -1,3 +1,7 @@
+<?php 
+$header_video = get_field('header_video');
+?>
+
 <section class="bg-turquoise">
     <div class="container">
         <div class="row">
@@ -5,14 +9,20 @@
                 <h1 class="headingTwo text-white text-center">Who are we?</h1>
             </div>
         </div>
-        <div class="row">
-            <div class="col md:col-span-8 md:col-start-3">
-                <!-- The YouTube video -->
-                <figure class="content-media content-media--video" id="featured-media">
-                    <iframe loading="lazy" class="content-media__object z-50" id="featured-video" src="https://www.youtube.com/embed/VJztnIFPO4o?enablejsapi=1&rel=0&showinfo=0&controls=0" frameborder="0"></iframe>
-                </figure>
+        <?php 
+        if($header_video) {
+        ?>
+            <div class="row">
+                <div class="col md:col-span-8 md:col-start-3">
+                    <!-- The YouTube video -->
+                    <figure class="content-media content-media--video" id="featured-media">
+                        <iframe loading="lazy" class="content-media__object z-40" id="featured-video" src="<?php echo $header_video; ?>" frameborder="0"></iframe>
+                    </figure>
+                </div>
             </div>
-        </div>
+        <?php
+        }
+        ?>
         <div class="row mt-12">
             <div class="col text-center">
                 <a href="<?php echo home_url();?>/track" class="ctaButton">Explore Learning Tracks</a>
