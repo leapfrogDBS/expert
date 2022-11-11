@@ -9,7 +9,7 @@
                 </div>
                 
                 <div class="col md:col-span-10 md:col-start-2">
-                    <div class="entry-content">
+                    <div class="entry-content block-editor-content">
                     <?php
                     the_content(
                         sprintf(

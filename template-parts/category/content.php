@@ -22,7 +22,7 @@ if($category_featured_image or $category_content ) {
                 <?php
                 if($category_content) {
                 ?> 
-                    <div class="col md:col-span-10 md:col-start-2 expert-content">
+                    <div class="col md:col-span-10 md:col-start-2 expert-content block-editor-content">
                         <?php echo $category_content; ?>
                     </div>
                 <?php

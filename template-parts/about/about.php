@@ -7,7 +7,7 @@ if($about_copy) {
 <section class="bg-white">
     <div class="container">
         <div class="row">
-            <div class="col md:col-span-10 md:col-start-2">
+            <div class="col md:col-span-10 md:col-start-2 block-editor-content">
                 <?php echo $about_copy; ?>
             </div>
         </div>

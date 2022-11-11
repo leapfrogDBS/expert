@@ -260,15 +260,33 @@ function data_fetch(){
 						<img src="<?php echo get_template_directory_uri();?>/img/fallback-post.jpg" class="w-full object-cover rounded-lg">
 					<?php
 					}
+					$reading_time = get_field('reading_time');  
 					?>
 				</div>
-				<div class="post-info col-span-2 p-4">
+				<div class="post-info col-span-2 px-4">
 					<h4 class="subtitleTwo mb-0"><?php the_category(' '); ?></h4>								
 					<h3 class="subtitleOne font-bold leading-5 mb-0"><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></h3>
-					<a class="text-3xl text-turquoise" href="<?php the_permalink() ?>"><i class="fa-solid fa-circle-play"></i></a>
+					<a class=" text-3xl  text-turquoise" href="<?php the_permalink() ?>">
+					<?php
+					$article_video_link = get_field('article_video_link');
+					if ($article_video_link) {
+					?>
+						<i class="fa-solid fa-circle-play"></i></a>     
+					<?php
+					} else {
+					?>
+						<i class="fa-brands fa-readme"></i>
+					<?php
+					}
+					?>
+					</a>
 					<div class="flex items-center">
-						<div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
+					<?php
+						if ($reading_time) {
+						?>
+							<div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
 						<?php 
+						}
 						if (rmp_get_avg_rating( $postID ) != 0) { ?>
 							<div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full ml-2 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
 						<?php

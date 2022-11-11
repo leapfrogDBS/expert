@@ -37,5 +37,4 @@ function hideAnnouncement() {
 
 
 
-
 }); //end DOM Load

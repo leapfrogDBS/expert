@@ -22,7 +22,7 @@ if($learning_tracks_featured_image or $learning_tracks_content ) {
                 <?php
                 if($learning_tracks_content) {
                 ?> 
-                    <div class="col md:col-span-10 md:col-start-2 expert-content">
+                    <div class="col md:col-span-10 md:col-start-2 expert-content block-editor-content">
                         <?php echo $learning_tracks_content; ?>
                     </div>
                 <?php

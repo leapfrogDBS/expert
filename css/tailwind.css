@@ -767,7 +767,7 @@ a:visited{
   grid-column: span 12 / span 12;
 }
 
-.single-post .entry-content h1{
+.block-editor-content h1{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   margin-bottom: 1.5rem;
@@ -777,7 +777,7 @@ a:visited{
 }
 
 @media (min-width: 768px){
-  .single-post .entry-content h1{
+  .block-editor-content h1{
     margin-bottom: 2.25rem;
     font-size: 2.25rem;
     line-height: 2.5rem;
@@ -785,13 +785,13 @@ a:visited{
 }
 
 @media (min-width: 1024px){
-  .single-post .entry-content h1{
+  .block-editor-content h1{
     font-size: 3rem;
     line-height: 1;
   }
 }
 
-.single-post .entry-content h2{
+.block-editor-content h2{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   margin-bottom: 2rem;
@@ -801,17 +801,17 @@ a:visited{
 }
 
 @media (min-width: 768px){
-  .single-post .entry-content h2{
+  .block-editor-content h2{
     font-size: 2.25rem;
     line-height: 2.5rem;
   }
 }
 
-.single-post .entry-content h2{
+.block-editor-content h2{
   margin-top: 2rem;
 }
 
-.single-post .entry-content h3{
+.block-editor-content h3{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   margin-bottom: 1.5rem;
@@ -821,13 +821,13 @@ a:visited{
 }
 
 @media (min-width: 768px){
-  .single-post .entry-content h3{
+  .block-editor-content h3{
     font-size: 1.5rem;
     line-height: 2rem;
   }
 }
 
-.single-post .entry-content h4{
+.block-editor-content h4{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   margin-bottom: 1.25rem;
@@ -837,17 +837,17 @@ a:visited{
 }
 
 @media (min-width: 768px){
-  .single-post .entry-content h4{
+  .block-editor-content h4{
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
-.single-post .entry-content h4{
+.block-editor-content h4{
   margin-top: 2rem;
 }
 
-.single-post .entry-content h5{
+.block-editor-content h5{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   margin-bottom: 1rem;
@@ -857,13 +857,13 @@ a:visited{
 }
 
 @media (min-width: 768px){
-  .single-post .entry-content h5{
+  .block-editor-content h5{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
 
-.single-post .entry-content h6{
+.block-editor-content h6{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   margin-bottom: 1rem;
@@ -872,7 +872,7 @@ a:visited{
   font-weight: 400;
 }
 
-.single-post .entry-content #main p, .single-product #main p{
+.block-editor-content p{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   font-family: "Nunito", sanas-serif;
@@ -883,13 +883,13 @@ a:visited{
 }
 
 @media (min-width: 768px){
-  .single-post .entry-content #main p, .single-product #main p{
+  .block-editor-content p{
     font-size: 1.25rem;
     line-height: 1.75rem;
   }
 }
 
-.single-post #main #main li, #main .single-product li{
+.block-editor-content li{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   font-family: "Nunito", sanas-serif;
@@ -900,23 +900,23 @@ a:visited{
 }
 
 @media (min-width: 1024px){
-  .single-post #main #main li, #main .single-product li{
+  .block-editor-content li{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
 
-.single-post #main #main li, #main .single-product li{
+.block-editor-content li{
   margin-bottom: 0.5rem;
 }
 
-.single-post #primary #main ul, .single-product #primary ul{
+.block-editor-content ul, .single-product #primary ul{
   margin-bottom: 1rem;
   list-style-position: inside;
   list-style-type: disc;
 }
 
-.single-post #main li{
+.block-editor-content li{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
   margin-bottom: 1rem;
@@ -926,19 +926,26 @@ a:visited{
 }
 
 @media (min-width: 768px){
-  .single-post #main li{
+  .block-editor-content li{
     font-size: 1.125rem;
     line-height: 1.75rem;
   }
 }
 
-.single-post #main li{
+.block-editor-content li{
   margin-bottom: 0.5rem;
 }
 
-.single-post #main img{
+.block-editor-content img{
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+}
+
+.block-editor-content a{
+  font-weight: 500;
+  --tw-text-opacity: 1;
+  color: rgb(6 214 160 / var(--tw-text-opacity));
+  text-decoration-line: underline;
 }
 
 .single-product .product_title{
@@ -1844,10 +1851,6 @@ a:visited{
      object-fit: cover !important;
 }
 
-.p-4{
-  padding: 1rem !important;
-}
-
 .p-2{
   padding: 0.5rem !important;
 }
@@ -1860,9 +1863,18 @@ a:visited{
   padding: 1.25rem !important;
 }
 
+.p-4{
+  padding: 1rem !important;
+}
+
 .py-20{
   padding-top: 5rem !important;
   padding-bottom: 5rem !important;
+}
+
+.px-4{
+  padding-left: 1rem !important;
+  padding-right: 1rem !important;
 }
 
 .py-1{
@@ -1888,11 +1900,6 @@ a:visited{
 .py-4{
   padding-top: 1rem !important;
   padding-bottom: 1rem !important;
-}
-
-.px-4{
-  padding-left: 1rem !important;
-  padding-right: 1rem !important;
 }
 
 .px-12{
@@ -1984,6 +1991,10 @@ a:visited{
 
 .pt-0{
   padding-top: 0px !important;
+}
+
+.pb-12{
+  padding-bottom: 3rem !important;
 }
 
 .text-left{
@@ -2465,6 +2476,79 @@ body.no-scroll {
   margin-left: 8px;
 }
 
+/* Text blocks within articles*/
+
+.text-block.green {
+  background: #44A659 ;
+}
+
+.text-block.red {
+  background: #E3655B;
+}
+
+.text-block, .block-quote {
+  border-radius: 19px;
+  padding: 5%;
+  margin: 5% 0;
+}
+
+.text-block h4, .text-block p, .block-quote h4 {
+  color: #fff !important;
+}
+
+.text-block h4, .block-quote h4 {
+  margin-top: 0 !important;
+  font-weight: 500 !important ;
+  font-size: 1.5rem;
+  /* 24px */
+  line-height: 2rem;
+  /* 32px */
+  margin-bottom: 1.5rem;
+}
+
+/* Quotes within articles */
+
+.block-quote {
+  background: rgba(217, 217, 217, 0.2);
+  border: 2px solid #06D6A0;
+  display: flex;
+  gap: 2rem;
+}
+
+.block-quote i {
+  color: #06D6A0 !important;
+  font-size: 4rem;
+}
+
+.block-quote h4  {
+  font-style: italic;
+  color: #06D6A0 !important;
+  margin-bottom: 0 !important;
+  font-weight: 300 !important;
+}
+
+.block-quote h4.author  {
+  font-weight: 500 !important;
+  margin-top: 1em !important;
+}
+
+@media only screen and (max-width: 768px) {
+  .text-block h4, .block-quote h4 {
+    font-size: 1.25rem;
+    /* 20px */
+    line-height: 1.75rem;
+  }
+
+  .block-quote {
+    flex-direction: column;
+    gap: 0.5rem
+  }
+
+  .block-quote i {
+    font-size: 2rem;
+  }
+}
+
 .hover\:border-turquoise:hover{
   --tw-border-opacity: 1 !important;
   border-color: rgb(6 214 160 / var(--tw-border-opacity)) !important;
@@ -2936,4 +3020,3 @@ body.no-scroll {
     grid-column: span 5 / span 5 !important;
   }
 }
-
