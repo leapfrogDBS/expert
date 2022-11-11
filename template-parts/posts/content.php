@@ -94,7 +94,6 @@ document.addEventListener('scroll', processScroll);
             var offset = Math.floor( top + ( $featuredMedia.outerHeight() / 2 ) ); //5. offset.
         
             window.onYouTubeIframeAPIReady = function() {
-                console.log('api ready');
                 player = new YT.Player( "featured-video", {
                 events: {
                     "onStateChange": onPlayerStateChange
@@ -104,7 +103,6 @@ document.addEventListener('scroll', processScroll);
         
            
             function onPlayerStateChange( event ) {
-                console.log("state change");
                 var isPlay  = 1 === event.data;
                 var isPause = 2 === event.data;
                 var isEnd   = 0 === event.data;
