@@ -23,7 +23,7 @@ include(locate_template('template-parts/cta/start-business.php'));
         scroll-padding-top: 150px   ;
     }
     html.announcement {
-        scroll-padding-top: 186px   ;
+        scroll-padding-top: 184px   ;
     }
 </style>
 
