@@ -28,7 +28,14 @@
 
 
 
-    navigator.clipboard.writeText(copyData);
+    navigator.clipboard.writeText(copyData).then(
+  () => {
+    /* clipboard successfully set */
+  },
+  () => {
+    /* clipboard write failed */
+  }
+);;
 
     showText.innerHTML = "Copied!";
 

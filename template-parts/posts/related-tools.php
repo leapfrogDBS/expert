@@ -33,7 +33,7 @@
                                 <li class="splide__slide p-2">                                                  
                                     <div class="rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
                                         <div class="realtive">
-                                            <img class="w-full h-64 object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
+                                            <img class="w-full h-44 md:h-64 object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
                                             <div class="absolute top-0 left-0 ml-6 mt-4">
                                                 <?php
                                                 $categories = get_the_category();

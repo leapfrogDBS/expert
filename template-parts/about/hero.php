@@ -33,7 +33,7 @@ $header_video = get_field('header_video');
 
 <script>
     jQuery( function( $ ) {
-        
+        console.log("run");
     var $window = $( window ); // 1. Window Object.
     var $featuredMedia = $( "#featured-media" ); // 1. The Video Container.
     var $featuredVideo = $( "#featured-video" ); // 2. The Youtube Video.
@@ -44,6 +44,7 @@ $header_video = get_field('header_video');
     var offset = Math.floor( top + ( $featuredMedia.outerHeight() / 2 ) ); //5. offset.
 
     window.onYouTubeIframeAPIReady = function() {
+        console.log("api ready");
         player = new YT.Player( "featured-video", {
            events: {
              "onStateChange": onPlayerStateChange
