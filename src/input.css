@@ -97,7 +97,7 @@
         @apply bodyOne;
     }
     .block-editor-content li {
-        @apply bodyTwo mb-2;
+        @apply bodyOne ml-4 mb-2;
     }
     .block-editor-content ul, .single-product #primary ul {
         @apply mb-4 list-disc list-inside;

@@ -13,8 +13,8 @@ $show_featured_image = get_field('show_featured_image');
                 ?>
                     <div class="col md:col-span-8 md:col-start-3">
                     <!-- The YouTube video -->
-                    <figure class="content-media content-media--video" id="featured-media">
-                        <iframe class="content-media__object z-40" id="featured-video" src="<?php echo $article_video_link; ?>" frameborder="0"></iframe>
+                    <figure class="content-media content-media--video rounded-xl" id="featured-media">
+                        <iframe class="content-media__object z-40 rounded-xl" id="featured-video" src="<?php echo $article_video_link; ?>" frameborder="0"></iframe>
                     </figure>
                 </div>
                 <?php

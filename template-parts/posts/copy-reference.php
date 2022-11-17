@@ -4,7 +4,7 @@
         <div class="row">
             <div class="col">
                 <div onClick="copyFunction()" class="citation relative flex flex-col items-center justify-center cursor-pointer">
-                    <h3 class="headingFour">Reference</h3>
+                    <h3 class="headingFour">Cite this article</h3>
                     <div id="citation-text" class="block subtitleOne">
                         <span class="author"><?php the_author(); ?></span>
                         <span class="published-date">(<?php echo get_the_date( 'Y' ); ?>)</span>
