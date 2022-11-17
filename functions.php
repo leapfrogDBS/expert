@@ -248,8 +248,8 @@ function data_fetch(){
 		<div class="flex flex-col">
 		<?php
         while( $the_query->have_posts() ): $the_query->the_post(); ?>
-			<div class="grid grid-cols-3 gap-x-4 mb-7 bg-white rounded-lg">
-				<div class="thumbnail-container">
+			<a href="<?php echo the_permalink(); ?>"class="group grid grid-cols-3 gap-x-4 mb-7 bg-white rounded-lg hover:bg-turquoise shadow-md bg-grey">
+				<div class="thumbnail-container relative">
 					<?php
 					if (has_post_thumbnail()) {
 					?>
@@ -261,40 +261,28 @@ function data_fetch(){
 					<?php
 					}
 					$reading_time = get_field('reading_time');  
+					if (rmp_get_avg_rating( $postID ) != 0) { ?>
+						<div class="text-xs mb-0 px-2 py-0.5 bg-blue group-hover:bg-turquoise text-white rounded-full ml-2 flex items-center absolute bottom-2 right-2"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
+					<?php
+					} 
 					?>
+					
 				</div>
-				<div class="post-info col-span-2 px-4">
-					<h4 class="subtitleTwo mb-0"><?php the_category(' '); ?></h4>								
-					<h3 class="subtitleOne font-bold leading-5 mb-0"><a href="<?php echo esc_url( post_permalink() ); ?>"><?php the_title();?></a></h3>
-					<a class=" text-3xl  text-turquoise" href="<?php the_permalink() ?>">
-					<?php
-					$article_video_link = get_field('article_video_link');
-					if ($article_video_link) {
-					?>
-						<i class="fa-solid fa-circle-play"></i></a>     
-					<?php
-					} else {
-					?>
-						<i class="fa-brands fa-readme"></i>
-					<?php
-					}
-					?>
-					</a>
+				<div class="post-info col-span-2 px-4 flex flex-col justify-center">						
+					<h3 class="subtitleOne font-medium text-charcoal leading-5 mb-0 group-hover:text-white"><?php the_title();?></h3>
+					
 					<div class="flex items-center">
 					<?php
 						if ($reading_time) {
 						?>
-							<div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
+							<div class="subtitleTwo mb-0 py-1 text-blue group-hover:text-white"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
 						<?php 
 						}
-						if (rmp_get_avg_rating( $postID ) != 0) { ?>
-							<div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full ml-2 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
-						<?php
-						} 
+					
 						?>
-						</div>
 					</div>
 				</div>
+					</a>
         <?php endwhile;
 		?>
 		</div>
