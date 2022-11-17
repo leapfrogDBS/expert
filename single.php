@@ -21,8 +21,7 @@ get_header();
 		endwhile; // End of the loop.
 		?>
    <?php
-    include(locate_template('template-parts/posts/related-tools.php'));
-	include(locate_template('template-parts/cta/start-business.php'));
+    
     ?>
 
 	</main><!-- #main -->

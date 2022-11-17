@@ -4,10 +4,8 @@ $article_video_link = get_field('article_video_link');
 $show_featured_image = get_field('show_featured_image');
 ?>
 
-<section class="bg-white relative pt-0 pb-12">
-        <div class="bg-none left-0 right-0 sticky mb-6" id="progress-bar-container">
-            <div id="progress-bar" class="rounded-r-full bg-orange block z-100 "></div> 
-        </div>
+<section id="post-content" class="bg-white relative pt-0 pb-12">
+        
         <div class="container">
             <div class="row">
                 <?php
@@ -32,7 +30,7 @@ $show_featured_image = get_field('show_featured_image');
                 }
                 ?>             
                 
-                <div class="col md:col-span-10 md:col-start-2">
+                <div class="col md:col-span-8 md:col-start-3">
                     <div class="entry-content block-editor-content">
                     <?php
                     the_content(
@@ -64,21 +62,6 @@ $show_featured_image = get_field('show_featured_image');
         </div>
     </section>
 
-
-
-<script>	
-	let processScroll = () => {
-    let docElem = document.documentElement,
-        docBody = document.body,
-        scrollTop = docElem['scrollTop'] || docBody['scrollTop'],
-        scrollBottom = (docElem['scrollHeight'] || docBody['scrollTop']) - window.innerHeight,
-        scrollPercent =scrollTop / scrollBottom * 100 + '%';
-
-        document.querySelector('#progress-bar').style.setProperty('--scrollAmount', scrollPercent)
-}
-document.addEventListener('scroll', processScroll);
-
-</script>
 
 <script>
  jQuery( function( $ ) {

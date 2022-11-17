@@ -3,6 +3,44 @@
     "title": "Learning Track Lessons",
     "fields": [
         {
+            "key": "field_637663acb54ea",
+            "label": "Title",
+            "name": "learning_track_title",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
+            "key": "field_63766380b54e9",
+            "label": "Copy",
+            "name": "learning_track_copy",
+            "type": "textarea",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "maxlength": "",
+            "rows": "",
+            "new_lines": ""
+        },
+        {
             "key": "field_636d22b8ea5ab",
             "label": "Lessons",
             "name": "learning_track_lessons",
@@ -62,5 +100,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668096925
+    "modified": 1668703449
 }

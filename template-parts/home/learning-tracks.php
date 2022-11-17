@@ -8,7 +8,7 @@
         </div>
 
 
-        <div class="custom-posts">
+        <div class="custom-posts max-w-4xl m-auto">
         <?php
             $args = array(
                 'post_type' => 'track',
@@ -23,16 +23,18 @@
 
                             <?php while ( $the_query->have_posts() ) : $the_query->the_post(); ?>
                             <li class="splide__slide md:col-span-4">
-                                <div class="shadow-md mb-8 mx-2">
-                                    <div class="square bg-yellow pb-[100%] relative">
-                                        <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                <a href="<?php echo the_permalink(); ?>" class="group">
+                                    <div class="shadow-md mb-8 mx-2">
+                                        <div class="square bg-yellow pb-[100%] relative">
+                                            <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        </div>
+                                        <div class="info px-6 py-3">
+                                            <h3 class="text-lg leading-tight font-semibold mb-1"><?php the_title(); ?></h3>                               
+                                            <p class="subtitleTwo mb-6"><?php echo strip_tags(get_the_excerpt()); ?></p>                                     
+                                            <p class="ctaButton small bg-turquoise group-hover:bg-blue">Learn more</p>
+                                        </div>
                                     </div>
-                                    <div class="info p-8">
-                                        <h3 class="headingSix"><?php the_title(); ?></h3>                               
-                                        <p class="bodyTwo"><?php echo strip_tags(get_the_excerpt()); ?></p>                                     
-                                        <a href="<?php the_permalink() ?>" class="ctaButton small">Learn more</a>
-                                    </div>
-                                </div>
+                                </a>
                             </li>
                             <?php endwhile; ?>
                 
@@ -68,6 +70,9 @@
                 breakpoints: {
                     768: {
                         perPage: 3,
+                    },
+                    580: {
+                        perPage: 2,    
                     },
                 },                       
             });

@@ -15,7 +15,7 @@ if ( have_posts() ) :
                     <p class="bodyOne text-white mb-12 text-center">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eius dolorum eligendi corrupti, harum quia et dolor provident accusamus, sunt nesciunt, minus placeat nemo eaque voluptatem iste exercitationem quae impedit nihil!</p>
                 </div>
             </div>
-            <div class="row">
+            <div class="row max-w-5xl mx-auto">
                 <?php
                 // The Loop
                 while ( have_posts() ) : the_post(); 
@@ -29,40 +29,32 @@ if ( have_posts() ) :
                     } 
                     $reading_time = get_field('reading_time');
                     ?>
-
-                    <div class="col sm:col-span-6 md:col-span-4 lg:col-span-3 category-post hidden">
+                   
+                    <a href="<?php the_permalink() ?>" class="group col sm:col-span-6 md:col-span-4 lg:col-span-3 category-post hidden">
                         <div class="rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
                             <div class="realtive">
-                                <img loading="lazy" class="w-full h-44 md:h-64 object-cover" src="<?php echo $imgSrc;?>"/>
-                                <div class="absolute top-0 left-0 ml-6 mt-4">
-                                    <?php
-                                    $categories = get_the_category();
-                                        if ( ! empty( $categories ) ) {
-                                            echo '<a class="subtitleTwo bg-grey px-3 py-1.5 rounded-full" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-                                        }
-                                    ?>
-                                </div>
+                                <img loading="lazy" class="w-full h-44 object-cover" src="<?php echo $imgSrc;?>"/>
                             </div>
-                            <div class="py-8 px-6 flex flex-col flex-1 justify-between">        
-                                <h3 class="headingSix"><?php the_title(); ?></h3>                               
-                                <p class="bodyTwo"><?php echo strip_tags(get_the_excerpt()); ?></p>
+                            <div class="px-6 py-3 flex flex-col flex-1 justify-between">        
+                                <h3 class="text-lg leading-tight font-semibold mb-1"><?php the_title(); ?></h3>                               
+                                <p class="subtitleTwo mb-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
                                 
                                 <div>
-                                <a class=" text-5xl md:headingTwo  text-turquoise" href="<?php the_permalink() ?>">
-                                                <?php
-                                                $article_video_link = get_field('article_video_link');
-                                                if ($article_video_link) {
-                                                ?>
-                                                   <i class="fa-solid fa-circle-play"></i></a>     
-                                                <?php
-                                                } else {
-                                                ?>
-                                                    <i class="fa-brands fa-readme"></i>
-                                                <?php
-                                                }
-                                                ?>
-                                                </a>
-                                    <div class="flex justify-between items-center mt-5">
+                                    <div class="text-4xl mb-0 md:headingTwo text-turquoise group-hover:text-blue">
+                                        <?php
+                                        $article_video_link = get_field('article_video_link');
+                                        if ($article_video_link) {
+                                        ?>
+                                            <i class="fa-solid fa-circle-play"></i>     
+                                        <?php
+                                        } else {
+                                        ?>
+                                            <i class="fa-brands fa-readme"></i>
+                                        <?php
+                                        }
+                                        ?>
+                                    </div>
+                                    <div class="flex justify-between items-center mt-2">
                                     <?php
                                         if ($reading_time) {
                                         ?>
@@ -78,7 +70,7 @@ if ( have_posts() ) :
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
 
                 <?php endwhile; 
                 ?>               

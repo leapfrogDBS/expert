@@ -20,7 +20,7 @@ if ( have_posts() ) :
                     ?>
                 </div>
             </div>
-            <div class="row">
+            <div class="row max-w-5xl m-auto">
                 <?php
                 // The Loop
                 while ( have_posts() ) : the_post(); 
@@ -38,19 +38,11 @@ if ( have_posts() ) :
                         <div class="rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
 							<a href="<?php the_permalink() ?>">
 								<div class="realtive">
-									<img loading="lazy" class="w-full h-64 object-cover" src="<?php echo $imgSrc;?>"/>
-									<div class="absolute top-0 left-0 ml-6 mt-4">
-										<?php
-										$categories = get_the_category();
-											if ( ! empty( $categories ) ) {
-												echo '<a class="subtitleTwo bg-grey px-3 py-1.5 rounded-full" href="' . esc_url( get_category_link( $categories[0]->term_id ) ) . '">' . esc_html( $categories[0]->name ) . '</a>';
-											}
-										?>
-									</div>
+									<img loading="lazy" class="w-full h-44 object-cover" src="<?php echo $imgSrc;?>"/>
 								</div>
-								<div class="py-8 px-6 flex flex-col flex-1 justify-between">        
-									<h3 class="headingSix"><?php the_title(); ?></h3>                               
-									<p class="bodyTwo"><?php echo strip_tags(get_the_excerpt()); ?></p>
+								<div class="px-6 py-3 flex flex-col flex-1 justify-between">        
+									<h3 class="text-lg leading-tight font-semibold mb-1"><?php the_title(); ?></h3>                               
+									<p class="subtitleTwo mb-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
 								</div>
 							</a>
                         </div>
