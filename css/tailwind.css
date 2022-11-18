@@ -1817,16 +1817,12 @@ a:visited{
   border-radius: 9999px !important;
 }
 
-.rounded-2xl{
-  border-radius: 1rem !important;
-}
-
-.rounded-md{
-  border-radius: 0.375rem !important;
-}
-
 .rounded-xl{
   border-radius: 0.75rem !important;
+}
+
+.rounded-2xl{
+  border-radius: 1rem !important;
 }
 
 .rounded-b-3xl{
@@ -2014,14 +2010,14 @@ a:visited{
   padding-bottom: 2.5rem !important;
 }
 
-.py-6{
-  padding-top: 1.5rem !important;
-  padding-bottom: 1.5rem !important;
-}
-
 .py-12{
   padding-top: 3rem !important;
   padding-bottom: 3rem !important;
+}
+
+.py-6{
+  padding-top: 1.5rem !important;
+  padding-bottom: 1.5rem !important;
 }
 
 .py-2{
@@ -2040,6 +2036,14 @@ a:visited{
 
 .pt-5{
   padding-top: 1.25rem !important;
+}
+
+.pt-0{
+  padding-top: 0px !important;
+}
+
+.pb-0{
+  padding-bottom: 0px !important;
 }
 
 .pt-12{
@@ -2064,10 +2068,6 @@ a:visited{
 
 .pt-4{
   padding-top: 1rem !important;
-}
-
-.pt-0{
-  padding-top: 0px !important;
 }
 
 .pb-12{
@@ -2274,6 +2274,10 @@ a:visited{
 
 html {
   scroll-behavior: smooth;
+}
+
+ol {
+  list-style: auto !important;
 }
 
 #anchor-links > a.ds-menu-active {
@@ -2582,13 +2586,17 @@ body.no-scroll {
   background: #E3655B;
 }
 
+.text-block.blue {
+  background: #2176FF;
+}
+
 .text-block, .block-quote {
   border-radius: 19px;
   padding: 5%;
   margin: 5% 0;
 }
 
-.text-block h4, .text-block p, .block-quote h4 {
+.text-block h4, .text-block p, .text-block li, .block-quote h4 {
   color: #fff !important;
 }
 

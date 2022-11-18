@@ -154,12 +154,15 @@
     .post, .page {
         @apply mb-0;
     } 
+   
 }
 
 html {
     scroll-behavior: smooth;
 }
-
+ ol {
+    list-style: auto !important;
+ }
 
 #anchor-links > a.ds-menu-active {
     border-color: #06D6A0 !important;
@@ -430,12 +433,15 @@ body.no-scroll {
 .text-block.red {
     background: #E3655B;
 }
+.text-block.blue {
+    background: #2176FF;
+}
 .text-block, .block-quote {
     border-radius: 19px;
     padding: 5%;
     margin: 5% 0;
 }
-.text-block h4, .text-block p, .block-quote h4 {
+.text-block h4, .text-block p, .text-block li, .block-quote h4 {
     color: #fff !important; 
 }
 .text-block h4, .block-quote h4 {
