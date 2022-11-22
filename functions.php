@@ -211,7 +211,7 @@ function ajax_fetch() {
 ?>
 <script type="text/javascript">
 function fetch(){
-
+	if (jQuery('#keyword').val()) {
     jQuery.ajax({
         url: '<?php echo admin_url('admin-ajax.php'); ?>',
         type: 'post',
@@ -220,6 +220,7 @@ function fetch(){
             jQuery('#datafetch').html( data );
         }
     });
+}	
 
 }
 </script>

@@ -125,6 +125,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-
+<script async data-uid="adbd0e71d9" src="https://prodigious-architect-1227.ck.page/adbd0e71d9/index.js"></script>
 </body>
 </html>

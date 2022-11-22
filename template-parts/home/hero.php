@@ -10,6 +10,7 @@
                 </div>
                 <div class="text-center sm:text-left lg:mt-14">
                     <a href="#" class="ctaButton">Get Started</a>
+                    <a data-formkit-toggle="adbd0e71d9" href="https://prodigious-architect-1227.ck.page/adbd0e71d9">Your link text</a>
                 </div>
             </div>
             <div class="col absolute inset-0 opacity-20 z-20 sm:relative sm:col-span-5 sm:opacity-100 lg:col-span-4">

@@ -24,7 +24,7 @@ if ($show_announcement_bar) {
 	
 	<?php wp_head(); ?>
 
-	<script async data-uid="adbd0e71d9" src="https://prodigious-architect-1227.ck.page/adbd0e71d9/index.js"></script>
+	
 <script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"colors":{"popup":{"background":"#2176FF","text":"#FFFFFF","border":"#FFFFFF"},"button":{"background":"#06D6A0","text":"#ffffff"}},"position":"bottom","transparency":"25","fontsize":"large","content":{"href":"https://expertprogrammanagement.com/cookie-policy/"}})});</script>
   <link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
