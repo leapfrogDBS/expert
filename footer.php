@@ -125,6 +125,6 @@
 </div><!-- #page -->
 
 <?php wp_footer(); ?>
-<script async data-uid="d2be393324" src="https://wondrous-writer-9346.ck.page/d2be393324/index.js"></script>
+
 </body>
 </html>

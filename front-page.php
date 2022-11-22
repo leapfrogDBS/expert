@@ -26,7 +26,7 @@ include(locate_template('template-parts/cta/start-business.php'));
         scroll-padding-top: 184px   ;
     }
 </style>
-
+<script async data-uid="d962fe5bd9" src="https://wondrous-writer-9346.ck.page/d962fe5bd9/index.js"></script>    
 <?php 
 /**
  * Get footer
