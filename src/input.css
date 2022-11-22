@@ -589,3 +589,11 @@ body.no-scroll {
         margin-top: 50px !important;
     }
 }
+
+
+.ppw-post-password-container {
+    padding: 100px 0;
+    max-width: 1024px;
+    margin: auto;
+
+}

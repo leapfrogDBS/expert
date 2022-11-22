@@ -5,7 +5,7 @@ if ($fc_page_title) :
 ?>
 
 
-<section class="bg-orange py-12">
+<section class="bg-pink py-12">
     <div class="container">
         <div class="row">
             <div class="col">

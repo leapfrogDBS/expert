@@ -2752,6 +2752,12 @@ body.no-scroll {
   }
 }
 
+.ppw-post-password-container {
+  padding: 100px 0;
+  max-width: 1024px;
+  margin: auto;
+}
+
 .hover\:border-turquoise:hover{
   --tw-border-opacity: 1 !important;
   border-color: rgb(6 214 160 / var(--tw-border-opacity)) !important;
