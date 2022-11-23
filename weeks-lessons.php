@@ -19,8 +19,6 @@ if ( post_password_required() ) :
 else :
 
 include(locate_template('template-parts/lesson-weeks/content.php'));
-include(locate_template('template-parts/lesson-weeks/videos.php'));
-include(locate_template('template-parts/lesson-weeks/templates.php'));
 
 endif;
 ?>

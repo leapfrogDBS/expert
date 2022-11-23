@@ -911,7 +911,7 @@ a:visited{
 }
 
 .block-editor-content li{
-  margin-left: 1rem;
+  margin-left: 1.5rem;
   margin-bottom: 0.5rem;
 }
 
@@ -921,29 +921,11 @@ a:visited{
   list-style-type: disc;
 }
 
-.block-editor-content li{
-  --tw-text-opacity: 1;
-  color: rgb(74 74 74 / var(--tw-text-opacity));
-  margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
-  font-weight: 400;
-}
-
-@media (min-width: 768px){
-  .block-editor-content li{
-    font-size: 1.125rem;
-    line-height: 1.75rem;
-  }
-}
-
-.block-editor-content li{
-  margin-bottom: 0.5rem;
-}
-
 .block-editor-content img{
-  margin-top: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-top: 3rem;
+  margin-bottom: 3rem;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .block-editor-content a{
@@ -1757,14 +1739,14 @@ a:visited{
        column-gap: 0.5rem !important;
 }
 
-.gap-x-10{
-  -moz-column-gap: 2.5rem !important;
-       column-gap: 2.5rem !important;
-}
-
 .gap-x-12{
   -moz-column-gap: 3rem !important;
        column-gap: 3rem !important;
+}
+
+.gap-x-10{
+  -moz-column-gap: 2.5rem !important;
+       column-gap: 2.5rem !important;
 }
 
 .gap-x-9{
@@ -1811,6 +1793,10 @@ a:visited{
 
 .rounded-xl{
   border-radius: 0.75rem !important;
+}
+
+.rounded-none{
+  border-radius: 0px !important;
 }
 
 .rounded-2xl{
@@ -1868,6 +1854,10 @@ a:visited{
   border-style: solid !important;
 }
 
+.border-none{
+  border-style: none !important;
+}
+
 .border-white{
   --tw-border-opacity: 1 !important;
   border-color: rgb(255 255 255 / var(--tw-border-opacity)) !important;
@@ -1910,11 +1900,6 @@ a:visited{
 .bg-yellow{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 190 0 / var(--tw-bg-opacity)) !important;
-}
-
-.bg-orange{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 109 49 / var(--tw-bg-opacity)) !important;
 }
 
 .bg-transparent{
@@ -1982,6 +1967,11 @@ a:visited{
   padding-right: 3rem !important;
 }
 
+.py-12{
+  padding-top: 3rem !important;
+  padding-bottom: 3rem !important;
+}
+
 .px-6{
   padding-left: 1.5rem !important;
   padding-right: 1.5rem !important;
@@ -2002,11 +1992,6 @@ a:visited{
   padding-bottom: 2.5rem !important;
 }
 
-.py-12{
-  padding-top: 3rem !important;
-  padding-bottom: 3rem !important;
-}
-
 .py-6{
   padding-top: 1.5rem !important;
   padding-bottom: 1.5rem !important;
@@ -2020,6 +2005,11 @@ a:visited{
 .px-24{
   padding-left: 6rem !important;
   padding-right: 6rem !important;
+}
+
+.py-24{
+  padding-top: 6rem !important;
+  padding-bottom: 6rem !important;
 }
 
 .pt-6{
@@ -2174,19 +2164,14 @@ a:visited{
   color: rgb(6 214 160 / var(--tw-text-opacity)) !important;
 }
 
-.text-orange{
+.text-pink{
   --tw-text-opacity: 1 !important;
-  color: rgb(255 109 49 / var(--tw-text-opacity)) !important;
+  color: rgb(249 98 125 / var(--tw-text-opacity)) !important;
 }
 
 .text-gray-800{
   --tw-text-opacity: 1 !important;
   color: rgb(31 41 55 / var(--tw-text-opacity)) !important;
-}
-
-.text-pink{
-  --tw-text-opacity: 1 !important;
-  color: rgb(249 98 125 / var(--tw-text-opacity)) !important;
 }
 
 .placeholder-charcoal::-moz-placeholder{
@@ -2758,6 +2743,22 @@ body.no-scroll {
   margin: auto;
 }
 
+.tablinks.active {
+  background: #06D6A0 !important;
+}
+
+.tablinks:hover {
+  font-weight: 500 !important;
+}
+
+.woocommerce-product-details__short-description {
+  margin: 30px 0;
+}
+
+.related.products {
+  display: none;
+}
+
 .hover\:border-turquoise:hover{
   --tw-border-opacity: 1 !important;
   border-color: rgb(6 214 160 / var(--tw-border-opacity)) !important;
@@ -2814,6 +2815,16 @@ body.no-scroll {
 .group:hover .group-hover\:text-blue{
   --tw-text-opacity: 1 !important;
   color: rgb(33 118 255 / var(--tw-text-opacity)) !important;
+}
+
+.group:hover .group-hover\:text-orange{
+  --tw-text-opacity: 1 !important;
+  color: rgb(255 109 49 / var(--tw-text-opacity)) !important;
+}
+
+.group:hover .group-hover\:text-pink{
+  --tw-text-opacity: 1 !important;
+  color: rgb(249 98 125 / var(--tw-text-opacity)) !important;
 }
 
 .group:hover .group-hover\:opacity-100{
@@ -3192,6 +3203,10 @@ body.no-scroll {
 
   .lg\:mb-20{
     margin-bottom: 5rem !important;
+  }
+
+  .lg\:mb-24{
+    margin-bottom: 6rem !important;
   }
 
   .lg\:block{

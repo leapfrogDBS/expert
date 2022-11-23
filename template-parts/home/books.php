@@ -10,7 +10,7 @@
                 <p class="bodyOne text-white text-center md:text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus amet dolorum nesciunt error? Debitis, sint. Recusandae itaque natus consectetur dignissimos nesciunt reprehenderit aperiam fugit totam! Consequuntur ad ea officiis facere?</p>
                     <img loading="lazy" class="w-full h-full md:hidden my-8 max-w-sm m-auto" src="<?php echo get_template_directory_uri(); ?>/img/leadership-book.jpg" alt="">
                 <div class="text-center md:text-left">
-                    <a href="#" class="ctaButton bg-turquoise ">Buy now</a>
+                    <a href="<?php echo home_url(); ?>/the-successful-leader/" class="ctaButton bg-turquoise ">Buy now</a>
                 </div>
             </div>
         </div>
@@ -25,7 +25,7 @@
                 <p class="bodyOne text-center md:text-left">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Possimus amet dolorum nesciunt error? Debitis, sint. Recusandae itaque natus consectetur dignissimos nesciunt reprehenderit aperiam fugit totam! Consequuntur ad ea officiis facere?</p>
                     <img loading="lazy" class="w-full h-full md:hidden my-8 max-w-sm m-auto" src="<?php echo get_template_directory_uri(); ?>/img/project-management-book.jpg" alt="">
                 <div class="text-center md:text-left">
-                    <a href="#" class="ctaButton">Buy now</a>
+                    <a href="<?php echo home_url(); ?>/project-management-from-the-ground-up/" class="ctaButton">Buy now</a>
                 </div>
             </div>
             <div class="col col-span-5 hidden md:block md:col-start-7">

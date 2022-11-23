@@ -41,6 +41,25 @@
             "maxlength": ""
         },
         {
+            "key": "field_637e3824b3634",
+            "label": "Page Content",
+            "name": "lw_page_content",
+            "type": "wysiwyg",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "tabs": "all",
+            "toolbar": "full",
+            "media_upload": 1,
+            "delay": 0
+        },
+        {
             "key": "field_637bbf6f6bd72",
             "label": "Week",
             "name": "week",
@@ -59,6 +78,25 @@
             "layout": "row",
             "button_label": "",
             "sub_fields": [
+                {
+                    "key": "field_637e386be878e",
+                    "label": "Title",
+                    "name": "lw_week_title",
+                    "type": "text",
+                    "instructions": "",
+                    "required": 0,
+                    "conditional_logic": 0,
+                    "wrapper": {
+                        "width": "",
+                        "class": "",
+                        "id": ""
+                    },
+                    "default_value": "",
+                    "placeholder": "",
+                    "prepend": "",
+                    "append": "",
+                    "maxlength": ""
+                },
                 {
                     "key": "field_637793943fccc",
                     "label": "Content",
@@ -81,7 +119,7 @@
                 {
                     "key": "field_6377911b9f0d6",
                     "label": "Videos",
-                    "name": "lw_videos",
+                    "name": "nlw_videos",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -100,7 +138,7 @@
                         {
                             "key": "field_637791319f0d7",
                             "label": "Video Title",
-                            "name": "lw_video_title",
+                            "name": "nlw_video_title",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -119,7 +157,7 @@
                         {
                             "key": "field_6377913f9f0d8",
                             "label": "Video URL",
-                            "name": "lw_video_url",
+                            "name": "nlw_video_url",
                             "type": "url",
                             "instructions": "",
                             "required": 0,
@@ -137,7 +175,7 @@
                 {
                     "key": "field_637791519f0d9",
                     "label": "Templates",
-                    "name": "lw_templates",
+                    "name": "nlw_templates",
                     "type": "repeater",
                     "instructions": "",
                     "required": 0,
@@ -156,7 +194,7 @@
                         {
                             "key": "field_637791659f0da",
                             "label": "Template Title",
-                            "name": "lw_template_title",
+                            "name": "nlw_template_title",
                             "type": "text",
                             "instructions": "",
                             "required": 0,
@@ -175,7 +213,7 @@
                         {
                             "key": "field_6377916d9f0db",
                             "label": "Template Link",
-                            "name": "lw_template_link",
+                            "name": "nlw_template_link",
                             "type": "file",
                             "instructions": "",
                             "required": 0,
@@ -214,5 +252,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1669055042
+    "modified": 1669218027
 }

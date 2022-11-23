@@ -54,7 +54,7 @@
                     }
                     if ($i % 3 == 0) { // 3 6 9 12 15 18 21 24 27
                        
-                        $backgroundColour = 'bg-orange';
+                        $backgroundColour = 'bg-turquoise';
                     }   
                     if ($i % 4 == 0) { // 4 8 12 16 20 24 28 32 
                         $backgroundColour = 'bg-pink';

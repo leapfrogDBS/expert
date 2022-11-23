@@ -71,31 +71,31 @@ if( have_rows('learning_track_lessons') ) {
                 <div class="grid grid-cols-12">
                     <div class="flex flex-col col-span-12 md:col-span-10 js-scroll <?php echo $cardOrder; ?>">
                         <div class="flex justify-center">
-                            <div class="p-4 border-2 border-white bg-orange rounded-full w-20 h-20 self-center flex items-center justify-center mb-4 ">
+                            <div class="p-4 border-2 border-white bg-yellow rounded-full w-20 h-20 self-center flex items-center justify-center mb-4 ">
                                 <h3 class="headingThree text-white inline mb-0"><?php echo $i; ?></h3>
                             </div>
                         </div>        
                             
-                        <div class="rounded-lg  bg-grey overflow-hidden drop-shadow-md h-full flex flex-col js-scroll fade-in">
+                        <a href="<?php echo $permalink; ?>" class="rounded-lg group bg-grey overflow-hidden drop-shadow-md h-full flex flex-col js-scroll fade-in">
                             <div class="realtive">
                                 <img loading="lazy" class="w-full h-44 md:h-64 object-cover" src="<?php echo $imgSrc;?>"/>
                             </div>
                             <div class="px-6 py-3 flex flex-col flex-1 justify-between"> 
                                  <?php
                                     if ( ! empty( $categories ) ) {
-                                        echo '<p class="text-xs text-orange font-semibold mb-1">' . esc_html( $categories[0]->name ) . '</p>';
+                                        echo '<p class="text-xs text-pink font-semibold mb-1">' . esc_html( $categories[0]->name ) . '</p>';
                                     }
                                 ?>           
                                 <h3 class="text-lg leading-tight font-semibold mb-1"><?php echo $title ?></h3>                               
                                 <p class="subtitleTwo mb-1"><?php echo $excerpt; ?></p>
                                 
                                 <div>
-                                <a class=" text-4xl mb-0 md:headingTwo  text-turquoise" href="<?php the_permalink() ?>">
+                                <p class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-pink" href="<?php the_permalink() ?>">
                                     <?php
                                     $article_video_link = get_field('article_video_link');
                                     if ($article_video_link) {
                                     ?>
-                                    <i class="fa-solid fa-circle-play"></i></a>     
+                                        <i class="fa-solid fa-circle-play"></i>     
                                     <?php
                                     } else {
                                     ?>
@@ -103,19 +103,19 @@ if( have_rows('learning_track_lessons') ) {
                                     <?php
                                     }
                                     ?>
-                                    </a>
+                                    </p>
                                     <div class="flex justify-between items-center mt-2">
-                                        <div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
+                                        <div class="subtitleTwo mb-0 py-1 text-blue mr-2"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
                                         <?php 
                                         if (rmp_get_avg_rating( $postID ) != 0) { ?>
-                                            <div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full ml-2 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
+                                            <div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
                                         <?php
                                         } 
                                         ?>
                                     </div>
                                 </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                     <div class="hidden col-span-2 md:flex flex-col js-scroll fade-in-bottom  <?php echo $lineOrder; ?>">
                         <div id="top" class="h-1/2 border-white <?php echo $borders; ?> <?php echo $topBorders; ?>"></div>

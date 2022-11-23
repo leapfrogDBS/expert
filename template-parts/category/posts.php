@@ -40,7 +40,7 @@ if ( have_posts() ) :
                                 <p class="subtitleTwo mb-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
                                 
                                 <div>
-                                    <div class="text-4xl mb-0 md:headingTwo text-turquoise group-hover:text-blue">
+                                    <div class="text-4xl mb-0 md:headingTwo text-turquoise group-hover:text-pink">
                                         <?php
                                         $article_video_link = get_field('article_video_link');
                                         if ($article_video_link) {
@@ -58,11 +58,11 @@ if ( have_posts() ) :
                                     <?php
                                         if ($reading_time) {
                                         ?>
-                                            <div class="subtitleTwo mb-0 py-1 text-blue"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
+                                            <div class="subtitleTwo mb-0 py-1 text-blue mr-2"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
                                         <?php 
                                         }
                                         if (rmp_get_avg_rating( $postID ) != 0) { ?>
-                                            <div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full ml-2 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
+                                            <div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               
                                         <?php
                                         } 
                                         ?>

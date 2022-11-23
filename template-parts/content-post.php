@@ -19,7 +19,7 @@
     include(locate_template('template-parts/posts/header.php')); 
     ?>
     <div class="bg-none left-0 right-0 sticky mb-6 z-50" id="progress-bar-container">
-         <div id="progress-bar" class="rounded-r-full bg-orange block z-50 "></div> 
+         <div id="progress-bar" class="rounded-r-full bg-pink block z-50 "></div> 
     </div>
 <script>	
 	let processScroll = () => {

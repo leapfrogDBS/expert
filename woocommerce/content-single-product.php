@@ -36,8 +36,8 @@ if ( post_password_required() ) {
 
 	<section class="bg-yellow">
 		<div class="container">
-			<div class="row">
-				<div class="col md:col-span-6">
+			<div class="row gap-x-12">
+				<div class="col sm:col-span-6 md:col-span-4 md:col-start-3">
 					<?php
 					/**
 					 * Hook: woocommerce_before_single_product_summary.
@@ -48,7 +48,7 @@ if ( post_password_required() ) {
 					do_action( 'woocommerce_before_single_product_summary' );
 					?>
 				</div>
-				<div class="col md:col-span-6">
+				<div class="col sm:col-span-6 md:col-span-4">
 					<?php
 					/**
 					 * Hook: woocommerce_single_product_summary.
@@ -73,7 +73,7 @@ if ( post_password_required() ) {
 	<section clas="bg-grey">
 		<div class="container">
 			<div class="row">
-				<div class="col">
+				<div class="col md:col-span-8 md:col-start-3">
 					<?php
 					/**
 					 * Hook: woocommerce_after_single_product_summary.
@@ -85,6 +85,7 @@ if ( post_password_required() ) {
 					do_action( 'woocommerce_after_single_product_summary' );
 					?>
 				</div>
+
 			</div>
 		</div>
 	</section>
