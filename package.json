@@ -37,7 +37,7 @@
     "map": false
   },
   "scripts": {
-    "build": "tailwindcss -i ./src/input.css -o ./css/tailwind.css",
+    "build": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --minify",
     "watch": "tailwindcss -i ./src/input.css -o ./css/tailwind.css --watch",
     "compile:css": "node-sass sass/ -o ./ && stylelint '*.css' --fix || true && stylelint '*.css' --fix",
     "compile:rtl": "rtlcss style.css style-rtl.css",
