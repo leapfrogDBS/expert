@@ -9,7 +9,7 @@
                     </div>
                 </div>
                 <div class="text-center sm:text-left lg:mt-14">
-                    <a href="#" class="ctaButton">Get Started</a>
+                    <a href="<?php echo home_url(); ?>//course-signup/" class="ctaButton">Get Started</a>
                 </div>
             </div>
             <div class="col absolute inset-0 opacity-20 z-20 sm:relative sm:col-span-5 sm:opacity-100 lg:col-span-4">

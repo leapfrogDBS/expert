@@ -40,7 +40,7 @@
                                             <p class="subtitleTwo mb-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
                                             
                                             <div>
-                                            <div class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-pink">
+                                            <div class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-blue">
                                                 <?php
                                                 $article_video_link = get_field('article_video_link');
                                                 if ($article_video_link) {

@@ -10,7 +10,7 @@ if ( have_posts() ) :
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="headingTwo text-white text-center"><?php echo single_cat_title() ; ?> Learning Pathways</h1>
+                    <h1 class="headingTwo text-white text-center"><?php echo single_cat_title() ; ?> Learning Tracks</h1>
                     <?php
                     if ($learning_tracks_post_area_content) {
                     ?>

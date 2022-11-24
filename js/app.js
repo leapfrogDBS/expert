@@ -83,7 +83,7 @@ window.addEventListener("scroll", () => {
 	var $videoWrap = $('#featured-media');
 	var $video = $('#featured-video');
 	var videoHeight = $video.outerHeight();
-  if ($videoWrap) {
+  if ($videoWrap.length) {
 	$window.on('scroll',  function() {
 		var windowScrollTop = $window.scrollTop();
 		var videoBottom = videoHeight + $videoWrap.offset().top;

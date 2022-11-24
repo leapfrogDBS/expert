@@ -90,7 +90,7 @@ if( have_rows('learning_track_lessons') ) {
                                 <p class="subtitleTwo mb-1"><?php echo $excerpt; ?></p>
                                 
                                 <div>
-                                <p class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-pink" href="<?php the_permalink() ?>">
+                                <p class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-blue" href="<?php the_permalink() ?>">
                                     <?php
                                     $article_video_link = get_field('article_video_link');
                                     if ($article_video_link) {
