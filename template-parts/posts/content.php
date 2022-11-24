@@ -11,10 +11,10 @@ $show_featured_image = get_field('show_featured_image');
                 <?php
                 if ($article_has_video && $article_video_link) {
                 ?>
-                    <div class="col md:col-span-8 md:col-start-3">
+                    <div class="col md:col-span-8 md:col-start-3 mb-12">
                     <!-- The YouTube video -->
                     <figure class="content-media content-media--video rounded-xl" id="featured-media">
-                        <iframe class="content-media__object z-40 rounded-xl" id="featured-video" src="<?php echo $article_video_link; ?>" frameborder="0"></iframe>
+                        <iframe class="content-media__object z-40 rounded-xl" id="featured-video" src="<?php echo $article_video_link; ?>?enablejsapi=1&rel=0&showinfo=0&controls=0" frameborder="0"></iframe>
                     </figure>
                 </div>
                 <?php

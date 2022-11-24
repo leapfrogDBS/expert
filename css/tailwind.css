@@ -1335,6 +1335,10 @@ a:visited{
   grid-column: span 10 / span 10 !important;
 }
 
+.col-span-6{
+  grid-column: span 6 / span 6 !important;
+}
+
 .col-start-5{
   grid-column-start: 5 !important;
 }
@@ -1374,6 +1378,11 @@ a:visited{
 .my-4{
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
+}
+
+.my-12{
+  margin-top: 3rem !important;
+  margin-bottom: 3rem !important;
 }
 
 .mb-4{
@@ -1865,6 +1874,10 @@ a:visited{
 
 .border-b-4{
   border-bottom-width: 4px !important;
+}
+
+.border-r-2{
+  border-right-width: 2px !important;
 }
 
 .border-solid{
@@ -3016,6 +3029,11 @@ body.no-scroll {
     margin-bottom: 0px !important;
   }
 
+  .md\:my-12{
+    margin-top: 3rem !important;
+    margin-bottom: 3rem !important;
+  }
+
   .md\:mb-0{
     margin-bottom: 0px !important;
   }
@@ -3044,6 +3062,10 @@ body.no-scroll {
     margin-left: 0.5rem !important;
   }
 
+  .md\:mb-12{
+    margin-bottom: 3rem !important;
+  }
+
   .md\:block{
     display: block !important;
   }
@@ -3066,6 +3088,10 @@ body.no-scroll {
 
   .md\:h-64{
     height: 16rem !important;
+  }
+
+  .md\:h-44{
+    height: 11rem !important;
   }
 
   .md\:w-\[40px\]{

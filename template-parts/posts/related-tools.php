@@ -10,7 +10,7 @@
         <div class="row mt-4 max-w-5xl mx-auto">
             <div class="col">
             <?php
-                $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 5, 'post__not_in' => array($post->ID) ) );
+                $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 10, 'post__not_in' => array($post->ID) ) );
                 if( $related ) {
                 ?>
 

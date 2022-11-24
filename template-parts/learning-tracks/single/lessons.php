@@ -19,13 +19,21 @@ if( have_rows('learning_track_lessons') ) {
                 <?php } ?>
             </div>
         </div>
-        
+            
+            <div class="row gap-x-0">
+                <div class="col text-center">
+                    <h3 class="headingTwo mb-0 text-white">Start</h3>
+                </div>
+                <div class="col h-20 md:h-44 col-span-6 h-full border-r-4">
+                </div>
+            </div>
             
             <?php
             while( have_rows('learning_track_lessons') ) : the_row();
 
             // Load sub field value.
             $learning_track_lesson = get_sub_field('learning_track_lesson');
+            $learning_track_card_copy = get_sub_field('learning_track_card_copy');
             $title = get_the_title($learning_track_lesson->ID);
             $imgSrc = get_the_post_thumbnail_url($learning_track_lesson->ID, "medium");
             $categories = get_the_category($learning_track_lesson->ID);
@@ -55,12 +63,12 @@ if( have_rows('learning_track_lessons') ) {
             }
 
             if ($i === 1) {
-                $topBorders = "invisible";
+                $topBorders = "";
                 $rowClasses = "";
                 $style = "";
             }
             if ($i === $rowCount) {
-                $bottomBorders = "invisible";
+                $bottomBorders = "";
                 $topBorders = "border-b-4";
             }
                         
@@ -78,7 +86,7 @@ if( have_rows('learning_track_lessons') ) {
                             
                         <a href="<?php echo $permalink; ?>" class="rounded-lg group bg-grey overflow-hidden drop-shadow-md h-full flex flex-col js-scroll fade-in">
                             <div class="realtive">
-                                <img loading="lazy" class="w-full h-44 md:h-64 object-cover" src="<?php echo $imgSrc;?>"/>
+                                <img loading="lazy" class="w-full h-full object-cover" src="<?php echo $imgSrc;?>"/>
                             </div>
                             <div class="px-6 py-3 flex flex-col flex-1 justify-between"> 
                                  <?php
@@ -87,7 +95,7 @@ if( have_rows('learning_track_lessons') ) {
                                     }
                                 ?>           
                                 <h3 class="text-lg leading-tight font-semibold mb-1"><?php echo $title ?></h3>                               
-                                <p class="subtitleTwo mb-1"><?php echo $excerpt; ?></p>
+                                <p class="subtitleTwo mb-1"><?php echo $learning_track_card_copy; ?></p>
                                 
                                 <div>
                                 <p class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-blue" href="<?php the_permalink() ?>">
@@ -130,7 +138,12 @@ if( have_rows('learning_track_lessons') ) {
             $marginTop = $marginTop + 100;
             endwhile;
             ?>
-
+         <div class="row gap-x-0 my-12 md:mb-12 md:mt-0">
+                <div class="col h-20 md:h-44 col-span-6 h-full border-r-4"></div>
+                <div class="col text-center">
+                    <h3 class="headingTwo mb-0 text-white">End</h3>
+                </div>
+            </div>
         
     </div>
 </section>

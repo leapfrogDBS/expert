@@ -78,24 +78,5 @@ window.addEventListener("scroll", () => {
 });
 
 
-   (function($) {
-	var $window = $(window);
-	var $videoWrap = $('#featured-media');
-	var $video = $('#featured-video');
-	var videoHeight = $video.outerHeight();
-  if ($videoWrap.length) {
-	$window.on('scroll',  function() {
-		var windowScrollTop = $window.scrollTop();
-		var videoBottom = videoHeight + $videoWrap.offset().top;
-		
-		if (windowScrollTop > videoBottom) {
-			$video.addClass('is-sticky');
-		} else {
-			$video.removeClass('is-sticky');
-		}
-	});
-}
-}(jQuery));
-
-
 }); //end DOM Load
+
