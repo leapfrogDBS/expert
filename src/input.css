@@ -105,7 +105,7 @@
     .block-editor-content img {
         @apply my-12 mx-auto;
     }
-    .block-editor-content a {
+       .block-editor-content a {
         @apply text-turquoise font-medium underline;
     }
     .single-product .product_title{
@@ -607,4 +607,9 @@ body.no-scroll {
 
 .related.products {
     display: none;
+}
+
+.block-editor-content li h1, .block-editor-content li h2, .block-editor-content li h3, .block-editor-content li h4, .block-editor-content li h5, .block-editor-content li h6 {
+    display: inline !important;
+    margin-bottom: 0 !important;
 }

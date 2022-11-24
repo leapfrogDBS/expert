@@ -24,7 +24,7 @@ if( have_rows('learning_track_lessons') ) {
                 <div class="col text-center">
                     <h3 class="headingTwo mb-0 text-white">Start</h3>
                 </div>
-                <div class="col h-20 md:h-44 col-span-6 h-full border-r-4">
+                <div class="col md:h-44 col-span-6 h-full border-r-4">
                 </div>
             </div>
             
@@ -139,7 +139,7 @@ if( have_rows('learning_track_lessons') ) {
             endwhile;
             ?>
          <div class="row gap-x-0 my-12 md:mb-12 md:mt-0">
-                <div class="col h-20 md:h-44 col-span-6 h-full border-r-4"></div>
+                <div class="col md:h-44 col-span-6 h-full border-r-4"></div>
                 <div class="col text-center">
                     <h3 class="headingTwo mb-0 text-white">End</h3>
                 </div>
