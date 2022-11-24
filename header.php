@@ -25,8 +25,8 @@ if ($show_announcement_bar) {
 	<?php wp_head(); ?>
 
   
-<script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"colors":{"popup":{"background":"#2176FF","text":"#FFFFFF","border":"#FFFFFF"},"button":{"background":"#06D6A0","text":"#ffffff"}},"position":"bottom","transparency":"25","fontsize":"large","content":{"href":"https://expertprogrammanagement.com/cookie-policy/"}})});</script>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
+	<script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"colors":{"popup":{"background":"#2176FF","text":"#FFFFFF","border":"#FFFFFF"},"button":{"background":"#06D6A0","text":"#ffffff"}},"position":"bottom","transparency":"25","fontsize":"large","content":{"href":"https://expertprogrammanagement.com/cookie-policy/"}})});</script>
+  	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
 </head>

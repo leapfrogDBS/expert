@@ -6,12 +6,12 @@
                 <p class="bodyOne">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi placeat nisi laboriosam ut quasi blanditiis quos? Fuga tempore debitis quaerat.</p>
             </div>
         </div>
-        <div class="row mt-4 max-w-5xl mx-auto">
+        <div class="row mt-4 mx-auto">
             <div class="col">
             <?php 
             
             global $query_string;
-            query_posts( $query_string . '&posts_per_page=9' );
+            query_posts( $query_string . '&posts_per_page' );
             
                 if ( have_posts() ) {
                     ?>
@@ -36,8 +36,8 @@
 
                                 <li class="splide__slide p-2">                                                  
                                     <a href="<?php echo the_permalink(); ?>" class="group rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
-                                        <div class="realtive">
-                                            <img class="w-full h-44 object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
+                                        <div class="realtive flex-1">
+                                            <img class="w-full h-full object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
                                         </div>
                                         <div class="px-6 py-3 flex flex-col flex-1 justify-between"> 
                                             <div>
@@ -49,9 +49,9 @@
                                                 ?>    
                                                 <h3 class="text-lg leading-tight font-semibold mb-1"><?php the_title(); ?></h3>                              
                                             </div> 
-                                            <p class="subtitleTwo mb-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
+                                            <p class="subtitleTwo mt-4 flex-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
                                             
-                                            <div>
+                                            <div class="h-16 my-4">
                                                 <div class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-blue">
                                                     <?php
                                                     $article_video_link = get_field('article_video_link');

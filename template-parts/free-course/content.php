@@ -1,8 +1,6 @@
 <?php
 $fc_content_area = get_field('fc_content_area');
 ?>
-
-
 <section class="pt-4">
     <div class="container">
         <div class="row">
