@@ -8,7 +8,7 @@ $fc_content_area = get_field('fc_content_area');
                 <?php echo $fc_content_area; ?>
             </div>
             <div class="col text-center ">
-                <a href="<?php echo home_url(); ?>/start-a-business-course" class="ctaButton bg-turquoise"><?php echo $fc_button_text; ?></a>
+                <a href="<?php echo home_url(); ?>/checkout/?add-to-cart=9251" class="ctaButton bg-turquoise"><?php echo $fc_button_text; ?></a>
             </div>
         </div>
     </div>
