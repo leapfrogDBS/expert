@@ -581,4 +581,31 @@ function mytheme_customize_register( $wp_customize ) {
 add_action( 'customize_register', 'mytheme_customize_register' );
 
 
+function dm_remove_wp_block_library_css(){
+wp_dequeue_style( 'wp-block-library' );
+}
+add_action( 'wp_enqueue_scripts', 'dm_remove_wp_block_library_css' );
 
+	// add async and defer attributes to enqueued scripts
+function shapeSpace_script_loader_tag($tag, $handle, $src) {
+	
+	if ($handle === 'my-plugin-javascript-handle') {
+		
+		if (false === stripos($tag, 'async')) {
+			
+			$tag = str_replace(' src', ' async="async" src', $tag);
+			
+		}
+		
+		if (false === stripos($tag, 'defer')) {
+			
+			$tag = str_replace('<script ', '<script defer ', $tag);
+			
+		}
+		
+	}
+	
+	return $tag;
+	
+}
+add_filter('script_loader_tag', 'shapeSpace_script_loader_tag', 10, 3);

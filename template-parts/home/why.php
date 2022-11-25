@@ -1,5 +1,5 @@
 <section id="why" class="bg-turquoise relative ds-section">
-    <img class="absolute bottom-[2%] lg:bottom-[5%] right-0 w-24" src="<?php echo get_template_directory_uri(); ?>/img/circles-bottom.png" alt="">
+    <img class="absolute bottom-[2%] lg:bottom-[5%] right-0 w-24" src="<?php echo get_template_directory_uri(); ?>/img/circles-bottom.png" loading="lazy" alt="">
     <div class="container">
         <div class="row mb-24 items-center">
             <div class="col lg:col-span-6 relative">
