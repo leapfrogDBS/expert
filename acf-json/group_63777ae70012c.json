@@ -22,22 +22,6 @@
             "maxlength": ""
         },
         {
-            "key": "field_63777aedb0f0e",
-            "label": "Video URL",
-            "name": "fc_video_url",
-            "type": "url",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": ""
-        },
-        {
             "key": "field_63777b01b0f0f",
             "label": "Button Text",
             "name": "fc_button_text",
@@ -94,5 +78,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668775457
+    "modified": 1669914112
 }

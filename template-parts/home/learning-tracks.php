@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col text-center md:col-span-8 md:col-start-3 mb-6">
                 <h2 class="headingTwo">Learning Tracks</h2>
-                <p class="bodyOne">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi placeat nisi laboriosam ut quasi blanditiis quos? Fuga tempore debitis quaerat.</p>
+                <p class="bodyOne">Guided learning tracks to help you master the skills areas you need to be successful.</p>
             </div>
         </div>
 
@@ -26,12 +26,16 @@
                                 <a href="<?php echo the_permalink(); ?>" class="group">
                                     <div class="shadow-md mb-8 mx-2">
                                         <div class="square bg-yellow pb-[100%] relative">
-                                            <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                            <?php if(has_post_thumbnail()) { ?>
+                                                <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                            <?php } else { ?>
+                                                <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                            <?php } ?>
                                         </div>
-                                        <div class="info px-6 py-3">
-                                            <h3 class="text-lg leading-tight font-semibold mb-1"><?php the_title(); ?></h3>                               
-                                            <p class="subtitleTwo mb-6"><?php echo strip_tags(get_the_excerpt()); ?></p>                                     
-                                            <p class="ctaButton small bg-turquoise group-hover:bg-blue">Learn more</p>
+                                        <div class="info px-6 py-3 h-52 flex flex-col">
+                                            <h3 class="text-lg leading-tight font-semibold mb-4 h-11"><?php the_title(); ?></h3>                               
+                                            <p class="subtitleTwo flex-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
+                                            <div><p class="ctaButton small bg-turquoise group-hover:bg-blue">Learn more</p></div>
                                         </div>
                                     </div>
                                 </a>
@@ -59,7 +63,7 @@
                 pagination: true,
                 rewind: true,
                 speed: '1000',
-                type: 'loop',
+                type: 'slide',
                 drag: true,
                 snap: true,
                 arrows: false,

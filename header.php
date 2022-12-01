@@ -57,7 +57,7 @@ if ($show_announcement_bar) {
 					<?php
 					$desktop_logo = get_field('desktop_header_logo', 'option'); 
 						if ($desktop_logo) { ?>
-							<img class="custom-logo" loading="lazy" src="<?php echo $desktop_logo['url']; ?>" alt="desktop header logo">
+							<img class="custom-logo w-[300px] h-autotailwind " loading="lazy" src="<?php echo $desktop_logo['url']; ?>" alt="desktop header logo">
 						<?php
 						}
 						?>
@@ -66,7 +66,7 @@ if ($show_announcement_bar) {
 						<?php
 						$mobile_logo = get_field('mobile_header_logo', 'option'); 
 						if ($mobile_logo) { ?>
-							<img  loading="lazy" src="<?php echo $mobile_logo['url']; ?>" alt="mobile header logo">
+							<img class="w-44 h-auto" loading="lazy" src="<?php echo $mobile_logo['url']; ?>" alt="mobile header logo">
 						<?php
 						}
 						?>
