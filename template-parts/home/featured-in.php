@@ -18,8 +18,8 @@
                         <?php while( have_rows('featured_in', 'option') ) : the_row(); 
                         $featured_in_logo = get_sub_field('featured_in_logo');
                         ?>
-                            <li class="splide__slide">
-                                <img class="m-auto w-32 h-auto" data-splide-lazy="<?php echo $featured_in_logo['url']; ?>" alt="<?php echo esc_attr($featured_in_logo['alt']); ?>" >
+                            <li class="splide__slide flex items-center justify-center">
+                                <img class="m-auto w-40 h-auto" data-splide-lazy="<?php echo $featured_in_logo['url']; ?>" alt="<?php echo esc_attr($featured_in_logo['alt']); ?>" >
                             </li>                           
                         <?php endwhile; ?>
                         </ul>
@@ -54,13 +54,10 @@
         mediaQuery: 'min',
         breakpoints: {
             640: {
-                perPage: 3,
+                perPage: 2,
             },
             920: {
                 perPage: 4,
-                },
-            1024: {
-                perPage: 5,
             },
         }                 
     });

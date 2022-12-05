@@ -57,7 +57,7 @@ if ($show_announcement_bar) {
 					<?php
 					$desktop_logo = get_field('desktop_header_logo', 'option'); 
 						if ($desktop_logo) { ?>
-							<img class="custom-logo w-[300px] h-autotailwind " loading="lazy" src="<?php echo $desktop_logo['url']; ?>" alt="desktop header logo">
+							<img height="34" width="300" class="custom-logo w-[300px] h-[34px]" loading="lazy" src="<?php echo $desktop_logo['url']; ?>" alt="desktop header logo">
 						<?php
 						}
 						?>
