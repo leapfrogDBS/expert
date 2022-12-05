@@ -108,7 +108,7 @@
 				</div>
 				<div class="row mt-6">
 					<div class="col">
-						<p class="subtitleTwo text-white text-center">&copy; Copyright <script>document.write(new Date().getFullYear())</script> Expert Program Management </p>
+						<p class="subtitleTwo text-white text-center">&copy; Copyright <?php echo date("Y"); ?> Expert Program Management </p>
 </p>
 					</div>
 				</div>
