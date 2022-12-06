@@ -1032,6 +1032,7 @@ a:visited{
 }
 
 #mobile-menu .woocommerce button.button.alt{
+  margin-bottom: 3rem;
   --tw-bg-opacity: 1;
   background-color: rgb(6 214 160 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -1154,7 +1155,7 @@ a:visited{
 }
 
 #mobile-menu .sub-menu{
-  margin-bottom: 0.5rem;
+  margin-bottom: 3rem;
 }
 
 #mobile-menu .sub-menu a:not(.ctaButton a){
@@ -1177,10 +1178,11 @@ a:visited{
   margin-bottom: 0.25rem;
   display: block;
   --tw-text-opacity: 1;
-  color: rgb(6 214 160 / var(--tw-text-opacity));
+  color: rgb(255 255 255 / var(--tw-text-opacity));
 }
 
 #mobile-menu .ctaButton{
+  margin-bottom: 3rem;
   --tw-bg-opacity: 1;
   background-color: rgb(6 214 160 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
@@ -1393,6 +1395,11 @@ a:visited{
   margin-bottom: 3rem !important;
 }
 
+.my-0{
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+}
+
 .mb-4{
   margin-bottom: 1rem !important;
 }
@@ -1505,6 +1512,10 @@ a:visited{
   height: 2.5rem !important;
 }
 
+.h-\[34px\]{
+  height: 34px !important;
+}
+
 .h-auto{
   height: auto !important;
 }
@@ -1555,10 +1566,6 @@ a:visited{
 
 .h-1\/2{
   height: 50% !important;
-}
-
-.h-\[34px\]{
-  height: 34px !important;
 }
 
 .w-full{
@@ -1767,14 +1774,14 @@ a:visited{
        column-gap: 1.5rem !important;
 }
 
-.gap-x-2{
-  -moz-column-gap: 0.5rem !important;
-       column-gap: 0.5rem !important;
-}
-
 .gap-x-4{
   -moz-column-gap: 1rem !important;
        column-gap: 1rem !important;
+}
+
+.gap-x-2{
+  -moz-column-gap: 0.5rem !important;
+       column-gap: 0.5rem !important;
 }
 
 .gap-x-12{
@@ -2540,8 +2547,6 @@ body.no-scroll {
   left: 50%;
   transform: translate(-50%, -50%);
   background: #fff;
-  width: 80%;
-  max-width: 1280px;
 }
 
 .exit-intent-popup {
@@ -2552,12 +2557,11 @@ body.no-scroll {
   right: 0;
   z-index: 999;
   background: rgba(33, 33, 33, 0.8);
-  transform: translateY(60%) scale(0);
   transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .exit-intent-popup.visible {
-  transform: translateY(0) scale(1);
+  transform: translateY(0) scale(1) !important;
 }
 
 #announcement-bar a {
@@ -2824,6 +2828,10 @@ body.no-scroll {
 
 .splide__arrow:disabled {
   display: none;
+}
+
+.block-editor-content.white > * {
+  color: #fff !important;
 }
 
 .hover\:border-turquoise:hover{

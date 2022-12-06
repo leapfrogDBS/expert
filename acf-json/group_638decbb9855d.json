@@ -46,6 +46,25 @@
             "delay": 0
         },
         {
+            "key": "field_638f1d3d42cd7",
+            "label": "Button Text",
+            "name": "cta_button_text",
+            "type": "text",
+            "instructions": "",
+            "required": 0,
+            "conditional_logic": 0,
+            "wrapper": {
+                "width": "",
+                "class": "",
+                "id": ""
+            },
+            "default_value": "",
+            "placeholder": "",
+            "prepend": "",
+            "append": "",
+            "maxlength": ""
+        },
+        {
             "key": "field_638ded059ce00",
             "label": "Link",
             "name": "cta_link",
@@ -85,5 +104,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670245674
+    "modified": 1670323532
 }

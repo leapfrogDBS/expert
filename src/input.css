@@ -137,16 +137,16 @@
         @apply bg-turquoise text-white headingTwo text-center py-12 mb-0;
     }
     #mobile-menu a:not(.ctaButton a) {
-     @apply text-turquoise headingFour mb-2 block;
+        @apply text-turquoise headingFour mb-2 block;
     }
     #mobile-menu .sub-menu {
-        @apply mb-2;
+        @apply mb-12 ;
     }
     #mobile-menu .sub-menu a:not(.ctaButton a) {
-        @apply headingFive text-turquoise mb-1 block;
+        @apply headingFive text-white mb-1 block;
     }
     #mobile-menu .ctaButton {
-        @apply bg-turquoise text-white;
+        @apply bg-turquoise text-white mb-12;
     } 
     .post, .page {
         @apply mb-0;
@@ -370,9 +370,7 @@ body.no-scroll {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background: #fff;
-    width: 80%;
-    max-width: 1280px;
+    background: #fff; 
 }
 .exit-intent-popup {
     position: fixed;
@@ -382,12 +380,11 @@ body.no-scroll {
     right: 0;
     z-index: 999;
     background: rgba(33, 33, 33, 0.8);
-    transform: translateY(60%) scale(0);
     transition: transform 0.3s cubic-bezier(0.4, 0.0, 0.2, 1);
 }
 
 .exit-intent-popup.visible {
-    transform: translateY(0) scale(1);
+    transform: translateY(0) scale(1) !important;
 }
 #announcement-bar a {
     text-decoration: underline;
@@ -628,7 +625,11 @@ body.no-scroll {
     color: #fff !important;
 }
 
-
 .splide__arrow:disabled {
    display: none;
-  }
+}
+
+.block-editor-content.white > * {
+    color: #fff !important;
+
+}

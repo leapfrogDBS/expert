@@ -235,7 +235,7 @@ function data_fetch(){
 
     $the_query = new WP_Query( 
       array( 
-        'posts_per_page' => -1, 
+        'posts_per_page' => 15, 
         's' => esc_attr( $_POST['keyword'] ), 
         'post_type' => 'post' 
       ) 
@@ -643,3 +643,12 @@ EOT;
     return $html;
 }
 add_filter( 'style_loader_tag', 'add_rel_preload', 10, 4 );
+
+
+/* Deregister jquery 
+function my_jquery_enqueue() {
+    wp_deregister_script( 'jquery' );
+}
+
+add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue' );
+*/

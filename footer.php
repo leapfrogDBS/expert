@@ -40,7 +40,7 @@
 						}
 						?>
 					</div>
-					<div class="col md:col-span-4 flex items-center justify-center mt-6 mb-8 md:my-0">
+					<div class="col md:col-span-4 flex items-center justify-center my-0">
 					<?php
 					$terms_page = get_field('terms_page', 'option'); 
 					$privacy_page = get_field('privacy_page', 'option'); 
@@ -118,23 +118,31 @@
 
 	</footer><!-- #colophon -->
 </div><!-- #page -->
-<div class="exit-intent-popup">
+
+<?php
+$cta_image = get_field('cta_image', 'option');
+$cta_copy = get_field('cta_copy', 'option');
+$cta_button_text = get_field('cta_button_text', 'option');
+$cta_link = get_field('cta_link', 'option');
+?>
+
+<div class="exit-intent-popup" style="transform: translateY(60%) scale(0);">
     <div class="newsletter">
 		<div class="bg-turquoise relative">
 			<div class="row items-center">
 				<div class="col col-span-12 lg:col-span-6 h-full">
+				<?php if($cta_image) { ?>
+                	<img class=" w-full h-full object-cover object-right" src="<?php echo $cta_image['url']; ?>" loading="lazy" alt="">
+				<?php } else { ?>
 					<img class=" w-full h-full object-cover object-right" src="<?php echo get_template_directory_uri(); ?>/img/business.jpg" loading="lazy" alt="">
+				<?php } ?>
 				</div>
 				<div class="col col-span-12 lg:col-span-5 px-10 lg:pr-0 py-10">
-					<h2 class="headingFour text-white">Start a business today</h2>
-					<h3 class="headingSix text-white">In our FREE course you will learn how to:</h3>
-					<p class="bodyOne text-white flex items-center gap-x-2">This 5-week course will teach you everything you need to know to set up and then scale a small, part-time business that will be profitable regardless of what's happening in the economy.</p>
-					<p class="bodyOne text-white flex items-center gap-x-2">So if you've always wanted to be your own boss and have the flexibility and freedom that entails, then...</p>
-					<p class="bodyOne text-white flex items-center gap-x-2">Do your future self a favor and check out our course designed to help you achieve exactly that.</p>
-					<?php
-					$cta_link_address = get_field('cta_link_address', 'option'); 		
-					if ($cta_link_address) { ?>
-						<a href="<?php echo $cta_link_address; ?>" class="ctaButton">Learn more</a>
+					<div id="post-content" class="entry-content entry-content block-editor-content white">
+					<?php echo $cta_copy; ?>
+					</div>	
+					<?php if ($cta_link && $cta_button_text) { ?>
+						<a href="<?php echo $cta_link; ?>" class="ctaButton"><?php echo $cta_button_text; ?></a>
 					<?php
 					}
 					?>
