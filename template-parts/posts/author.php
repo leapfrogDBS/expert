@@ -13,7 +13,6 @@
                     ?>
                     <div class="author-details col-span-4 p-4">
                         <p class="headingFive mb-0"><?php echo get_the_author_meta( 'display_name', $post->post_author ); ?></p>
-                        <p class="subtitleOne mb-0"><?php echo get_the_author_meta( 'nickname', $post->post_author ); ?></p>
                         <p class="subtitleTwo"><?php echo get_the_author_meta( 'user_description', $post->post_author ); ?></p>
                     </div>
                 </div>

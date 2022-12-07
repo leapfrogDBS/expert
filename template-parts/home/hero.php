@@ -1,11 +1,15 @@
+<?php
+$typewritter_effect_headings = get_field('typewritter_effect_headings');
+$hero_subtitle = get_field('hero_subtitle');
+?>
 <section id="home-hero" class="bg-turquoise relative z-10">
     <div class="container">
         <div class="row relative items-center">
             <div class="col pt-12 pb-24 sm:col-span-7 lg:col-span-8 z-30">
-                <h1 id="header-title" class="text-center headingOne text-white sm:text-left">Turn your ambition into a sucess story</h1>
+                <h1 id="header-title" class="whitespace-nowrap text-center headingOne text-white mb-0 sm:text-left"></h1>
                 <div class="grid grid-cols-8">
                     <div class="col-span-8 mb-12 sm:border-l-2 sm:border-white sm:pl-8 text-center sm:text-left xl:col-span-5 z-30">
-                        <h2 class="headingFive text-white mb-0 font-nunito">Actionable, easy-to-understand tools that take about 10 minutes to consume.</h2>
+                        <h2 class="headingFive text-white mb-0 font-nunito"><?php echo $hero_subtitle; ?></h2>
                     </div>
                 </div>
                 <div class="text-center sm:text-left lg:mt-14">
@@ -20,10 +24,16 @@
 </section>
 
 
+
 <script type="text/javascript">
 	document.addEventListener('DOMContentLoaded',function(event){
-	// array with texts to type in typewriter
-	var dataText = ["Be more successful." , "Thrive in your career.", "Be happier.", "Build confidence." ];
+	var typewritterHeadings = <?php echo json_encode((array)$typewritter_effect_headings); ?>;
+	var dataText = [];
+
+	for (i=0; i<typewritterHeadings.length; i++) {
+		dataText.push(typewritterHeadings[i]['typewritter_heading']);
+	}
+
 	var headerTitle = document.querySelector('#header-title');
 	// type one text in the typwriter
 	// keeps calling itself until the text is finished

@@ -6,7 +6,7 @@
     <div class="container">
         <div class="row">
             <div class="col md:col-span-8 md:col-start-3 text-center">
-                <h2 class="headingFour text-white">Featured in</h2>
+                <h2 class="headingFour text-white mb-6">Featured in</h2>
             </div>
         </div>
         <div class="row">
@@ -50,7 +50,7 @@
         perMove: 1,
         perPage: 1,
         arrows: true,
-        autoplay: true,
+        autoplay: false,
         mediaQuery: 'min',
         breakpoints: {
             640: {
