@@ -1368,14 +1368,14 @@ a:visited{
   margin-right: auto !important;
 }
 
-.my-8{
-  margin-top: 2rem !important;
-  margin-bottom: 2rem !important;
-}
-
 .my-4{
   margin-top: 1rem !important;
   margin-bottom: 1rem !important;
+}
+
+.my-8{
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
 }
 
 .mx-2{
@@ -1553,20 +1553,12 @@ a:visited{
   height: 14rem !important;
 }
 
-.h-44{
-  height: 11rem !important;
-}
-
 .h-20{
   height: 5rem !important;
 }
 
 .h-1\/2{
   height: 50% !important;
-}
-
-.h-4{
-  height: 1rem !important;
 }
 
 .w-full{
@@ -1633,6 +1625,10 @@ a:visited{
   max-width: 32rem !important;
 }
 
+.max-w-\[88vw\]{
+  max-width: 88vw !important;
+}
+
 .max-w-md{
   max-width: 28rem !important;
 }
@@ -1663,10 +1659,6 @@ a:visited{
 
 .max-w-\[240px\]{
   max-width: 240px !important;
-}
-
-.max-w-\[88vw\]{
-  max-width: 88vw !important;
 }
 
 .flex-1{
@@ -1770,12 +1762,12 @@ a:visited{
   justify-content: space-between !important;
 }
 
-.gap-2{
-  gap: 0.5rem !important;
-}
-
 .gap-8{
   gap: 2rem !important;
+}
+
+.gap-2{
+  gap: 0.5rem !important;
 }
 
 .gap-x-6{
@@ -2458,7 +2450,7 @@ body.no-scroll {
 }
 
 #datafetch::-webkit-scrollbar-thumb {
-  background-color: #F3722C;
+  background-color: #F6617C;
   border-radius: 1.5rem !important;
 }
 
@@ -3304,10 +3296,6 @@ body.no-scroll {
 
   .lg\:h-20{
     height: 5rem !important;
-  }
-
-  .lg\:h-64{
-    height: 16rem !important;
   }
 
   .lg\:w-20{

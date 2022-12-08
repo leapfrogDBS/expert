@@ -186,14 +186,10 @@ function add_custom_scripts() {
 	wp_enqueue_style('splide-css', 'https://cdn.jsdelivr.net/npm/@splidejs/splide@latest/dist/css/splide.min.css');	
 	wp_enqueue_style('font-awesome-css', 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css');	
 }
-
 add_action( 'wp_enqueue_scripts', 'add_custom_scripts' );
 
 
 function theme_setup() {
-     
-    
-
     /**
     * Nav Menus
     */
@@ -347,11 +343,6 @@ function display_breadcrumb() {
 	echo '"';
 	}
 	}
-
-
-
-
-
 
 // REMOVE EMOJI ICONS
 remove_action('wp_head', 'print_emoji_detection_script', 7);
