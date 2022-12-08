@@ -1,4 +1,4 @@
-<section class="bg-blue">
+<section class="bg-white">
 <?php 
 global $wp_query;
 $post_count =  $wp_query->post_count;
@@ -11,7 +11,7 @@ if ( have_posts() ) :
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="headingTwo text-white text-center">Latest Tools</h1>
+                    <h1 class="headingTwo text-center">Latest Tools</h1>
                 </div>
             </div>
             <div class="row mt-12 gap-8">
@@ -77,7 +77,7 @@ if ( have_posts() ) :
             
             <div class="row">
                 <div class="col flex justify-center mt-12">
-                    <div id="loadmore" class="ctaButton bg-turquoise">Load more</div>
+                    <div id="loadmore" class="ctaButton">Load more</div>
                 </div>
             </div>
             <script>
