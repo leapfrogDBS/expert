@@ -1525,8 +1525,8 @@ a:visited{
   height: 3rem !important;
 }
 
-.h-44{
-  height: 11rem !important;
+.h-64{
+  height: 16rem !important;
 }
 
 .h-16{
@@ -1553,12 +1553,20 @@ a:visited{
   height: 14rem !important;
 }
 
+.h-44{
+  height: 11rem !important;
+}
+
 .h-20{
   height: 5rem !important;
 }
 
 .h-1\/2{
   height: 50% !important;
+}
+
+.h-4{
+  height: 1rem !important;
 }
 
 .w-full{
@@ -1625,10 +1633,6 @@ a:visited{
   max-width: 32rem !important;
 }
 
-.max-w-5xl{
-  max-width: 64rem !important;
-}
-
 .max-w-md{
   max-width: 28rem !important;
 }
@@ -1653,8 +1657,16 @@ a:visited{
   max-width: 36rem !important;
 }
 
+.max-w-5xl{
+  max-width: 64rem !important;
+}
+
 .max-w-\[240px\]{
   max-width: 240px !important;
+}
+
+.max-w-\[88vw\]{
+  max-width: 88vw !important;
 }
 
 .flex-1{
@@ -1760,6 +1772,10 @@ a:visited{
 
 .gap-2{
   gap: 0.5rem !important;
+}
+
+.gap-8{
+  gap: 2rem !important;
 }
 
 .gap-x-6{
@@ -3288,6 +3304,10 @@ body.no-scroll {
 
   .lg\:h-20{
     height: 5rem !important;
+  }
+
+  .lg\:h-64{
+    height: 16rem !important;
   }
 
   .lg\:w-20{

@@ -97,8 +97,7 @@ if ($show_announcement_bar) {
 								<span class="hamburger-middle w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-[10px] md:w-[40px] bg-turquoise"></span>
 								<span class="hamburger-bottom w-8 h-[3px] absolute top-0 left-0 rotate-0 transition-all duration-500 translate-y-[20px] md:w-[40px] bg-turquoise"></span>
 							</div>
-						
-						
+											
 						<div class="hidden md:flex">
 							<?php include(locate_template('template-parts/menu/desktop-menu.php')); ?>
 						</div>

@@ -5,6 +5,8 @@
  * Get header
  */ 
 get_header();
+
+$name_and_address = get_field('name_and_address', 'options');
 ?>
 
 
@@ -17,7 +19,13 @@ get_header();
             </div>
             <div class="col md:col-span-6">
                 <?php echo do_shortcode('[contact-form-7 id="43" title="Contact Form"]'); ?>
+                <?php if($name_and_address) { ?>
+                <div class="entry-content block-editor-content">
+                    <?php echo $name_and_address; ?>
+                </div>
+            <?php } ?>
             </div>
+            
         </div>
     </div>
 </section>

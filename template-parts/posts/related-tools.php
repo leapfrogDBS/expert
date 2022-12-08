@@ -7,7 +7,7 @@
                 <p class="bodyOne">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Animi placeat nisi laboriosam ut quasi blanditiis quos? Fuga tempore debitis quaerat.</p>
             </div>
         </div>
-        <div class="row mt-4 max-w-5xl mx-auto">
+        <div class="row">
             <div class="col">
             <?php
                 $related = get_posts( array( 'category__in' => wp_get_post_categories($post->ID), 'numberposts' => 10, 'post__not_in' => array($post->ID) ) );
@@ -31,31 +31,33 @@
                                     ?>
 
                                 <li class="splide__slide p-2">                                                  
-                                    <a href ="<?php echo the_permalink(); ?>" class="group rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col">
-                                        <div class="realtive">
-                                            <img class="w-full h-44 object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
+                                    <a href="<?php echo the_permalink(); ?>" class="group rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
+                                        <div class="realtive flex-1">
+                                            <img class="w-full h-full object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
                                         </div>
-                                        <div class="px-6 py-3 flex flex-col flex-1 justify-between">        
-                                            <h3 class="text-lg leading-tight font-semibold mb-1"><?php the_title(); ?></h3>                               
-                                            <p class="subtitleTwo mb-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
+                                        <div class="px-6 py-3 flex flex-col flex-1 justify-between"> 
                                             
-                                            <div>
-                                            <div class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-blue">
-                                                <?php
-                                                $article_video_link = get_field('article_video_link');
-                                                if ($article_video_link) {
-                                                ?>
-                                                   <i class="fa-solid fa-circle-play"></i>    
-                                                <?php
-                                                } else {
-                                                ?>
-                                                    <i class="fa-brands fa-readme"></i>
-                                                <?php
-                                                }
+                                            <h3 class="text-lg leading-tight font-semibold mb-1"><?php the_title(); ?></h3>                              
+                                            
+                                            <p class="subtitleTwo mt-4 flex-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
+                                            
+                                            <div class="h-16 my-4">
+                                                <div class=" text-4xl mb-0 md:headingTwo  text-turquoise group-hover:text-blue">
+                                                    <?php
+                                                    $article_video_link = get_field('article_video_link');
+                                                    if ($article_video_link) {
+                                                    ?>
+                                                    <i class="fa-solid fa-circle-play"></i>    
+                                                    <?php
+                                                    } else {
+                                                    ?>
+                                                        <i class="fa-brands fa-readme"></i>
+                                                    <?php
+                                                    }
                                                 ?>
                                                 </div>
                                                 <div class="flex justify-between items-center mt-2">
-                                                <?php
+                                                    <?php
                                                     if ($reading_time) {
                                                     ?>
                                                         <div class="subtitleTwo mb-0 py-1 text-blue mr-2"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
@@ -69,9 +71,8 @@
                                                 </div>
                                             </div>
                                         </div>
-                                                </a>
+                                    </a>
                                 </li>
-
                             <?php
                             } // end while
                             ?>

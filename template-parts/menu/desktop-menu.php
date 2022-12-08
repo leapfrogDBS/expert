@@ -7,7 +7,7 @@
 ?>
 
 <nav>
-<ul class="main-nav flex items-center">
+<ul id="desktop-nav" class="main-nav flex items-center">
     <?php
     $count = 0;
     $submenu = false;
