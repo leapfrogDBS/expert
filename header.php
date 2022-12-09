@@ -18,14 +18,23 @@ if ($show_announcement_bar) {
 <!doctype html>
 <html class="<?php echo $html_classes; ?>" <?php language_attributes(); ?>>
 <head>
+	<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-HCYMXP2TYR"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HCYMXP2TYR');
+</script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<link rel="profile" href="https://gmpg.org/xfn/11">
 	
 	<?php wp_head(); ?>
 
-	<script src="https://www.youtube.com/iframe_api"></script>	
-	<script src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"colors":{"popup":{"background":"#2176FF","text":"#FFFFFF","border":"#FFFFFF"},"button":{"background":"#06D6A0","text":"#ffffff"}},"position":"bottom","transparency":"25","fontsize":"large","content":{"href":"https://expertprogrammanagement.com/cookie-policy/"}})});</script>
+	<script defer src="https://www.youtube.com/iframe_api"></script>	
+	<script defer src="https://cdn.websitepolicies.io/lib/cookieconsent/cookieconsent.min.js" defer></script><script>window.addEventListener("load",function(){window.wpcc.init({"colors":{"popup":{"background":"#2176FF","text":"#FFFFFF","border":"#FFFFFF"},"button":{"background":"#06D6A0","text":"#ffffff"}},"position":"bottom","transparency":"25","fontsize":"large","content":{"href":"https://expertprogrammanagement.com/cookie-policy/"}})});</script>
   	<link rel="preconnect" href="https://fonts.googleapis.com">
 	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 	<link href="https://fonts.googleapis.com/css2?family=Nunito&family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
