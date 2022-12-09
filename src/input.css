@@ -631,5 +631,14 @@ body.no-scroll {
 
 .block-editor-content.white > * {
     color: #fff !important;
+}
 
+ .products + #mega-menu #menu-container {
+    width: 30% !important;
+    margin-right: 0 !important;
+    margin-left: auto;
+} 
+.products + #mega-menu #menu-container #menu-list {
+    display: flex !important;
+    flex-direction: column !important;
 }

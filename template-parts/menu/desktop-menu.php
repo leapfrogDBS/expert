@@ -47,11 +47,12 @@
         <?php if ( $parent_id == $item->menu_item_parent ): ?>
 
             <?php if ( !$submenu ): $submenu = true; ?>
+       
             <div id="mega-menu" class="fixed -translate-x-full left-0 right-0 transition opacity-0 bg-transparent pt-[20px] group-hover:opacity-100 group-hover:block group-hover:transform min-w-[560px] transform hover:text-white group-hover:translate-x-0 ">
-                <div class="container rounded-b-3xl relative py-12 px-24 bg-white shadow-xl w-full">
-                    <div class="relative z-10">
+                <div class="container ">
+                    <div id="menu-container" class="relative z-10 rounded-b-3xl relative py-12 px-24 bg-white shadow-xl w-full">
                         <div>											
-                            <ul class="grid grid-cols-3 gap-x-6 gap-y-2">
+                            <ul id="menu-list" class="grid grid-cols-3 gap-x-6 gap-y-2">
                             <?php endif; ?>
 
                             <li>
@@ -70,8 +71,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
-                
+            </div> 
+            
             <?php $submenu = false; endif; ?>
 
         <?php endif; ?>

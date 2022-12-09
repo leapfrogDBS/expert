@@ -1429,14 +1429,6 @@ a:visited{
   margin-bottom: 0.25rem !important;
 }
 
-.ml-auto{
-  margin-left: auto !important;
-}
-
-.mr-0{
-  margin-right: 0px !important;
-}
-
 .mb-6{
   margin-bottom: 1.5rem !important;
 }
@@ -2835,6 +2827,17 @@ body.no-scroll {
   color: #fff !important;
 }
 
+.products + #mega-menu #menu-container {
+  width: 30% !important;
+  margin-right: 0 !important;
+  margin-left: auto;
+}
+
+.products + #mega-menu #menu-container #menu-list {
+  display: flex !important;
+  flex-direction: column !important;
+}
+
 .hover\:border-turquoise:hover{
   --tw-border-opacity: 1 !important;
   border-color: rgb(6 214 160 / var(--tw-border-opacity)) !important;
@@ -3031,16 +3034,16 @@ body.no-scroll {
     grid-column: span 4 / span 4 !important;
   }
 
+  .md\:col-span-6{
+    grid-column: span 6 / span 6 !important;
+  }
+
   .md\:col-span-8{
     grid-column: span 8 / span 8 !important;
   }
 
   .md\:col-span-10{
     grid-column: span 10 / span 10 !important;
-  }
-
-  .md\:col-span-6{
-    grid-column: span 6 / span 6 !important;
   }
 
   .md\:col-span-5{
