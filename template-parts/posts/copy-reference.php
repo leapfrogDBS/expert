@@ -21,7 +21,7 @@
 </section>
 
 
-<script>
+<script defer>
     function copyFunction() {
 
         var copyData = document.getElementById("copy-text").innerHTML;

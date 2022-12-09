@@ -80,7 +80,7 @@ if ( have_posts() ) :
                     <div id="loadmore" class="ctaButton">Load more</div>
                 </div>
             </div>
-            <script>
+            <script defer>
                 /*Load More Button */
                 const loadmore = document.querySelector('#loadmore');
                 var increments = 8;

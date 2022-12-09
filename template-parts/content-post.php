@@ -21,7 +21,7 @@
     <div class="bg-none left-0 right-0 sticky mb-6 z-50" id="progress-bar-container">
          <div id="progress-bar" class="rounded-r-full bg-pink block z-50 "></div> 
     </div>
-<script>	
+<script defer>	
 	let processScroll = () => {
     let docElem = document.documentElement,
         docBody = document.body,

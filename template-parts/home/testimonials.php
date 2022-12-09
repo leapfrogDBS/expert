@@ -40,7 +40,7 @@
         </div>
     </div>
 </section>
-<script>
+<script defer>
     var splide3 = new Splide( '#testimonials-slider', {
         lazyLoad: true,
         pagination: true,

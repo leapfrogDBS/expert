@@ -8,7 +8,7 @@
     </div>
 </div>
 
-<script>
+<script defer>
 /* Anchor links Highlight */
 jQuery(function ($) {
     $('#anchor-links a:first-child').addClass('ds-menu-active')

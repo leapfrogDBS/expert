@@ -111,7 +111,7 @@ endif; ?>
 }
 </style>
 
-<script>
+<script defer>
     document.querySelector('.tablinks').click();
     function openTab(evt, week) {
         var i, tabcontent, tablinks;

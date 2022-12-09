@@ -105,7 +105,7 @@
         </div>
     </div>
 </section>
-<script>
+<script defer>
     var splide4 = new Splide( '#articles-slider', {
         lazyLoad: true,
         pagination: false,

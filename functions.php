@@ -204,7 +204,7 @@ add_action('after_setup_theme', 'theme_setup');
 add_action( 'wp_footer', 'ajax_fetch' );
 function ajax_fetch() {
 ?>
-<script type="text/javascript">
+ <script defer type="text/javascript">
 function fetch(){
 	if (jQuery('#keyword').val()) {
     jQuery.ajax({
@@ -282,7 +282,7 @@ function data_fetch(){
         <?php endwhile;
 		?>
 		</div>
-		<script>
+		<script defer>
 			searchResults = document.querySelector('#datafetch');
 			closeButton = searchResults.querySelector('#close-search');
 			searchField = document.querySelector('#search-bar #keyword');

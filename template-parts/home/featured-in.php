@@ -38,7 +38,7 @@
     </div>
 </section>
 
-<script>
+<script defer>
     var splide2 = new Splide( '#featured-in-slider', {
         lazyLoad: true,
         pagination: false,

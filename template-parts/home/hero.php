@@ -25,7 +25,7 @@ $hero_subtitle = get_field('hero_subtitle');
 
 
 
-<script type="text/javascript">
+<script defer type="text/javascript">
 	document.addEventListener('DOMContentLoaded',function(event){
 	var typewritterHeadings = <?php echo json_encode((array)$typewritter_effect_headings); ?>;
 	var dataText = [];

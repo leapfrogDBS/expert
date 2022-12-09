@@ -153,7 +153,7 @@ $cta_link = get_field('cta_link', 'option');
         
     </div>
 </div>
-<script>
+<script defer>
 const CookieService = {
     setCookie(name, value, days) {
         let expires = '';
@@ -217,6 +217,6 @@ if (!CookieService.getCookie('exitIntentShown')) {
 
 
 <?php wp_footer(); ?>
-
+	<script defer src="https://edgrmtracking.com/partnersforms/widget/?component=chat&ref=aae8a7fa7f7b6192"></script>
 </body>
 </html>
