@@ -642,3 +642,7 @@ body.no-scroll {
     display: flex !important;
     flex-direction: column !important;
 }
+
+.block-editor-content .ctaButton {
+    text-decoration: none !important;
+}
