@@ -140,7 +140,7 @@
         @apply text-turquoise headingFour mb-2 block;
     }
     #mobile-menu .sub-menu {
-        @apply mb-12 ;
+        @apply mb-6 ;
     }
     #mobile-menu .sub-menu a:not(.ctaButton a) {
         @apply headingFive text-white mb-1 block;

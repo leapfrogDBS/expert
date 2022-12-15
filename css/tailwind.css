@@ -1152,7 +1152,7 @@ a:visited{
 }
 
 #mobile-menu .sub-menu{
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
 }
 
 #mobile-menu .sub-menu a:not(.ctaButton a){
@@ -3239,10 +3239,6 @@ body.no-scroll {
 }
 
 @media (min-width: 1024px){
-  .lg\:visible{
-    visibility: visible !important;
-  }
-
   .lg\:relative{
     position: relative !important;
   }
@@ -3357,13 +3353,31 @@ body.no-scroll {
     text-align: left !important;
   }
 
+  .lg\:text-lg{
+    font-size: 1.125rem !important;
+    line-height: 1.75rem !important;
+  }
+
   .lg\:opacity-100{
     opacity: 1 !important;
   }
 }
 
 @media (min-width: 1280px){
+  .xl\:visible{
+    visibility: visible !important;
+  }
+
   .xl\:col-span-5{
     grid-column: span 5 / span 5 !important;
+  }
+
+  .xl\:hidden{
+    display: none !important;
+  }
+
+  .xl\:text-xl{
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
   }
 }

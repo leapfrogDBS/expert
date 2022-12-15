@@ -11,7 +11,7 @@
             <?php 
             
             global $query_string;
-            query_posts( $query_string . '&posts_per_page' );
+            query_posts( $query_string . '&posts_per_page=15' );
             
                 if ( have_posts() ) {
                     ?>

@@ -32,13 +32,13 @@
         if (str_contains($classes, 'mega-menu')) {
            ?>
 
-            <p class="title text-base font-normal mb-0 px-2 py-2 cursor-pointer <?php echo $classes; ?>" aria-haspopup="true">
+            <p class="title text-base lg:text-lg xl:text-xl font-normal mb-0 px-4 py-2 cursor-pointer <?php echo $classes; ?>" aria-haspopup="true">
                 <?php echo $title; ?>
         </p>
         <?php    
         } else {  
         ?>
-            <a href="<?php echo $link; ?>" class="title text-base font-normal mb-0 px-2 py-2 <?php echo $classes; ?>" <?php echo $popup; ?>> 
+            <a href="<?php echo $link; ?>" class="title text-base lg:text-lg xl:text-xl font-normal mb-0 px-4 py-2 <?php echo $classes; ?>" <?php echo $popup; ?>> 
             <?php echo $title; ?>
         </a>
     <?php } 
