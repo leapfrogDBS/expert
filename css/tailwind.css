@@ -1948,6 +1948,16 @@ a:visited{
   background-color: transparent !important;
 }
 
+.bg-\[\#ffD103\]{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 209 3 / var(--tw-bg-opacity)) !important;
+}
+
+.bg-\[\#ffd103\]{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 209 3 / var(--tw-bg-opacity)) !important;
+}
+
 .bg-none{
   background-image: none !important;
 }
@@ -2219,6 +2229,11 @@ a:visited{
 .text-gray-800{
   --tw-text-opacity: 1 !important;
   color: rgb(31 41 55 / var(--tw-text-opacity)) !important;
+}
+
+.text-black{
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
 }
 
 .placeholder-charcoal::-moz-placeholder{
@@ -3247,6 +3262,10 @@ body.no-scroll {
 }
 
 @media (min-width: 1024px){
+  .lg\:visible{
+    visibility: visible !important;
+  }
+
   .lg\:relative{
     position: relative !important;
   }

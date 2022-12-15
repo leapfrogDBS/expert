@@ -11,15 +11,15 @@ $book_two_product_link = get_field('book_two_product_link', 'options');
 
 if ($book_one_title && $book_one_image && $book_one_copy && $book_one_product_link ) :
 ?>
-<section class="bg-blue">
+<section class="bg-[#ffD103]">
     <div class="container">
         <div class="row items-center">
             <div class="col col-span-5 hidden md:block">
                 <img loading="lazy" class="w-full h-full max-w-md m-auto" src="<?php echo $book_one_image['url']; ?>" alt="">
             </div>
             <div class="col md:col-span-5 md:col-start-7">
-                <h2 class="headingThree text-white text-center md:mb-20 md:text-left"><?php echo $book_one_title; ?></h2>
-                <p class="bodyOne text-white text-center md:text-left"><?php echo $book_one_copy; ?></p>
+                <h2 class="headingThree text-black text-center md:mb-20 md:text-left"><?php echo $book_one_title; ?></h2>
+                <p class="bodyOne text-black text-center md:text-left"><?php echo $book_one_copy; ?></p>
                     <img loading="lazy" class="w-full h-full md:hidden my-8 max-w-sm m-auto" src="<?php echo $book_one_image['url']; ?>" alt="">
                 <div class="text-center md:text-left">
                     <a href="<?php echo $book_one_product_link; ?>" class="ctaButton bg-turquoise ">Buy now</a>
@@ -33,12 +33,12 @@ if ($book_one_title && $book_one_image && $book_one_copy && $book_one_product_li
 if ($book_two_title && $book_two_image && $book_two_copy && $book_two_product_link ) :
 ?>
 
-<section class="bg-yellow">
+<section class="bg-blue">
     <div class="container">
         <div class="row items-center">
             <div class="col md:col-span-5">
-                <h2 class="headingThree text-center md:mb-20 md:text-left"><?php echo $book_two_title; ?></h2>
-                <p class="bodyOne text-center md:text-left"><?php echo $book_two_copy; ?></p>
+                <h2 class=" text-white headingThree text-center md:mb-20 md:text-left"><?php echo $book_two_title; ?></h2>
+                <p class="text-white bodyOne text-center md:text-left"><?php echo $book_two_copy; ?></p>
                     <img loading="lazy" class="w-full h-full md:hidden my-8 max-w-sm m-auto" src="<?php echo $book_two_image['url']; ?>" alt="">
                 <div class="text-center md:text-left">
                     <a href="<?php echo $book_two_product_link; ?>" class="ctaButton">Buy now</a>

@@ -1,4 +1,4 @@
-<section class="bg-white">
+<section class="bg-[#ffd103]">
 <?php 
 global $wp_query;
 $post_count =  $wp_query->post_count;
