@@ -653,5 +653,8 @@ body.no-scroll {
 }
 
 .wpcc-container {
-    z-index: 999999999999999999999 !important;
+    z-index: 99999 !important;
+}
+.eduChat {
+    z-index: 99998 !important;
 }
