@@ -2852,6 +2852,10 @@ body.no-scroll {
   display: inline-block;
 }
 
+.wpcc-container {
+  z-index: 999999999999999999999 !important;
+}
+
 .hover\:border-turquoise:hover{
   --tw-border-opacity: 1 !important;
   border-color: rgb(6 214 160 / var(--tw-border-opacity)) !important;

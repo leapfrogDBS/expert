@@ -651,3 +651,7 @@ body.no-scroll {
     vertical-align: middle;
     display: inline-block;
 }
+
+.wpcc-container {
+    z-index: 999999999999999999999 !important;
+}
