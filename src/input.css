@@ -646,3 +646,8 @@ body.no-scroll {
 .block-editor-content .ctaButton {
     text-decoration: none !important;
 }
+.mega-link i {
+    width: 40px;
+    vertical-align: middle;
+    display: inline-block;
+}

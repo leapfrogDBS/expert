@@ -18,7 +18,7 @@ $productivity_button_link = get_field('productivity_button_link');
                 </figure>
             </div>
             <div class="col text-center ">
-                <a href="<?php echo $productivity_button_link; ?>" class="ctaButton bg-turquoise"><?php echo $productivity_button_text; ?></a>
+                <a href="<?php echo $productivity_button_link['url']; ?>" class="ctaButton bg-turquoise"><?php echo $productivity_button_text; ?></a>
             </div>
         </div>
     </div>
