@@ -27,7 +27,7 @@
         $parent_id = $item->ID;
     ?>
 
-    <li class="items-start group">
+    <li class="items-start group text-center">
         <?php
         if (str_contains($classes, 'mega-menu')) {
            ?>

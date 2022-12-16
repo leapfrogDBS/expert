@@ -1944,8 +1944,9 @@ a:visited{
   background-color: rgb(255 190 0 / var(--tw-bg-opacity)) !important;
 }
 
-.bg-transparent{
-  background-color: transparent !important;
+.bg-\[\#ffd103\]{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 209 3 / var(--tw-bg-opacity)) !important;
 }
 
 .bg-\[\#ffD103\]{
@@ -1953,9 +1954,8 @@ a:visited{
   background-color: rgb(255 209 3 / var(--tw-bg-opacity)) !important;
 }
 
-.bg-\[\#ffd103\]{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 209 3 / var(--tw-bg-opacity)) !important;
+.bg-transparent{
+  background-color: transparent !important;
 }
 
 .bg-none{
@@ -2221,6 +2221,11 @@ a:visited{
   color: rgb(6 214 160 / var(--tw-text-opacity)) !important;
 }
 
+.text-black{
+  --tw-text-opacity: 1 !important;
+  color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
+}
+
 .text-pink{
   --tw-text-opacity: 1 !important;
   color: rgb(249 98 125 / var(--tw-text-opacity)) !important;
@@ -2229,11 +2234,6 @@ a:visited{
 .text-gray-800{
   --tw-text-opacity: 1 !important;
   color: rgb(31 41 55 / var(--tw-text-opacity)) !important;
-}
-
-.text-black{
-  --tw-text-opacity: 1 !important;
-  color: rgb(0 0 0 / var(--tw-text-opacity)) !important;
 }
 
 .placeholder-charcoal::-moz-placeholder{
@@ -3380,31 +3380,13 @@ body.no-scroll {
     text-align: left !important;
   }
 
-  .lg\:text-lg{
-    font-size: 1.125rem !important;
-    line-height: 1.75rem !important;
-  }
-
   .lg\:opacity-100{
     opacity: 1 !important;
   }
 }
 
 @media (min-width: 1280px){
-  .xl\:visible{
-    visibility: visible !important;
-  }
-
   .xl\:col-span-5{
     grid-column: span 5 / span 5 !important;
-  }
-
-  .xl\:hidden{
-    display: none !important;
-  }
-
-  .xl\:text-xl{
-    font-size: 1.25rem !important;
-    line-height: 1.75rem !important;
   }
 }
