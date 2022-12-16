@@ -58,9 +58,9 @@ if ($show_announcement_bar) {
 		
     <div class="header-container desktop-header-container block py-4">
 			
-		<div class="container flex md:grid md:grid-cols-2 lg:grid-cols-3 justify-between items-center mb-1">
+		<div class="container flex lg:grid lg:grid-cols-12 justify-between items-center mb-1">
 					
-			<div id="logo-container" class="logo-container h-10 w-auto flex items-center">
+			<div id="logo-container" class="logo-container h-10 w-auto flex items-center lg:col-span-5">
            		<a href="<?php echo home_url(); ?>">
 					<div class="hidden sm:block">
 					<?php
@@ -83,12 +83,12 @@ if ($show_announcement_bar) {
 				</a>
 		  	</div>
 
-			<div id="search-bar" class="text-center invisible absolute -left-full lg:left-auto opacity-0 pt-5 lg:relative lg:visible lg:opacity-100 lg:pt-0 lg:block bg-white/95 lg:bg-white ">
-				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
+			<div id="search-bar" class="text-center invisible absolute -left-full lg:left-auto opacity-0 pt-5 lg:relative lg:visible lg:opacity-100 lg:pt-0 lg:block bg-white/95 lg:bg-white lg:col-span-2">
+				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72 w-full xl:text-xl" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
 					<div id="datafetch" class="fixed overflow-y-scroll left-0 right-0 text-left px-12 max-w-lg m-auto lg:bg-white rounded-b-3xl shadow-lg"></div>
 			</div>
 			
-				<nav>
+				<nav class="lg:col-span-5">
 					<ul class="flex items-center font-semibold justify-end gap-x-2 md:gap-x-0">
 						<div id="search-icon" class="lg:hidden w-8">
 							<i class="fa-solid headingFour mb-0 fa-magnifying-glass text-turquoise text-2xl"></i>

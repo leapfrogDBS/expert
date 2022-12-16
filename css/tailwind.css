@@ -935,58 +935,6 @@ a:visited{
   text-decoration-line: underline;
 }
 
-.single-product .product_title{
-  --tw-text-opacity: 1;
-  color: rgb(74 74 74 / var(--tw-text-opacity));
-  margin-bottom: 2rem;
-  font-size: 1.875rem;
-  line-height: 2.25rem;
-  font-weight: 500;
-}
-
-@media (min-width: 768px){
-  .single-product .product_title{
-    font-size: 2.25rem;
-    line-height: 2.5rem;
-  }
-}
-
-.single-product h3{
-  --tw-text-opacity: 1;
-  color: rgb(74 74 74 / var(--tw-text-opacity));
-  margin-bottom: 1.25rem;
-  font-size: 1.125rem;
-  line-height: 1.75rem;
-  font-weight: 700;
-}
-
-@media (min-width: 768px){
-  .single-product h3{
-    font-size: 1.25rem;
-    line-height: 1.75rem;
-  }
-}
-
-.single-product .price span{
-  --tw-text-opacity: 1;
-  color: rgb(74 74 74 / var(--tw-text-opacity));
-  margin-bottom: 1.5rem;
-  font-size: 1.25rem;
-  line-height: 1.75rem;
-  font-weight: 500;
-}
-
-@media (min-width: 768px){
-  .single-product .price span{
-    font-size: 1.5rem;
-    line-height: 2rem;
-  }
-}
-
-.single-product .price span{
-  font-weight: 700;
-}
-
 .woocommerce button.button.alt{
   color: rgb(74 74 74 / var(--tw-text-opacity));
   display: inline-block;
@@ -1283,10 +1231,6 @@ a:visited{
 
 .bottom-\[2\%\]{
   bottom: 2% !important;
-}
-
-.top-20{
-  top: 5rem !important;
 }
 
 .z-50{
@@ -1612,16 +1556,16 @@ a:visited{
   width: 13rem !important;
 }
 
+.w-\[215px\]{
+  width: 215px !important;
+}
+
 .w-11{
   width: 2.75rem !important;
 }
 
 .w-20{
   width: 5rem !important;
-}
-
-.w-\[215px\]{
-  width: 215px !important;
 }
 
 .min-w-\[560px\]{
@@ -1796,14 +1740,14 @@ a:visited{
        column-gap: 0.5rem !important;
 }
 
-.gap-x-12{
-  -moz-column-gap: 3rem !important;
-       column-gap: 3rem !important;
-}
-
 .gap-x-10{
   -moz-column-gap: 2.5rem !important;
        column-gap: 2.5rem !important;
+}
+
+.gap-x-12{
+  -moz-column-gap: 3rem !important;
+       column-gap: 3rem !important;
 }
 
 .gap-x-9{
@@ -1954,11 +1898,6 @@ a:visited{
   background-color: rgb(249 98 125 / var(--tw-bg-opacity)) !important;
 }
 
-.bg-yellow{
-  --tw-bg-opacity: 1 !important;
-  background-color: rgb(255 190 0 / var(--tw-bg-opacity)) !important;
-}
-
 .bg-\[\#ffd103\]{
   --tw-bg-opacity: 1 !important;
   background-color: rgb(255 209 3 / var(--tw-bg-opacity)) !important;
@@ -1971,6 +1910,11 @@ a:visited{
 
 .bg-transparent{
   background-color: transparent !important;
+}
+
+.bg-yellow{
+  --tw-bg-opacity: 1 !important;
+  background-color: rgb(255 190 0 / var(--tw-bg-opacity)) !important;
 }
 
 .bg-none{
@@ -3151,24 +3095,24 @@ li {
     grid-column: span 6 / span 6 !important;
   }
 
-  .md\:col-span-8{
-    grid-column: span 8 / span 8 !important;
-  }
-
   .md\:col-span-10{
     grid-column: span 10 / span 10 !important;
+  }
+
+  .md\:col-span-8{
+    grid-column: span 8 / span 8 !important;
   }
 
   .md\:col-span-5{
     grid-column: span 5 / span 5 !important;
   }
 
-  .md\:col-start-3{
-    grid-column-start: 3 !important;
-  }
-
   .md\:col-start-2{
     grid-column-start: 2 !important;
+  }
+
+  .md\:col-start-3{
+    grid-column-start: 3 !important;
   }
 
   .md\:col-start-7{
@@ -3374,6 +3318,10 @@ li {
     grid-column: span 9 / span 9 !important;
   }
 
+  .lg\:col-span-2{
+    grid-column: span 2 / span 2 !important;
+  }
+
   .lg\:col-start-3{
     grid-column-start: 3 !important;
   }
@@ -3402,6 +3350,10 @@ li {
     display: block !important;
   }
 
+  .lg\:grid{
+    display: grid !important;
+  }
+
   .lg\:hidden{
     display: none !important;
   }
@@ -3422,8 +3374,12 @@ li {
     max-width: 700px !important;
   }
 
-  .lg\:grid-cols-3{
-    grid-template-columns: repeat(3, minmax(0, 1fr)) !important;
+  .lg\:grid-cols-6{
+    grid-template-columns: repeat(6, minmax(0, 1fr)) !important;
+  }
+
+  .lg\:grid-cols-12{
+    grid-template-columns: repeat(12, minmax(0, 1fr)) !important;
   }
 
   .lg\:flex-row{
@@ -3464,14 +3420,6 @@ li {
 @media (min-width: 1280px){
   .xl\:sticky{
     position: sticky !important;
-  }
-
-  .xl\:top-20{
-    top: 5rem !important;
-  }
-
-  .xl\:top-32{
-    top: 8rem !important;
   }
 
   .xl\:top-40{
@@ -3515,14 +3463,13 @@ li {
     justify-content: center !important;
   }
 
-  .xl\:space-x-16 > :not([hidden]) ~ :not([hidden]){
-    --tw-space-x-reverse: 0 !important;
-    margin-right: calc(4rem * var(--tw-space-x-reverse)) !important;
-    margin-left: calc(4rem * calc(1 - var(--tw-space-x-reverse))) !important;
-  }
-
   .xl\:border-t{
     border-top-width: 1px !important;
+  }
+
+  .xl\:text-xl{
+    font-size: 1.25rem !important;
+    line-height: 1.75rem !important;
   }
 }
   
