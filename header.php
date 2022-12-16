@@ -83,6 +83,7 @@ if ($show_announcement_bar) {
 				</a>
 		  	</div>
 
+			
 			<div id="search-bar" class="text-center invisible absolute -left-full lg:left-auto opacity-0 pt-5 lg:relative lg:visible lg:opacity-100 lg:pt-0 lg:block bg-white/95 lg:bg-white lg:col-span-2">
 				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72 w-full xl:text-xl" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
 					<div id="datafetch" class="fixed overflow-y-scroll left-0 right-0 text-left px-12 max-w-lg m-auto lg:bg-white rounded-b-3xl shadow-lg"></div>
