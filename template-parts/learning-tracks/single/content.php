@@ -61,7 +61,7 @@
                     }
 
                 ?>
-                    <div class="col mb-4 flex p-4 rounded-2xl border-2 js-scroll fade-in-bottom <?php echo $backgroundColour; ?> items-center gap-x-6 md:gap-x-12 shadow-lg learning-goal md:col-span-8 md:col-start-3">
+                    <div class="col mb-4 flex p-4 rounded-2xl border-2  fade-in-bottom <?php echo $backgroundColour; ?> items-center gap-x-6 md:gap-x-12 shadow-lg learning-goal md:col-span-8 md:col-start-3">
                         <h5 class="headingOne mb-0 text-white"><?php echo $i; ?></h5>
                         <h5 class="headingFive mb-0 text-white"><?php echo $goal; ?></h5>
                     </div>

@@ -558,6 +558,13 @@ video {
   }
 }
 
+@media (min-width: 1280px){
+  .headingOne{
+    font-size: 6rem;
+    line-height: 1;
+  }
+}
+
 .headingTwo{
   margin-bottom: 1.5rem;
   font-size: 1.875rem;
@@ -626,7 +633,7 @@ video {
   margin-bottom: 1.25rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 @media (min-width: 768px){
@@ -830,7 +837,7 @@ a:visited{
   margin-bottom: 1.25rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 @media (min-width: 768px){
@@ -950,7 +957,7 @@ a:visited{
   margin-bottom: 1.25rem;
   font-size: 1.125rem;
   line-height: 1.75rem;
-  font-weight: 300;
+  font-weight: 700;
 }
 
 @media (min-width: 768px){
@@ -2834,7 +2841,6 @@ body.no-scroll {
 
 #home-hero #header-title {
   height: 100%;
-  min-height: 2.5em;
   color: #fff !important;
 }
 
@@ -2873,6 +2879,42 @@ body.no-scroll {
 
 .eduChat {
   z-index: 99998 !important;
+}
+
+table {
+  border: 1px solid #ccc;
+  border-collapse: collapse;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  table-layout: fixed;
+}
+
+table caption {
+  font-size: 1.5em;
+  margin: .5em 0 .75em;
+}
+
+table tr {
+  background-color: #f8f8f8;
+  border: 1px solid #ddd;
+  padding: .35em;
+}
+
+table th,
+  table td {
+  padding: .625em;
+  text-align: center;
+}
+
+table th {
+  font-size: .85em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}
+
+li {
+  list-style-position: inside !important;
 }
 
 .hover\:border-turquoise:hover{
@@ -2944,6 +2986,14 @@ body.no-scroll {
 
   .sm\:col-span-6{
     grid-column: span 6 / span 6 !important;
+  }
+
+  .sm\:col-span-8{
+    grid-column: span 8 / span 8 !important;
+  }
+
+  .sm\:col-span-4{
+    grid-column: span 4 / span 4 !important;
   }
 
   .sm\:col-span-7{
@@ -3294,10 +3344,6 @@ body.no-scroll {
     grid-column: span 8 / span 8 !important;
   }
 
-  .lg\:col-span-4{
-    grid-column: span 4 / span 4 !important;
-  }
-
   .lg\:col-span-9{
     grid-column: span 9 / span 9 !important;
   }
@@ -3389,4 +3435,18 @@ body.no-scroll {
   .xl\:col-span-5{
     grid-column: span 5 / span 5 !important;
   }
-}
+} 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

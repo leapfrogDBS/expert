@@ -22,7 +22,7 @@
         @apply font-nunito;
     }
     .headingOne {
-        @apply font-medium text-4xl mb-4 md:mb-10 md:text-6xl md:font-bold lg:mb-16 lg:text-7xl;
+        @apply font-medium text-4xl mb-4 md:mb-10 md:text-6xl md:font-bold lg:mb-16 lg:text-7xl xl:text-8xl;
     }
     .headingTwo {
         @apply font-bold mb-6 text-3xl md:mb-9 md:text-4xl lg:text-5xl;
@@ -37,7 +37,7 @@
         @apply font-medium text-xl mb-6 md:text-2xl;
     }
     .headingSix {
-        @apply font-light text-lg mb-5 md:text-xl;
+        @apply font-bold text-lg mb-5 md:text-xl;
     }
     .subtitleOne {
         @apply font-normal text-base mb-4 md:text-lg;
@@ -621,7 +621,6 @@ body.no-scroll {
   }
 #home-hero #header-title {
     height: 100%;
-    min-height: 2.5em;
     color: #fff !important;
 }
 
@@ -658,3 +657,52 @@ body.no-scroll {
 .eduChat {
     z-index: 99998 !important;
 }
+
+table {
+    border: 1px solid #ccc;
+    border-collapse: collapse;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    table-layout: fixed;
+  }
+  
+  table caption {
+    font-size: 1.5em;
+    margin: .5em 0 .75em;
+  }
+  
+  table tr {
+    background-color: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: .35em;
+  }
+  
+  table th,
+  table td {
+    padding: .625em;
+    text-align: center;
+  }
+  
+  table th {
+    font-size: .85em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+ li {
+    list-style-position: inside !important;
+ } 
+
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  

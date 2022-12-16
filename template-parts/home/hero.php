@@ -2,11 +2,11 @@
 $typewritter_effect_headings = get_field('typewritter_effect_headings');
 $hero_subtitle = get_field('hero_subtitle');
 ?>
-<section id="home-hero" class="bg-turquoise relative z-10">
+<section id="home-hero" class="bg-turquoise relative z-10 py-12">
     <div class="container">
         <div class="row relative items-center">
-            <div class="col pt-12 pb-24 sm:col-span-7 lg:col-span-8 z-30">
-                <h1 id="header-title" class="whitespace-nowrap text-center headingOne text-white mb-0 sm:text-left"></h1>
+            <div class="col pt-12 pb-24 sm:col-span-8 lg:col-span-9 z-30">
+                <h1 id="header-title" class="mb-12 whitespace-nowrap text-center headingOne text-white mb-0 sm:text-left"></h1>
                 <div class="grid grid-cols-8">
                     <div class="col-span-8 mb-12 sm:border-l-2 sm:border-white sm:pl-8 text-center sm:text-left xl:col-span-5 z-30">
                         <h2 class="headingFive text-white mb-0 font-nunito"><?php echo $hero_subtitle; ?></h2>
@@ -16,7 +16,7 @@ $hero_subtitle = get_field('hero_subtitle');
                     <a href="<?php echo home_url(); ?>/track/" class="ctaButton">Get Started</a>
                 </div>
             </div>
-            <div class="col absolute inset-0 opacity-20 z-20 sm:relative sm:col-span-5 sm:opacity-100 lg:col-span-4">
+            <div class="col absolute inset-0 opacity-20 z-20 sm:relative sm:col-span-4 sm:opacity-100 lg:col-span-3">
                 <img class="w-auto mx-auto sm:w-full h-full sm:ml-auto sm:mr-0" src="<?php echo get_template_directory_uri(); ?>/img/top-lady.svg" alt="">
             </div>
         </div>

@@ -55,13 +55,13 @@
                             <ul id="menu-list" class="grid grid-cols-3 gap-x-6 gap-y-2">
                             <?php endif; ?>
 
-                            <li>
+                            <li class="text-center">
                             <?php $icon = get_field('icon', $item);
                             ?>
                                 <a href="<?php echo $link; ?>" class="block p-2 -mx-2 rounded-lg hover:bg-turquoise transition ease-in-out duration-300 text-gray-800 font-semibold hover:text-white">
                                     <div class="mega-link flex items-center gap-x-4 ">
                                         <?php echo $icon; ?>
-                                        <p><?php echo $title; ?></p>
+                                        <p class="text-left"><?php echo $title; ?></p>
                                     </div>
                                 </a>
                             </li>

@@ -24,7 +24,7 @@ if( have_rows('learning_track_lessons') ) {
                 <div class="col text-center">
                     <h3 class="headingTwo mb-0 text-white">Start</h3>
                 </div>
-                <div class="col md:h-44 col-span-6 h-full border-r-4">
+                <div class="col md:h-44 col-span-6 h-full border-r-4 border-white">
                 </div>
             </div>
             
@@ -77,14 +77,14 @@ if( have_rows('learning_track_lessons') ) {
         <div class="lesson-card row gap-x-0 mx-auto max-w-sm md:max-w-none<?php echo $rowClasses; ?>" style="<?php echo $style; ?>">
             <div class="col col-span-12 md:col-span-5 <?php echo $colStart; ?>">
                 <div class="grid grid-cols-12">
-                    <div class="flex flex-col col-span-12 md:col-span-10 js-scroll <?php echo $cardOrder; ?>">
+                    <div class="flex flex-col col-span-12 md:col-span-10  <?php echo $cardOrder; ?>">
                         <div class="flex justify-center">
                             <div class="p-4 border-2 border-white bg-yellow rounded-full w-20 h-20 self-center flex items-center justify-center mb-4 ">
                                 <h3 class="headingThree text-white inline mb-0"><?php echo $i; ?></h3>
                             </div>
                         </div>        
                             
-                        <a href="<?php echo $permalink; ?>" class="rounded-lg group bg-grey overflow-hidden drop-shadow-md h-full flex flex-col js-scroll fade-in">
+                        <a href="<?php echo $permalink; ?>" class="rounded-lg group bg-grey overflow-hidden drop-shadow-md h-full flex flex-col  fade-in">
                             <div class="realtive">
                                 <img loading="lazy" class="w-full h-full object-cover" src="<?php echo $imgSrc;?>"/>
                             </div>
@@ -125,7 +125,7 @@ if( have_rows('learning_track_lessons') ) {
                             </div>
                         </a>
                     </div>
-                    <div class="hidden col-span-2 md:flex flex-col js-scroll fade-in-bottom  <?php echo $lineOrder; ?>">
+                    <div class="hidden col-span-2 md:flex flex-col  fade-in-bottom  <?php echo $lineOrder; ?>">
                         <div id="top" class="h-1/2 border-white <?php echo $borders; ?> <?php echo $topBorders; ?>"></div>
                         <div id="bottom" class="h-1/2 border-white <?php echo $borders; ?> <?php echo $bottomBorders; ?>"></div>
                     
@@ -139,7 +139,7 @@ if( have_rows('learning_track_lessons') ) {
             endwhile;
             ?>
          <div class="row gap-x-0 my-12 md:mb-12 md:mt-0">
-                <div class="col md:h-44 col-span-6 h-full border-r-4"></div>
+                <div class="col md:h-44 col-span-6 h-full  border-white"></div>
                 <div class="col text-center">
                     <h3 class="headingTwo mb-0 text-white">End</h3>
                 </div>
