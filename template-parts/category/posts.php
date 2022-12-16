@@ -11,7 +11,7 @@ if ( have_posts() ) :
         <div class="container">
             <div class="row">
                 <div class="col">
-                    <h1 class="headingTwo text-center">Latest Tools</h1>
+                    <h1 class="headingTwo text-center text-white">Latest Tools</h1>
                 </div>
             </div>
             <div class="row mt-12 gap-8">

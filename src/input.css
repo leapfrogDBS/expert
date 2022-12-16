@@ -100,7 +100,7 @@
         @apply bodyOne ml-6 mb-2;
     }
     .block-editor-content ul, .single-product #primary ul {
-        @apply mb-4 list-disc list-inside;
+        @apply mb-4 list-disc ml-6;
     }
     .block-editor-content img {
         @apply my-12 mx-auto;
@@ -690,7 +690,7 @@ table {
     text-transform: uppercase;
   }
  li {
-    list-style-position: inside !important;
+    list-style-position: outside !important;
  } 
 
  .block-editor-content h4 {
