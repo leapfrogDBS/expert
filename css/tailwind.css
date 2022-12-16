@@ -2917,6 +2917,10 @@ li {
   list-style-position: inside !important;
 }
 
+.block-editor-conten h4 {
+  font-weight: 600 !important;
+}
+
 .hover\:border-turquoise:hover{
   --tw-border-opacity: 1 !important;
   border-color: rgb(6 214 160 / var(--tw-border-opacity)) !important;
@@ -3435,10 +3439,7 @@ li {
   .xl\:col-span-5{
     grid-column: span 5 / span 5 !important;
   }
-} 
-
-  
-  
+}
   
   
   
