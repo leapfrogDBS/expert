@@ -27,12 +27,8 @@ $reading_time = get_field('reading_time');
                         ?>
                         <p class="text-xs md:text-sm subtitleTwo text-white mb-0 font-medium whitespace-nowrap">By <?php echo $display_name; ?></p>
                         <div class="flex flex-col md:flex-row md:items-center">
+                            <div class="text-xs md:text-sm subtitleTwo mb-0 py-1 text-white"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php post_read_time(); ?></div>                                                                  
                             <?php
-                                if ($reading_time) {  
-                            ?>
-                                <div class="text-xs md:text-sm subtitleTwo mb-0 py-1 text-white"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
-                            <?php 
-                                }
                             if (rmp_get_avg_rating( $postID ) != 0) { ?>
                                 
                                     <div class="text-xs md:text-sm subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full md:ml-2 w-11 flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               

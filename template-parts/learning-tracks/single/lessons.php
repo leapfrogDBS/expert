@@ -113,7 +113,6 @@ if( have_rows('learning_track_lessons') ) {
                                     ?>
                                     </p>
                                     <div class="flex justify-between items-center mt-2">
-                                        <div class="subtitleTwo mb-0 py-1 text-blue mr-2"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2">10 minutes</span></div>                                                                  
                                         <?php 
                                         if (rmp_get_avg_rating( $postID ) != 0) { ?>
                                             <div class="subtitleTwo mb-0 px-2 py-0.5 bg-blue text-white rounded-full flex items-center leading-4"><span class="font-medium"><?php echo rmp_get_avg_rating( $postID ); ?></span><i class="fa-solid fa-star text-yellow ml-2 text-[10px]"></i></div>                                               

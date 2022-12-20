@@ -7,6 +7,7 @@ $show_featured_image = get_field('show_featured_image');
 <section id="post-content" class="bg-white relative pt-6 pb-12">
         
         <div class="container">
+        
             <div class="row">
                 <?php
                 if ($article_has_video && $article_video_link) {

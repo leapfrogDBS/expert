@@ -268,14 +268,8 @@ function data_fetch(){
 					<h3 class="subtitleOne font-medium text-charcoal leading-5 mb-0 group-hover:text-white"><?php the_title();?></h3>
 					
 					<div class="flex items-center">
-					<?php
-						if ($reading_time) {
-						?>
-							<div class="subtitleTwo mb-0 py-1 text-blue group-hover:text-white"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php echo $reading_time; ?> minutes</span></div>                                                                  
-						<?php 
-						}
-					
-						?>
+						<div class="subtitleTwo mb-0 py-1 text-blue group-hover:text-white"><i class="fa-regular fa-clock"></i><span class="font-medium ml-2"><?php post_read_time(); ?></span></div>                                                                  
+						
 					</div>
 				</div>
 					</a>
@@ -659,3 +653,27 @@ function mytheme_et_project_posttype_args( $args ) {
 		'show_ui'             => false
 	));
 }
+
+function post_read_time() { 
+  
+	// get the post content 
+	$content = get_post_field( 'post_content', $post->ID ); 
+	  
+	// count the words 
+	$word_count = str_word_count( strip_tags( $content ) ); 
+	  
+	// reading time itself 
+	$readingtime = ceil($word_count / 200); 
+	  
+	if ($readingtime == 1) { 
+	 $timer = " minute"; 
+	} else { 
+	 $timer = " minutes"; 
+	} 
+	  
+	// I'm going to print 'X minute read' above my post 
+	$totalreadingtime = $readingtime . $timer; 
+	echo $totalreadingtime; 
+	return $totalreadingtime; 
+	  
+	} 
