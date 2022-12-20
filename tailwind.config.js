@@ -10,7 +10,7 @@ important: true,
         'nunito': ['"Nunito"', 'sanas-serif'],
       },
       colors : {
-        turquoise: '#0EA35D',
+        turquoise: '#06D6A0',
         blue: '#2176FF',
         yellow: '#FFD100',
         red: '#E3655B',

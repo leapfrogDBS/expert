@@ -714,7 +714,7 @@ video {
 
 .ctaButton:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(14 163 93 / var(--tw-bg-opacity));
+  background-color: rgb(6 214 160 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -931,7 +931,7 @@ a:visited{
 .block-editor-content a{
   font-weight: 500;
   --tw-text-opacity: 1;
-  color: rgb(14 163 93 / var(--tw-text-opacity));
+  color: rgb(6 214 160 / var(--tw-text-opacity));
   text-decoration-line: underline;
 }
 
@@ -958,7 +958,7 @@ a:visited{
 
 .woocommerce button.button.alt:hover{
   --tw-bg-opacity: 1;
-  background-color: rgb(14 163 93 / var(--tw-bg-opacity));
+  background-color: rgb(6 214 160 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -982,7 +982,7 @@ a:visited{
 #mobile-menu .woocommerce button.button.alt{
   margin-bottom: 3rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(14 163 93 / var(--tw-bg-opacity));
+  background-color: rgb(6 214 160 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1075,7 +1075,7 @@ a:visited{
 .woocommerce-checkout .entry-header{
   margin-bottom: 0px;
   --tw-bg-opacity: 1;
-  background-color: rgb(14 163 93 / var(--tw-bg-opacity));
+  background-color: rgb(6 214 160 / var(--tw-bg-opacity));
   padding-top: 3rem;
   padding-bottom: 3rem;
   text-align: center;
@@ -1103,7 +1103,7 @@ a:visited{
   margin-bottom: 0.5rem;
   display: block;
   --tw-text-opacity: 1;
-  color: rgb(14 163 93 / var(--tw-text-opacity));
+  color: rgb(6 214 160 / var(--tw-text-opacity));
 }
 
 #mobile-menu .sub-menu{
@@ -1136,7 +1136,7 @@ a:visited{
 #mobile-menu .ctaButton{
   margin-bottom: 3rem;
   --tw-bg-opacity: 1;
-  background-color: rgb(14 163 93 / var(--tw-bg-opacity));
+  background-color: rgb(6 214 160 / var(--tw-bg-opacity));
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
 }
@@ -1884,7 +1884,7 @@ a:visited{
 
 .bg-turquoise{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(14 163 93 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(6 214 160 / var(--tw-bg-opacity)) !important;
 }
 
 .bg-white{
@@ -2189,7 +2189,7 @@ a:visited{
 
 .text-turquoise{
   --tw-text-opacity: 1 !important;
-  color: rgb(14 163 93 / var(--tw-text-opacity)) !important;
+  color: rgb(6 214 160 / var(--tw-text-opacity)) !important;
 }
 
 .text-black{
@@ -2897,17 +2897,17 @@ li {
 
 .hover\:border-turquoise:hover{
   --tw-border-opacity: 1 !important;
-  border-color: rgb(14 163 93 / var(--tw-border-opacity)) !important;
+  border-color: rgb(6 214 160 / var(--tw-border-opacity)) !important;
 }
 
 .hover\:bg-turquoise:hover{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(14 163 93 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(6 214 160 / var(--tw-bg-opacity)) !important;
 }
 
 .hover\:text-turquoise:hover{
   --tw-text-opacity: 1 !important;
-  color: rgb(14 163 93 / var(--tw-text-opacity)) !important;
+  color: rgb(6 214 160 / var(--tw-text-opacity)) !important;
 }
 
 .hover\:text-white:hover{
@@ -2935,7 +2935,7 @@ li {
 
 .group:hover .group-hover\:bg-turquoise{
   --tw-bg-opacity: 1 !important;
-  background-color: rgb(14 163 93 / var(--tw-bg-opacity)) !important;
+  background-color: rgb(6 214 160 / var(--tw-bg-opacity)) !important;
 }
 
 .group:hover .group-hover\:bg-blue{
