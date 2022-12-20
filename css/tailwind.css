@@ -1452,6 +1452,10 @@ a:visited{
   display: none !important;
 }
 
+.aspect-\[1\.75\]{
+  aspect-ratio: 1.75 !important;
+}
+
 .h-full{
   height: 100% !important;
 }

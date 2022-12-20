@@ -86,7 +86,7 @@ if( have_rows('learning_track_lessons') ) {
                             
                         <a href="<?php echo $permalink; ?>" class="rounded-lg group bg-grey overflow-hidden drop-shadow-md h-full flex flex-col  fade-in">
                             <div class="realtive">
-                                <img loading="lazy" alt="lesson image" class="w-full h-full object-cover" src="<?php echo $imgSrc;?>"/>
+                                <img loading="lazy" alt="lesson image" class="w-full aspect-[1.75] object-cover" src="<?php echo $imgSrc;?>"/>
                             </div>
                             <div class="px-6 py-3 flex flex-col flex-1 justify-between"> 
                                  <?php
@@ -134,11 +134,11 @@ if( have_rows('learning_track_lessons') ) {
         </div>    
             <?php
             $i++;
-            $marginTop = $marginTop + 100;
+            $marginTop = $marginTop + 30;
             endwhile;
             ?>
          <div class="row gap-x-0 my-12 md:mb-12 md:mt-0">
-                <div class="col md:h-44 col-span-6 h-full  border-white"></div>
+                <div class="col md:h-44 col-span-6 h-full border-r-4 border-white"></div>
                 <div class="col text-center">
                     <h3 class="headingTwo mb-0 text-white">End</h3>
                 </div>

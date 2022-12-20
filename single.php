@@ -25,6 +25,14 @@ get_header();
     ?>
 
 	</main><!-- #main -->
+	<style>
+    html {
+        scroll-padding-top: 76px   ;
+    }
+    html.announcement {
+        scroll-padding-top: 110px   ;
+    }
+</style>
 
 <?php
 get_footer();
