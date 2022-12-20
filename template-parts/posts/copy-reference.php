@@ -5,13 +5,14 @@
             <div class="col">
                 <div onClick="copyFunction()" class="citation relative flex flex-col items-center justify-center cursor-pointer">
                     <h3 class="headingFour">Cite this article</h3>
-                    <div id="citation-text" class="block subtitleOne">
-                        <span class="author"><?php the_author(); ?></span>
-                        <span class="published-date">(<?php echo get_the_date( 'Y' ); ?>)</span>
-                        <span class="title"><?php the_title(); ?></span>
-                        <span class="website-name"><?php echo get_bloginfo( 'name' ); ?></span>
-                        <span class="accessed-date">acessed <?php echo date('d F Y');; ?></span>
-                        <p id="copy-text" class="hidden"><?php the_author(); ?> (<?php echo get_the_date( Y ); ?>) <?php the_permalink(); ?> <?php the_title(); ?> <?php echo get_bloginfo( 'name' ); ?> acessed <?php echo date('d F Y');; ?></p>			
+                    <div id="citation-text" class="block subtitleTwo">
+                        <span class="author">Minute Tools Content Team,</span>
+                        <span class="title"><?php the_title(); ?>,</span>
+                        <span class="organisation">Minute Tools,</span>
+                        <span class="published-month"><?php echo get_the_date( 'M' ); ?>,</span>
+                        <span class="published-year"><?php echo get_the_date( 'Y' ); ?>,</span>
+                        <span class="website-address"><?php the_permalink(); ?></span>
+                        <p id="copy-text" class="hidden">Minute Tools Content Team, <?php the_title(); ?>, Minute Tools, <?php echo get_the_date( M ); ?>, <?php echo get_the_date( Y ); ?> <?php the_permalink(); ?> </p>			
                     </div>
                     <div id="click-to-copy" class="ctaButton">Click to copy</div>
                 </div>
@@ -19,8 +20,6 @@
         </div>
     </div>
 </section>
-
-
 <script defer>
     function copyFunction() {
 

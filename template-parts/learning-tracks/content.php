@@ -13,7 +13,7 @@ if($learning_tracks_featured_image or $learning_tracks_content ) {
                 ?>    
                     <div class="col md:col-span-8 md:col-start-3">
                         <div id="featured-image-container">
-                            <img class="w-full object-cover mb-12" src="<?php echo $learning_tracks_featured_image['url']; ?> " alt="" loading="lazy">
+                            <img class="w-full object-cover mb-12" src="<?php echo $learning_tracks_featured_image['url']; ?> " alt="learnign track featured image" loading="lazy">
                         </div>
                     </div>
                 <?php

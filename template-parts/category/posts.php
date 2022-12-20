@@ -32,7 +32,7 @@ if ( have_posts() ) :
                     <a href="<?php the_permalink() ?>" class="group col sm:col-span-6 md:col-span-4 lg:col-span-3 category-post hidden max-w-[88vw]">
                         <div class="rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
                             <div class="realtive">
-                                <img loading="lazy" class="w-full h-64 object-cover" src="<?php echo $imgSrc;?>"/>
+                                <img loading="lazy" alt="featured image" class="w-full h-64 object-cover" src="<?php echo $imgSrc;?>"/>
                             </div>
                             <div class="px-6 py-3 flex flex-col flex-1 justify-between">        
                                 <h3 class="text-lg leading-tight font-semibold mb-1"><?php the_title(); ?></h3>                               

@@ -249,11 +249,11 @@ function data_fetch(){
 					<?php
 					if (has_post_thumbnail()) {
 					?>
-						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" class="w-full object-cover rounded-lg">
+						<img src="<?php echo get_the_post_thumbnail_url(get_the_ID(), 'thumbnail'); ?>" class="w-full object-cover rounded-lg" alt="article thumbnail">
 					<?php
 					} else {
 					?>
-						<img src="<?php echo get_template_directory_uri();?>/img/fallback-post.jpg" class="w-full object-cover rounded-lg">
+						<img src="<?php echo get_template_directory_uri();?>/img/fallback-post.jpg" class="w-full object-cover rounded-lg" alt="article thumbnail">
 					<?php
 					}
 					$reading_time = get_field('reading_time');  
@@ -643,3 +643,19 @@ function my_jquery_enqueue() {
 
 add_action( 'wp_enqueue_scripts', 'my_jquery_enqueue' );
 */
+
+
+/**
+ *	This will hide the Divi "Project" post type.
+ *	Thanks to georgiee (https://gist.github.com/EngageWP/062edef103469b1177bc#gistcomment-1801080) for his improved solution.
+ */
+add_filter( 'et_project_posttype_args', 'mytheme_et_project_posttype_args', 10, 1 );
+function mytheme_et_project_posttype_args( $args ) {
+	return array_merge( $args, array(
+		'public'              => false,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => false,
+		'show_in_nav_menus'   => false,
+		'show_ui'             => false
+	));
+}

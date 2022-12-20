@@ -13,7 +13,7 @@ if($category_featured_image or $category_content ) {
                 ?>    
                     <div class="col md:col-span-8 md:col-start-3">
                         <div id="featured-image-container">
-                            <img class="w-full object-cover mb-12" src="<?php echo $category_featured_image['url']; ?> " alt="" loading="lazy">
+                            <img class="w-full object-cover mb-12" src="<?php echo $category_featured_image['url']; ?> " alt="featured image" loading="lazy">
                         </div>
                     </div>
                 <?php

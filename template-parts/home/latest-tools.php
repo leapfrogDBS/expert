@@ -37,7 +37,7 @@
                                 <li class="splide__slide p-2">                                                  
                                     <a href="<?php echo the_permalink(); ?>" class="group rounded-lg bg-grey overflow-hidden drop-shadow-md h-full flex flex-col ">
                                         <div class="realtive flex-1">
-                                            <img class="w-full h-full object-cover" data-splide-lazy="<?php echo $imgSrc;?>"/>
+                                            <img class="w-full h-full object-cover" alt="thumbnail article" data-splide-lazy="<?php echo $imgSrc;?>"/>
                                         </div>
                                         <div class="px-6 py-3 flex flex-col flex-1 justify-between"> 
                                             <div>

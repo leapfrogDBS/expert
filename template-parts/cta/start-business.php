@@ -9,9 +9,9 @@ $cta_link = get_field('cta_link', 'option');
     <div class="row items-center">
         <div class="col col-span-12 md:col-span-6 h-full">
             <?php if($cta_image) { ?>
-                <img class=" w-full h-full object-cover object-right" src="<?php echo $cta_image['url']; ?>" loading="lazy" alt="">
+                <img class=" w-full h-full object-cover object-right" src="<?php echo $cta_image['url']; ?>" loading="lazy" alt="cta image">
             <?php } else { ?>
-                <img class=" w-full h-full object-cover object-right" src="<?php echo get_template_directory_uri(); ?>/img/business.jpg" loading="lazy" alt="">
+                <img class=" w-full h-full object-cover object-right" src="<?php echo get_template_directory_uri(); ?>/img/business.jpg" loading="lazy" alt="cta image">
             <?php } ?>
         </div>
         <div class="col col-span-12 md:col-span-5 px-10 md:pr-0 py-10">

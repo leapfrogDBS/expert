@@ -12,9 +12,9 @@
             </div>
             <div class="col absolute inset-0 opacity-20 z-20 sm:relative sm:col-span-5 sm:opacity-100 lg:col-span-3">
                 <?php if(has_post_thumbnail()) { ?>
-                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="w-auto mx-auto sm:w-full h-full sm:ml-auto sm:mr-0">
+                    <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="post-thumbnail images" class="w-auto mx-auto sm:w-full h-full sm:ml-auto sm:mr-0">
                 <?php } else { ?>
-                    <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="w-auto mx-auto sm:w-full h-full sm:ml-auto sm:mr-0">
+                    <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="post-thumbnail images" class="w-auto mx-auto sm:w-full h-full sm:ml-auto sm:mr-0">
                 <?php } ?>
             </div>
         </div>

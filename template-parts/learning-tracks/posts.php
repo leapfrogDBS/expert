@@ -39,9 +39,9 @@ if ( have_posts() ) :
 							<a href="<?php the_permalink() ?>">
                                 <div class="square bg-yellow pb-[100%] relative">
                                     <?php if(has_post_thumbnail()) { ?>
-                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <img src="<?php echo get_the_post_thumbnail_url(); ?>" alt="article thumbnail" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     <?php } else { ?>
-                                        <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                                        <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="article thumbnail" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                     <?php } ?>
                                 </div>
 								<div class="info px-6 py-3 h-52 flex flex-col">

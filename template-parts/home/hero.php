@@ -17,7 +17,7 @@ $hero_subtitle = get_field('hero_subtitle');
                 </div>
             </div>
             <div class="col absolute inset-0 opacity-20 z-20 sm:relative sm:col-span-4 sm:opacity-100 lg:col-span-3">
-                <img class="w-auto mx-auto sm:w-full h-full sm:ml-auto sm:mr-0" src="<?php echo get_template_directory_uri(); ?>/img/top-lady.svg" alt="">
+                <img class="w-auto mx-auto sm:w-full h-full sm:ml-auto sm:mr-0" src="<?php echo get_template_directory_uri(); ?>/img/top-lady.svg" alt="top image lady">
             </div>
         </div>
     </div>
