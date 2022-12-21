@@ -14,7 +14,7 @@ $reading_time = get_field('reading_time');
                 // Get the author image URL    
                 $output = get_avatar_url($author_id);
                 // Display the author image    
-                echo '<img class="rounded-full w-11 h-11 md:w-16 md:h-16 border-white border-2 border-solid" src="'.$output.'"/>';
+                echo '<img class="rounded-full w-11 h-11 md:w-16 md:h-16 border-white border-2 border-solid" alt="author image" src="'.$output.'"/>';
                 ?>
                     <div class="flex flex-col md:gap-y-1">
                         <?php
