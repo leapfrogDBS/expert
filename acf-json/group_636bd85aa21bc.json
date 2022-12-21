@@ -27,30 +27,6 @@
             "mime_types": ""
         },
         {
-            "key": "field_636bd871ec517",
-            "label": "Mobile Header Logo",
-            "name": "mobile_header_logo",
-            "type": "image",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "return_format": "array",
-            "preview_size": "medium",
-            "library": "all",
-            "min_width": "",
-            "min_height": "",
-            "min_size": "",
-            "max_width": "",
-            "max_height": "",
-            "max_size": "",
-            "mime_types": ""
-        },
-        {
             "key": "field_636bd885ec518",
             "label": "Footer Logo",
             "name": "footer_logo",
@@ -93,5 +69,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668012185
+    "modified": 1671632064
 }

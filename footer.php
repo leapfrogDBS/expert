@@ -35,7 +35,7 @@
 					<?php 
 						$footer_logo = get_field('footer_logo', 'option'); 
 						if ($footer_logo) { ?>
-							<a href="<?php echo home_url(); ?>" ><img loading="lazy" src="<?php echo $footer_logo['url']; ?>" alt="footer logo"></a>
+							<a href="<?php echo home_url(); ?>" ><img class="w-[200px] h-[40px] sm:w-[250px] sm:h-[50px]" loading="lazy" src="<?php echo $footer_logo['url']; ?>" alt="footer logo"></a>
 						<?php
 						}
 						?>

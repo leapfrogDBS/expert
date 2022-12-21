@@ -62,20 +62,11 @@ if ($show_announcement_bar) {
 					
 			<div id="logo-container" class="logo-container h-10 w-auto flex items-center lg:col-span-5">
            		<a href="<?php echo home_url(); ?>">
-					<div class="hidden sm:block">
+					<div class="block">
 					<?php
 					$desktop_logo = get_field('desktop_header_logo', 'option'); 
 						if ($desktop_logo) { ?>
-							<img height="34" width="300" class="custom-logo w-[300px] h-[34px]" loading="lazy" src="<?php echo $desktop_logo['url']; ?>" alt="desktop header logo">
-						<?php
-						}
-						?>
-					</div>
-					<div class="sm:hidden">
-						<?php
-						$mobile_logo = get_field('mobile_header_logo', 'option'); 
-						if ($mobile_logo) { ?>
-							<img class="w-44 h-auto" loading="lazy" src="<?php echo $mobile_logo['url']; ?>" alt="mobile header logo">
+							<img height="50" width="250" class="custom-logo w-[200px] h-[40px] sm:w-[250px] sm:h-[50px]" loading="lazy" src="<?php echo $desktop_logo['url']; ?>" alt="desktop header logo">
 						<?php
 						}
 						?>
@@ -85,7 +76,7 @@ if ($show_announcement_bar) {
 
 			
 			<div id="search-bar" class="text-center invisible absolute -left-full lg:left-auto opacity-0 pt-5 lg:relative lg:visible lg:opacity-100 lg:pt-0 lg:block bg-white/95 lg:bg-white lg:col-span-2">
-				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72 w-full xl:text-xl" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
+				<input class="bg-white px-4 text-charcoal placeholder-charcoal font-bold border focus:border-charcoal border-charcoal rounded-full max-w-72 lg:w-full xl:text-xl" type="text" name="keyword" id="keyword" onkeyup="fetch()" placeholder="search..."></input>
 					<div id="datafetch" class="fixed overflow-y-scroll left-0 right-0 text-left px-12 max-w-lg m-auto lg:bg-white rounded-b-3xl shadow-lg"></div>
 			</div>
 			
