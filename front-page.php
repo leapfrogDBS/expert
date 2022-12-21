@@ -19,11 +19,11 @@ include(locate_template('template-parts/home/testimonials.php'));
 include(locate_template('template-parts/cta/start-business.php'));
 ?>
 <style>
-    html {
-        scroll-padding-top: 150px   ;
+    html section {
+        scroll-margin-top: 120px   ;
     }
-    html.announcement {
-        scroll-padding-top: 184px   ;
+    html.announcement section {
+        scroll-margin-top: 150px   ;
     }
 </style>
 

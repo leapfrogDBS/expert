@@ -86,7 +86,7 @@ if( have_rows('learning_track_lessons') ) {
                             
                         <a href="<?php echo $permalink; ?>" class="rounded-lg group bg-grey overflow-hidden drop-shadow-md h-full flex flex-col  fade-in">
                             <div class="realtive">
-                                <img loading="lazy" alt="lesson image" class="w-full aspect-[1.75] object-cover" src="<?php echo $imgSrc;?>"/>
+                                <img loading="lazy" alt="lesson image" class="w-full aspect-[1.77] object-cover" src="<?php echo $imgSrc;?>"/>
                             </div>
                             <div class="px-6 py-3 flex flex-col flex-1 justify-between"> 
                                  <?php

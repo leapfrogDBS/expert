@@ -108,8 +108,8 @@
 				</div>
 				<div class="row mt-6">
 					<div class="col">
-						<p class="subtitleTwo text-white text-center">&copy; Copyright <?php echo date("Y"); ?> Expert Program Management </p>
-</p>
+						<p class="subtitleTwo text-white text-center">&copy; Copyright <?php echo date("Y"); ?> Minute Tools </p>
+						<a href="https://www.leapfrogdbs.co.uk/" class="mt-6 subtitleTwo text-xs text-turquoise block text-center">Website design and build by <span class="font-bold">Leapfrog DBS Ltd</span></a>
 					</div>
 				</div>
 			</div>

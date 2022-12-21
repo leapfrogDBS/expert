@@ -25,14 +25,16 @@ get_header();
     ?>
 
 	</main><!-- #main -->
+
 	<style>
-    html {
-        scroll-padding-top: 76px   ;
+    html .ez-toc-section {
+        scroll-margin-top: 120px   ;
     }
-    html.announcement {
-        scroll-padding-top: 110px   ;
+    html.announcement .ez-toc-section {
+        scroll-margin-top: 150px   ;
     }
 </style>
+
 
 <?php
 get_footer();
