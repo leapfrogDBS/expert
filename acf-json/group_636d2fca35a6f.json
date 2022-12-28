@@ -3,25 +3,6 @@
     "title": "Article Fields",
     "fields": [
         {
-            "key": "field_636d2fd57d34a",
-            "label": "Reading time",
-            "name": "reading_time",
-            "type": "text",
-            "instructions": "",
-            "required": 0,
-            "conditional_logic": 0,
-            "wrapper": {
-                "width": "",
-                "class": "",
-                "id": ""
-            },
-            "default_value": "",
-            "placeholder": "",
-            "prepend": "",
-            "append": "minutes",
-            "maxlength": 2
-        },
-        {
             "key": "field_636d3a658c7ae",
             "label": "Has Video?",
             "name": "article_has_video",
@@ -110,5 +91,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1668104903
+    "modified": 1672234865
 }
