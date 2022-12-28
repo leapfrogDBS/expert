@@ -12,7 +12,7 @@
                         <span class="published-month"><?php echo get_the_date( 'M' ); ?>,</span>
                         <span class="published-year"><?php echo get_the_date( 'Y' ); ?>,</span>
                         <span class="website-address"><?php the_permalink(); ?></span>
-                        <p id="copy-text" class="hidden">Minute Tools Content Team, <?php the_title(); ?>, Minute Tools, <?php echo get_the_date( 'M' ); ?>, <?php echo get_the_date( Y ); ?> <?php the_permalink(); ?> </p>			
+                        <p id="copy-text" class="hidden">Minute Tools Content Team, <?php the_title(); ?>, Minute Tools, <?php echo get_the_date( 'M' ); ?>, <?php echo get_the_date( 'Y' ); ?> <?php the_permalink(); ?> </p>			
                     </div>
                     <div id="click-to-copy" class="ctaButton">Click to copy</div>
                 </div>
