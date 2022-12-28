@@ -102,6 +102,9 @@
     .block-editor-content ul, .single-product #primary ul {
         @apply list-disc ml-6;
     }
+    .block-editor-content table {
+        @apply mb-10;
+    }
     .block-editor-content ul, .block-editor-content ol {
         @apply mb-10;
     }
@@ -652,7 +655,7 @@ body.no-scroll {
     text-decoration: none !important;
 }
 .mega-link i {
-    width: 40px;
+    width: 30px;
     vertical-align: middle;
     display: inline-block;
 }
