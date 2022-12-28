@@ -49,3 +49,5 @@ if($category_featured_image or $category_content ) {
 }
 include(locate_template('template-parts/social-media/sticky-social.php'));  
 ?>
+
+
