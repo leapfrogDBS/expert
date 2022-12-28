@@ -94,13 +94,16 @@
         @apply subtitleTwo;
     }
     .block-editor-content p {
-        @apply bodyOne;
+        @apply bodyOne mb-10;
     }
     .block-editor-content li {
-        @apply bodyOne ml-6 mb-2;
+        @apply bodyOne ml-6 mb-4;
     }
     .block-editor-content ul, .single-product #primary ul {
-        @apply mb-4 list-disc ml-6;
+        @apply list-disc ml-6;
+    }
+    .block-editor-content ul, .block-editor-content ol {
+        @apply mb-10;
     }
     .block-editor-content img {
         @apply my-12 mx-auto;
@@ -150,7 +153,10 @@
     } 
     .post, .page {
         @apply mb-0;
-    }   
+    } 
+    .block-editor-content table td, .block-editor-content table td p {
+        @apply subtitleOne font-nunito;;
+    }
 }
 
 html {
@@ -689,12 +695,21 @@ table {
     letter-spacing: .1em;
     text-transform: uppercase;
   }
- li {
+ ul li {
     list-style-position: outside !important;
+ } 
+ ol li {
+    list-style-position: inside !important;
+    text-indent: -1.5em;
+    padding-left: 1.5em;
  } 
 
  .block-editor-content h4 {
     font-weight: 600 !important;
+ }
+ 
+ .text-block.blue p, .text-block.blue ul, .text-block.blue ol {
+    margin-bottom: 1em !important;
  }
   
   
@@ -706,4 +721,4 @@ table {
   
   
   
-  
+ 
