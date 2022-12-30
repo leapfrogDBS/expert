@@ -26,7 +26,9 @@ if($category_featured_image or $category_content ) {
                 ?> 
                     <div class="xl:flex xl:justify-center relative">
                         <div class="hidden xl:block mx-auto xl:m-0 lg:max-w-[700px] xl:w-[215px] xl:sticky xl:top-40 xl:h-screen xl:-translate-y-7 transition-opacity">
-                            
+                            <img src="<?php echo get_template_directory_uri();?>/img/add.png" class="mb-6" alt="ad image">
+                            <img src="<?php echo get_template_directory_uri();?>/img/add.png" class="mb-6" alt="ad image">
+                            <img src="<?php echo get_template_directory_uri();?>/img/add.png" class="mb-6" alt="ad image">
                         </div>    
                         <div class="lg:max-w-[700px] pt-8 xl:border-t border-toggl mx-auto">
                             <div class="entry-content block-editor-content">
