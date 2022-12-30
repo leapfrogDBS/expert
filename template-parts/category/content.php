@@ -26,7 +26,7 @@ if($category_featured_image or $category_content ) {
                 ?> 
                     <div class="xl:flex xl:justify-center relative">
                         <div class="hidden xl:block mx-auto xl:m-0 lg:max-w-[700px] xl:w-[215px] xl:sticky xl:top-40 xl:h-screen xl:-translate-y-7 transition-opacity">
-                            <?php echo do_shortcode('[ez-toc]'); ?>
+                            
                         </div>    
                         <div class="lg:max-w-[700px] pt-8 xl:border-t border-toggl mx-auto">
                             <div class="entry-content block-editor-content">
@@ -51,3 +51,4 @@ include(locate_template('template-parts/social-media/sticky-social.php'));
 ?>
 
 
+    

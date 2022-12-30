@@ -88,7 +88,7 @@
         @apply headingSix mt-8;
     }
     .block-editor-content h5 {
-        @apply subtitleOne;
+        @apply bodyOne font-bold;
     }
     .block-editor-content h6 {
         @apply subtitleTwo;
@@ -107,6 +107,9 @@
     }
     .block-editor-content ul, .block-editor-content ol {
         @apply mb-10;
+    }
+    .block-editor-content ul ul {
+        @apply mt-4 mb-0;
     }
     .block-editor-content img {
         @apply my-12 mx-auto;

@@ -854,17 +854,22 @@ a:visited{
 .block-editor-content h5{
   --tw-text-opacity: 1;
   color: rgb(74 74 74 / var(--tw-text-opacity));
+  font-family: "Nunito", sanas-serif;
   margin-bottom: 1rem;
-  font-size: 1rem;
-  line-height: 1.5rem;
+  font-size: 1.125rem;
+  line-height: 1.75rem;
   font-weight: 400;
 }
 
 @media (min-width: 768px){
   .block-editor-content h5{
-    font-size: 1.125rem;
+    font-size: 1.25rem;
     line-height: 1.75rem;
   }
+}
+
+.block-editor-content h5{
+  font-weight: 700;
 }
 
 .block-editor-content h6{
@@ -930,6 +935,11 @@ a:visited{
 
 .block-editor-content ul, .block-editor-content ol{
   margin-bottom: 2.5rem;
+}
+
+.block-editor-content ul ul{
+  margin-top: 1rem;
+  margin-bottom: 0px;
 }
 
 .block-editor-content img{
