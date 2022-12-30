@@ -164,7 +164,7 @@ const CookieService = {
             expires = '; expires=' + date.toUTCString();
         }
 
-        document.cookie = name + '=' + (value || '')  + expires + ';';
+        document.cookie = name + '=' + (value || '')  + expires + '; path=/';
     },
 
     getCookie(name) {
