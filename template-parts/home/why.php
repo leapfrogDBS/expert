@@ -32,7 +32,7 @@
                 </div>
                 <img loading="lazy" class="lg:hidden m-auto w-52 h-full mb-8" src="<?php echo get_template_directory_uri(); ?>/img/why2-mobile.svg" alt="mobile why two image">
                 <div class="text-center lg:text-left">
-                    <a href="<?php echo home_url();?>/about" class="ctaButton">Learn more</a>
+                    <a href="<?php echo home_url();?>/about" class="ctaButton">Read more about us</a>
                 </div>               
             </div>
         </div>

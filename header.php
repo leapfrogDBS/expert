@@ -82,7 +82,7 @@ if ($show_announcement_bar) {
 			</div>
 			
 				<nav class="lg:col-span-5">
-					<ul class="flex items-center font-semibold justify-end gap-x-2 md:gap-x-0">
+					<div class="flex items-center font-semibold justify-end gap-x-2 md:gap-x-0">
 						<div id="search-icon" class="lg:hidden w-8">
 							<i class="fa-solid headingFour mb-0 fa-magnifying-glass text-turquoise text-2xl"></i>
 								<div id="close-search-container">
@@ -103,7 +103,7 @@ if ($show_announcement_bar) {
 						<div class="hidden md:flex">
 							<?php include(locate_template('template-parts/menu/desktop-menu.php')); ?>
 						</div>
-					</ul>
+					</div>
 				</nav>
 				
 		</div>
