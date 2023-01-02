@@ -32,8 +32,8 @@
                                                 <img src="<?php echo get_template_directory_uri(); ?>/img/lady1.svg" alt="thumbnail article" class="h-5/6 absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2">
                                             <?php } ?>
                                         </div>
-                                        <div class="info px-6 py-3 h-52 flex flex-col">
-                                            <h3 class="text-lg leading-tight font-semibold mb-4 h-11"><?php the_title(); ?></h3>                               
+                                        <div class="info px-6 py-3 h-56 flex flex-col">
+                                            <h3 class="text-lg leading-tight font-semibold mb-4 h-16"><?php the_title(); ?></h3>                               
                                             <p class="subtitleTwo flex-1"><?php echo strip_tags(get_the_excerpt()); ?></p>
                                             <div><p class="ctaButton small bg-turquoise group-hover:bg-blue">View Learning Track</p></div>
                                         </div>

@@ -1777,14 +1777,18 @@ a:visited{
        column-gap: 0.5rem !important;
 }
 
-.gap-x-10{
-  -moz-column-gap: 2.5rem !important;
-       column-gap: 2.5rem !important;
-}
-
 .gap-x-12{
   -moz-column-gap: 3rem !important;
        column-gap: 3rem !important;
+}
+
+.gap-y-6{
+  row-gap: 1.5rem !important;
+}
+
+.gap-x-10{
+  -moz-column-gap: 2.5rem !important;
+       column-gap: 2.5rem !important;
 }
 
 .gap-x-9{
@@ -1794,10 +1798,6 @@ a:visited{
 
 .gap-y-2{
   row-gap: 0.5rem !important;
-}
-
-.gap-y-6{
-  row-gap: 1.5rem !important;
 }
 
 .gap-x-0{
@@ -2081,6 +2081,10 @@ a:visited{
   padding-top: 2rem !important;
 }
 
+.pt-0{
+  padding-top: 0px !important;
+}
+
 .pt-12{
   padding-top: 3rem !important;
 }
@@ -2095,10 +2099,6 @@ a:visited{
 
 .pb-1{
   padding-bottom: 0.25rem !important;
-}
-
-.pt-0{
-  padding-top: 0px !important;
 }
 
 .pt-\[20px\]{
@@ -3021,16 +3021,16 @@ ol li {
     grid-column: span 5 / span 5 !important;
   }
 
+  .sm\:mb-12{
+    margin-bottom: 3rem !important;
+  }
+
   .sm\:ml-auto{
     margin-left: auto !important;
   }
 
   .sm\:mr-0{
     margin-right: 0px !important;
-  }
-
-  .sm\:mb-12{
-    margin-bottom: 3rem !important;
   }
 
   .sm\:block{
@@ -3204,12 +3204,12 @@ ol li {
     margin-top: 2.5rem !important;
   }
 
-  .md\:mb-20{
-    margin-bottom: 5rem !important;
-  }
-
   .md\:mb-24{
     margin-bottom: 6rem !important;
+  }
+
+  .md\:mb-20{
+    margin-bottom: 5rem !important;
   }
 
   .md\:ml-2{
@@ -3313,14 +3313,14 @@ ol li {
     line-height: 2.5rem !important;
   }
 
-  .md\:text-6xl{
-    font-size: 3.75rem !important;
-    line-height: 1 !important;
-  }
-
   .md\:text-sm{
     font-size: 0.875rem !important;
     line-height: 1.25rem !important;
+  }
+
+  .md\:text-6xl{
+    font-size: 3.75rem !important;
+    line-height: 1 !important;
   }
 }
 
@@ -3345,10 +3345,6 @@ ol li {
     grid-column: span 3 / span 3 !important;
   }
 
-  .lg\:col-span-6{
-    grid-column: span 6 / span 6 !important;
-  }
-
   .lg\:col-span-5{
     grid-column: span 5 / span 5 !important;
   }
@@ -3363,6 +3359,10 @@ ol li {
 
   .lg\:col-span-9{
     grid-column: span 9 / span 9 !important;
+  }
+
+  .lg\:col-span-6{
+    grid-column: span 6 / span 6 !important;
   }
 
   .lg\:col-start-3{
@@ -3441,10 +3441,6 @@ ol li {
   .lg\:py-56{
     padding-top: 14rem !important;
     padding-bottom: 14rem !important;
-  }
-
-  .lg\:pr-0{
-    padding-right: 0px !important;
   }
 
   .lg\:pt-0{
