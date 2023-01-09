@@ -68,7 +68,7 @@
             "key": "field_638de5103ba2b",
             "label": "Book One Product Link",
             "name": "book_one_product_link",
-            "type": "page_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -77,13 +77,7 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "product"
-            ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
+            "return_format": "array"
         },
         {
             "key": "field_638de52dfa3b6",
@@ -151,7 +145,7 @@
             "key": "field_638de55bfa3b9",
             "label": "Book Two Product Link",
             "name": "book_two_product_link",
-            "type": "page_link",
+            "type": "link",
             "instructions": "",
             "required": 0,
             "conditional_logic": 0,
@@ -160,13 +154,7 @@
                 "class": "",
                 "id": ""
             },
-            "post_type": [
-                "product"
-            ],
-            "taxonomy": "",
-            "allow_null": 0,
-            "allow_archives": 1,
-            "multiple": 0
+            "return_format": "array"
         }
     ],
     "location": [
@@ -187,5 +175,5 @@
     "active": true,
     "description": "",
     "show_in_rest": 0,
-    "modified": 1670244220
+    "modified": 1673283122
 }
