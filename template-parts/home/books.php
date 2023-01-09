@@ -21,7 +21,7 @@ $book_two_product_link = get_field('book_two_product_link', 'options');
                 <p class="bodyOne text-black text-center md:text-left"><?php echo $book_one_copy; ?></p>
                     <img loading="lazy" class="w-full h-full md:hidden my-8 max-w-sm m-auto" src="<?php echo $book_one_image['url']; ?>" alt="book image">
                 <div class="text-center md:text-left">
-                    <a href="<?php echo $book_one_product_link; ?>" class="ctaButton">Buy now</a>
+                    <a href="<?php echo $book_one_product_link['url']; ?>" class="ctaButton">Buy now</a>
                 </div>
             </div>
         </div>
@@ -36,7 +36,7 @@ $book_two_product_link = get_field('book_two_product_link', 'options');
                 <p class="text-white bodyOne text-center md:text-left"><?php echo $book_two_copy; ?></p>
                     <img loading="lazy" class="w-full h-full md:hidden my-8 max-w-sm m-auto" src="<?php echo $book_two_image['url']; ?>" alt="book image">
                 <div class="text-center md:text-left">
-                    <a href="<?php echo $book_two_product_link; ?>" class="ctaButton bg-turquoise">Buy now</a>
+                    <a href="<?php echo $book_two_product_link['url']; ?>" class="ctaButton bg-turquoise">Buy now</a>
                 </div>
             </div>
             <div class="col col-span-5 hidden md:block md:col-start-7">
