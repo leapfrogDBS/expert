@@ -63,10 +63,8 @@ $show_featured_image = get_field('show_featured_image');
                     </div><!-- .entry-content -->
 
                 </div>
-                <div class="hidden xl:block w-[215px] xl:sticky xl:top-40 xl:h-screen xl:max-h-screen sidebar-fade transition-opacity duration-1000 opacity-100">
-                    <img src="<?php echo get_template_directory_uri();?>/img/add.png" class="mb-6" alt="ad image">
-                    <img src="<?php echo get_template_directory_uri();?>/img/add.png" class="mb-6" alt="ad image">
-                    <img src="<?php echo get_template_directory_uri();?>/img/add.png" class="mb-6" alt="ad image">
+                <div class="ad-space hidden xl:block w-[215px] xl:sticky xl:top-40 xl:h-screen xl:max-h-screen sidebar-fade transition-opacity duration-1000 opacity-100">
+                    
                 </div>
             </div>
         </div>

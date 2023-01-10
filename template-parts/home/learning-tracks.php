@@ -12,6 +12,8 @@
         <?php
             $args = array(
                 'post_type' => 'track',
+                'orderby' => 'date',
+                'order' => 'DESC',
                 'posts_per_page' => 9
             );
             $the_query = new WP_Query( $args ); ?>
