@@ -126,7 +126,7 @@ $cta_button_text = get_field('cta_button_text', 'option');
 $cta_link = get_field('cta_link', 'option');
 ?>
 
-<div class="exit-intent-popup" style="transform: translateY(60%) scale(0);">
+<div class="exit-intent-popup hidden" style="transform: translateY(60%) scale(0);">
     <div class="newsletter">
 		<div class="bg-turquoise relative">
 			<div class="row items-center">
