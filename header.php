@@ -19,13 +19,14 @@ if ($show_announcement_bar) {
 <html class="<?php echo $html_classes; ?>" <?php language_attributes(); ?>>
 <head>
 	<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-HCYMXP2TYR"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-16593814-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-HCYMXP2TYR');
+  gtag('config', 'UA-16593814-1');
 </script>
 	<meta charset="<?php bloginfo( 'charset' ); ?>">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
