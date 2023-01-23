@@ -718,7 +718,9 @@ table {
     margin-bottom: 1em !important;
  }
   
-  
+ .citation-text {
+    overflow-wrap: anywhere;
+ } 
   
   
   
