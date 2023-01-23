@@ -718,8 +718,10 @@ table {
     margin-bottom: 1em !important;
  }
   
- #citation-text {
-    overflow-wrap: anywhere !important;
+ @media only screen and (max-width: 480px) {
+    #citation-text {
+        overflow-wrap: anywhere !important;
+    }
  } 
   
   
