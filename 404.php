@@ -24,6 +24,7 @@ get_header();
 					</div>
 				</div>
 			</div>
+			
 			<img class="absolute w-full h-full inset-0 object-cover z-[-1]" src="<?php echo get_template_directory_uri(); ?>/img/404.png" alt="404 image">
 		</section><!-- .error-404 -->
 
